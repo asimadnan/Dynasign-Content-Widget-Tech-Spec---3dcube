@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<script>
+var t= Date.now();
+</script>
+        
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">		
+<link href="css/style.css" rel="stylesheet">
+<link href="css/red_dstudio.css" rel="stylesheet"> 
+<link href="css/dac.css" rel="stylesheet"> 
+<link href="css/jquery-ui.css" rel="stylesheet" >
+<!-- the color picker -->
+<link href="css/spectrum.css" rel="stylesheet" >
+<link href="css/combobox-style.css" rel="stylesheet" >
+<link href="css/bootstrap-switch.min.css" rel="stylesheet" >
+<link href="css/dropzone.css" type="text/css" rel="stylesheet" />
+<link href="css/w2ui-1.4.3.min.css" rel="stylesheet">
+<!-- for content widget editor components -->
+<link href="css/dac-content-widget-editor.css?t=1" rel="stylesheet" >
+ 		
+<!-- Javascript files -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js?v=1"></script>
+<script src="js/respond.min.js?v=1"></script>
+<script src="js/html5shiv.js?v=1"></script>
+<script src="js/spectrum.js?v=1"></script>
+<script src="js/combobox.js?v=1"></script>
+<script src="js/bootstrap-switch.min.js?v=1"></script>
+<script src="js/dropzone.min.js?v=1"></script>
+<script src="js/w2ui-1.4.3.min.js?v=1"></script>
+<script src="htmlplayer/js/dac/dac_util.js?v=23>"></script> 
+<script src="js/util/dac_ui.js"></script> 
+<script src="js/util/dac_widget_editor.js?t="+t></script> 
+</head>
+<body>
+<!-- header starts -->
+<!-- Navigation Starts -->
+
+<div class="navbar bs-docs-nav" role="banner">
+<div class="container">
+
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+                
+         <a class="navbar-brand" href="index.html"><span class="navbar-brand-text">Dynasign Studios Developer Guide</span></a>
+    </div>
+
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <!-- Navigation links starts here -->
+        <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="">Content Studio</a></li>
+
+
+        </ul>
+    </nav>
+
+</div>
+</div>
+<!--/ Navigation Ends --> 
+<div class="content"><div class="container"><h4>Account No: <span style="color: #226688;">DY1303806194  </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business Name: <span style="color: #226688;">Dynasign Corporation </span> <span style="margin-right:30px; float:right; color: #880000;font-size:16px;"></span></h4></div></div><br><!-- header ends -->
+    
+<div class="content">
+<div class="container">
+    <ol class="breadcrumb"><li><a href="#">Home</a></li><li><a href="">Content Studio</a></li><li><a href="">Widget Templates</a></li><li>Content Widget Editor</li></ol>	
+    <div>  
+        <h3><span id="metaDataChevron" class="glyphicon glyphicon-minus-sign" onclick="showHideWidgetHeaderInfo()" style="cursor:hand;"></span><span onclick="showHideWidgetHeaderInfo()" style="cursor:hand;"> [Template Name]: New</span>
+            <span class="pull-right">  
+            <button id="previewButton" type="button" class="dac-btn"><span style="background-color: transparent;"></span>&nbsp;Preview</button>
+            <button id="saveButton" type="button" class="dac-btn"><span style="background-color: transparent;"></span>&nbsp;Save</button>
+            </span>
+        </h3>
+  
+        <div class="form" id="widgetHeaderInfo">
+            <form id="widget_form" class="form-horizontal">
+            <div class="form-group"><label class="control-label col-md-2" for="content_desc">Description</label><div class="col-md-6 input-group-sm"><input type="text" class="form-control" id="cw_content_desc" value="Enter desc"></div></div>
+
+            <div class="form-group"><label class="control-label col-md-2">Status</label>
+                <div class="radio" style="float:left;margin-left:15px;">
+                <label>
+                  <input type="radio" name="cw_approval_flag" id="approval_flag10" value="10">
+                  Work in Progress</label>
+                </div>
+                <div class="radio" style="float:left;margin-left:10px;">
+                <label>
+                  <input type="radio" name="cw_approval_flag" id="approval_flag50" value="50">
+                  Licensed to Play </label>
+                </div>
+
+            </div>
+ 
+            </form>
+	</div>
+	         
+    </div>
+<!--- individual widget editor starts ----->
+<!---<p id="the_editor2" class="inc:widget_editor/twitter_pic/editor_twitter_pic.html">Editor comes here</p>--->
+<div id="the_editor"></div>
+<!--- individual widget editor ends ----->
+
+    
+</div>
+</div>   
+
+
+<div id="dialog_save_error" class="basic_modal" title="Message">
+    Content Widget Save Error 
+</div>
+ <!-- Begin Preview Modal -->
+<div class="modal fade" id="previewModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width: 800px;margin: 30px auto;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Preview</h4>
+      </div>
+      <div class="modal-body">
+          <iframe id="widgetEditorPreview" src="" style="width:570px;height:400px;border:solid 5px #E1E1E1;border-radius: 10px "></iframe>           
+      </div>
+      <div class="modal-footer">
+        <!---  <button id="previewButtonFull" type="button" class="btn btn-success"><span class="glyphicon glyphicon-film" style="background-color: transparent;"></span>&nbsp;Full Screen</button>   --->
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- End Preview Modal -->
+ 
+  <div id="loading" style="display: none;  margin-left: 350px; margin-top: 0px;width: 320px; height: 50px; text-align: center; background-color: #CCCCCC; color:#CC0000; ">
+    <div rel="title">Loading ...    </div>
+</div>
+
+<div id="uploadContainer" style="bottom: 0px; position: fixed; width: 100%; display: none; background-color: rgb(213, 213, 213);">
+    <div><b>Uploading...</b></div>
+    <div id="previews" class="dropzone-previews"></div>
+</div> 
+<!-- Content ends -->
+<div id="spacer" style="margin-top:140px;">
+&nbsp;
+</div>
+<!-- footer starts -->
+
+ <!-- Modal -->
+<div id="modal">
+</div>
+<script>
+function showCustomModal(heading,body,footer){   
+var str ='<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+    str +='<div class="modal-dialog">';
+       str +='<div class="modal-content">';
+         str +='<div class="modal-header">';
+          str +=' <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+           str +='<h4 class="modal-title" id="myModalHeadingButton"></h4>';
+           str += heading;
+         str +='</div>';
+         str +='<div class="modal-body" id="myModalContent">';
+         str += body;
+        str +=' </div>';
+        str +=' <div class="modal-footer" id="myModalFooter">';
+        if(footer!=undefined)
+            str += footer;
+        else
+            str +='<button type="button" class="mytest btn btn-danger">OK</button>';
+         str +='</div>';
+       str +='</div>';
+    str +=' </div>';
+   str +='</div>';
+   $('#modal').html(str);
+   $('#myModal').modal('show');
+}
+
+
+function showTimeoutModal(heading,body,footer){   
+var str ='<div class="modal fade" id="timeoutModal" tabindex="-1" role="dialog" aria-labelledby="timeoutLabel" aria-hidden="true">';
+    str +='<div class="modal-dialog">';
+       str +='<div class="modal-content">';
+         str +='<div class="modal-header">';
+          str +=' <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+           str +='<h4 class="modal-title" id="timeoutHeadingButton"></h4>';
+           str += heading;
+         str +='</div>';
+         str +='<div class="modal-body" id="timeoutContent">';
+         str += body;
+        str +=' </div>';
+        str +=' <div class="modal-footer" id="timeoutFooter">';
+        if(footer!=undefined)
+            str += footer;
+        else
+            str +='<button type="button" class="mytest btn btn-danger">OK</button>';
+         str +='</div>';
+       str +='</div>';
+    str +=' </div>';
+   str +='</div>';
+   $('#modal').html(str);
+   $('#timeoutModal').modal('show');
+}
+</script>
+
+
+<script src="js/util/waiting_dialog.js"></script>
+<script src="js/w2ui-1.4.3.min.js"></script>
+<script src="js/bootbox.js"></script>
+<script src="js/util/input_number.js"></script>
+<script>
+    
+var top2Tabs = '<h3>&nbsp;&nbsp;&nbsp;Widget Price and Licensed Devices</h3><div><div style="float:left; margin-left: 0px;"><span class="daclabel daclabel-default" >Number of Devices You Like to Play this Widget on </span><div style="margin-top:5px;"><div class="col-md-1 input-group-sm" ><div class="input-group"><span class="input-group-btn"><button type="button" class="btn btn-default btn-number"  data-type="minus" data-field="quant[1]" style="margin-left:-14px"><span class="glyphicon glyphicon-minus"></span></button></span><input type="text" name="quant[1]" class="form-control input-number" id="licensed_players" value="6" min="1" max="99999"><span class="input-group-btn"><button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"><span class="glyphicon glyphicon-plus"></span> </button></span></div></div></div></div><div style="float:left; margin-left: 0px; margin-top: 10px;"><span class="daclabel daclabel-default" >Unit Price </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="unit_price" value="1.49" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Volume Discount </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="volume_discount" value="0%" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Your Unit Price After Discount </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="your_unit_price" value="0%" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Total Monthly Price </span><div style="margin-top:5px;"><input type="text"  class="form-control"  id="total_widget_price" value="2" readonly="readonly"  style="color:#9C0000;  margin-left:0px; text-align: right; width:100px" /> </div></div><hr style = "width:100%; border: 0; height: 2px;  background: #fff;"><span class="daclabel daclabel-default" style="float:left; margin-left: 0px; margin-bottom: 0px; margin-top: 0px;" >Unit price is per month per device. Volume discount is based on the number of devices</span></div>	<h3>&nbsp;&nbsp;&nbsp;Widget Size</h3><div><div class=\"dropdown\"><span><input id="input_zone_width" maxlength="5" style="width:60px; height:30px;"  value="1920"></input> x <input id="input_zone_height" maxlength="5" style="width:60px;height:30px;" value="1080"></input></span><button class="btn" data-toggle="dropdown"  style="color: #CCCCCC; min-width: 30px; width: 33px;"><span class="caret" style="color:#333333"></span></button><ul class="dropdown-menu list-dropdown-menu" style="margin-left: 30px; margin-top:-128px;"><li><a href="#" onclick="changeZoneSize(\'3840|2160\');">3840 x 2160 (landscape)</a></li><li><a href="#" onclick="changeZoneSize(\'1920|1080\');">1920 x 1080 (landscape)</a></li><li><a href="#" onclick="changeZoneSize(\'1280|720\');">1280 x 720 (landscape</a></li><li><a href="#" onclick="changeZoneSize(\'2160|3840\');">2160 x 3840 (portrait)</a></li><li><a href="#" onclick="changeZoneSize(\'1080|1920\');">1080 x 1920 (portrait)</a></li><li><a href="#" onclick="changeZoneSize(\'720|1280\');">720 x 1280 (portrait)</a></li></ul><div style="float:right;margin-right:230px;"><button type="button" class="dac-btn-sm" onclick=\'changeZoneSize($( "#input_zone_width" ).val()+"|"+$( "#input_zone_height" ).val())\'>Set Size</button></div><div style="margin-top:10px;">Set the widget size to be the same as the zone size on screen.</div></div></div>';
+var m_dacUtil = new DacUtil();
+var assetAPI = 'http://localhost/api/dac/1.0/resources/asset?dkey=DY1303806194-ABCDEF&asset=';
+
+var fkey = '';
+var mode = 'e';
+var wizard = '';
+
+var accountNo = 'DY1303806194';
+var templateName = 'twitter';
+var m_fullWidget = {};
+var content = {};
+var widgetHeaderOn = true;
+
+var m_editorUIObj = {};
+
+var accordionIndex = 2;
+var widgetId="0", widgetJson="",widgetAssetJson="", feedJson="",feedAssetJson="";
+
+var maxCharsPerPost = 500;
+var unit_price = 4.99; 
+var licensed_players = 1; 
+
+var qrCodePalette = [
+        ["#900","#b45f06","#bf9000","#38761d","#134f5c","#0b5394","#351c75","#741b47"],
+        ["#600","#783f04","#7f6000","#274e13","#0c343d","#073763","#20124d","#4c1130"]
+    ];
+    
+var fullPalette =  [
+            ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)", "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+            ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)", "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+            ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+            "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+            "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+            "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+            "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+            "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+            "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+            "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+            "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+            "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+        ];
+        
+var unit_price = 1.99; 
+var licensed_players = 2; 
+var discountedUnitPrice = 1.49;
+var volumeDiscount = 0;
+        
+var dacUI = new DacUI();
+var dacWidgetEditor = new DacWidgetEditor();
+
+var template_editor_file = "widget_editor/twitter/editor_twitter.html";
+
+<!--- begin: common text labels here ---->
+var commonTranslationList = {};
+commonTranslationList["Widget Size"] = "Widget Size";
+commonTranslationList["Set Size"] = "Set Size";
+commonTranslationList["Set the widget size to be the same as the zone size on screen."] = "Set the widget size to be the same as the zone size on screen.";
+<!--- end: common text labels here ---->
+
+<!--- begin: template specific text labels here ---->
+var translationList = {};
+
+<!--- end: template specific text labels here ---->
+
+$(function(){
+
+    templateName = getParameterByName("template");
+    if (templateName != null && templateName != "")
+    {
+        var t= Date.now();
+        template_editor_file = "widget_editor/"+templateName+"/editor_"+templateName+".html?t="+t;
+        var loadFullWidgetJSonPromise = loadFullWidgetJson();
+        var loadEditorUIJsonPromise = loadEditorUIJson();
+        var loadEditorLangJsonPromise = loadEditorLangJson();
+        $.when(loadFullWidgetJSonPromise,loadEditorUIJsonPromise, loadEditorLangJsonPromise).done(function (fullWidget, editorUIObj, transList) {
+            console.log("[widget_editor]loading done ... ");
+            //build Editor UI
+            //alert(JSON.stringify(content));
+            dacWidgetEditor.setContent(content);
+            dacWidgetEditor.setUIObj(editorUIObj);
+            loadEditorHtmlFile();
+
+        });
+    }
+    else
+    {
+        alert("template is null");
+    }
+    
+
+                
+});
+
+function loadEditorHtmlFile()
+{
+    console.log("loadEditorHtmlFile...");
+    $('#the_editor').load(template_editor_file); 
+}
+
+function loadEditorUIJson()
+{
+    var deferred = $.Deferred();
+
+    var dataFile = "widget_editor/"+templateName+"/ui_"+templateName+".json";          
+    var loadEditorUIPromise = $.getJSON(dataFile);
+    
+    loadEditorUIPromise.done(function(data) {
+        editorUIObj = data;
+        console.log( "[widget_editor]loadEditorUIJson ok editorUIObj=" + JSON.stringify(editorUIObj)); 
+        deferred.resolve(editorUIObj);
+    });
+
+            
+    loadEditorUIPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("[widget_editor]loadEditorUIJson error"+textStatus+" "+errorThrown);
+        deferred.resolve(null);
+    });
+    return deferred.promise();
+}
+
+
+function loadEditorLangJson()
+{
+    var deferred = $.Deferred();
+
+    var dataFile = "widget_editor/"+templateName+"/lang_"+templateName+".json";          
+    var loadTranslationPromise = $.getJSON(dataFile);
+    
+    loadTranslationPromise.done(function(data) {
+        translationList = data;
+        console.log( "[widget_editor]loadEditorLangJson ok translationList=" + JSON.stringify(translationList)); 
+        deferred.resolve(translationList);
+    });
+
+            
+    loadTranslationPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("[widget_editor]loadEditorLangJson error"+textStatus+" "+errorThrown);
+        deferred.resolve(null);
+    });
+    return deferred.promise();
+}
+
+function loadFullWidgetJson()
+{
+    var deferred = $.Deferred();
+    var templateName = getParameterByName("template");
+    if (templateName == null || templateName == "")
+        templateName = "twitter";
+    var dataFile = "widget_editor/"+templateName+"/data_"+templateName+".json";          
+    var loadFullWidgetPromise = $.getJSON(dataFile);
+    
+    loadFullWidgetPromise.done(function(data) {
+        m_fullWidget = data;
+        content = m_fullWidget["widget"]["dac_widget"]["content"];
+        console.log( "[widget_editor]loadFullWidgetJson ok m_fullWidget=" + JSON.stringify(m_fullWidget)); 
+
+         //alert("full widget json ok");
+        deferred.resolve(m_fullWidget);
+    });
+
+            
+    loadFullWidgetPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("[widget_editor]loadFullWidgetJson error"+textStatus+" "+errorThrown);
+        deferred.resolve(null);
+    });
+    return deferred.promise();
+}
+       
+   
+/////////////////////////////////
+function initWidgetEditor()
+{
+    unit_price = parseFloat(Math.round(unit_price * 100) / 100).toFixed(2);
+    var discount = dacUI.getWidgetVolumeDiscount(licensed_players);
+    var ds_unit_price = unit_price - unit_price * discount;
+    ds_unit_price = parseFloat(Math.round(ds_unit_price * 100) / 100).toFixed(2);
+    $('#licensed_players').val(licensed_players);
+    $('#your_unit_price').val("$"+ds_unit_price);
+    $('#unit_price').val("$"+unit_price);
+    var total_widget_price = parseFloat(Math.round(licensed_players * ds_unit_price * 100) / 100).toFixed(2);
+    discount = parseFloat(discount*100).toFixed(0) ;
+    $('#volume_discount').val(discount+"%");
+    $('#total_widget_price').val("$"+total_widget_price);
+         
+    var approveFlag = "50";
+    if (approveFlag==10)
+        $('#approval_flag10').prop('checked',true);
+    else 
+        $('#approval_flag50').prop('checked',true);
+    
+    $("#cw_edit_level").val("10");
+    	
+    $("#accordion").accordion({ heightStyle: "panel" });
+    $("#accordion").accordion('option', 'active' , accordionIndex);
+    console.log("initWidgetEditor active accordionIndex="+accordionIndex);
+	
+    //alert("content.zone_size_option="+content.zone_size_option);
+    if (content.zone_size_option === undefined)
+        content.zone_size_option = "custom";
+
+    $('#uploadContainer').hide();  
+
+    if (content.zone_size_option === "custom")
+    {
+        $("#standardSize").hide();
+        $("#customSize").show();
+        //alert("custom");
+        $("#radio_custom").prop("checked", true);
+        $('#zone_width').html(content.zone_width);
+        $('#zone_height').html(content.zone_height);
+    }
+    else
+    { 
+        //alert("standard");
+        $("#standardSize").show();
+        $("#customSize").hide();
+        $("#radio_standard").prop("checked", true);
+        var select_zone_size = content.zone_width +"|"+content.zone_height;
+
+        $("#select_zone_size").val(select_zone_size);
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+$("#previewButton").click(function() 
+{
+    doPreview();
+});
+
+function doPreview()
+{
+    //alert("doPreview");
+    content = m_fullWidget["widget"]["dac_widget"]["content"];
+    contentJson = JSON.stringify(content);
+    //console.log("preview contentJson = "+contentJson);
+    widgetId = m_fullWidget["wid"];
+    templateName = m_fullWidget["template"];
+    widget= m_fullWidget["widget"];
+    widget_zone_width = widget["dac_widget"]["content"]["zone_width"];
+    widget_zone_height = widget["dac_widget"]["content"]["zone_height"];
+    previewContent(widgetId, templateName, widget_zone_width, widget_zone_height); 
+
+
+}
+
+ $("#previewModal2").on('shown.bs.modal', function(){
+     //alert("#previewModal2 show");
+    $('#widgetEditorPreview').attr('src',templateHtmlPath);
+});
+
+$('#previewModal2').on('hidden.bs.modal', function () {
+     //alert("#previewModal2 hide");
+    //$('#widgetEditorPreview').attr('src',"");
+})
+
+function setPreviewUrl()
+{
+    //alert("setPreviewUrl");
+    $('#widgetEditorPreview').attr('src',templateHtmlPath);
+}
+
+var templateHtmlPath ="";
+function previewContent(widgetId, templateName, widget_zone_width, widget_zone_height)
+{
+    var zone_width = Number(content.zone_width);
+    var zone_height = Number(content.zone_height);
+
+    if(zone_width>=zone_height) //landscape
+    {
+        var preview_width = 770;
+        var preview_height = zone_height*(preview_width/zone_width);
+    }
+    else //portrait
+    {
+        var preview_height = 770;
+        var preview_width = zone_width*(preview_height/zone_height);
+    }
+    var zone_ratio = zone_width/zone_height;
+    var preview_ratio = preview_width/preview_height;
+
+    var previewSize = {"width":preview_width+"px","height":preview_height+"px","border":"solid 5px #E1E1E1","border-radius": "0px"};
+    $('#widgetEditorPreview').css(previewSize);
+
+    console.log("previewContent zone width= "+ content.zone_width+" height= "+ content.zone_height+" zone_ratio="+zone_ratio);
+    console.log("previewContent zone width= "+ preview_width+" height= "+ preview_height+" preview_ratio="+preview_ratio);
+    
+    //var templateName = getParameterByName("template");
+    //if (templateName == null || templateName == "")
+    //    templateName = "twitter";
+    var t = new Date().getTime();
+    templateHtmlPath = "htmlplayer/templates/"+ templateName +"/template_" + templateName + ".html?playmode=preview&width="+preview_width+"&height="+preview_height+"&account="+accountNo+"&debug=1&cache=0&t="+t;
+    
+    //$('#widgetEditorPreview').attr('src',templateHtmlPath);
+    //$('#widgetEditorPreview').attr('src',"preview_url.html");
+
+	
+    //setTimeout(sendContentToPreviewWindow,1500);
+    $('#previewModal2').modal('show');
+
+}
+
+
+
+function playWidgetStandalone()
+{
+    //$('#widgetEditorPreview')[0].contentWindow.previewTemplate(content);
+    //alert("playWidgetStandalone widgetJson="+widgetJson);
+    $('#widgetEditorPreview')[0].contentWindow.initAndPlayTemplate(m_fullWidget);
+}
+
+$("#previewButtonFull").click(function() 
+{
+   doPreview();
+   launchFullScreen(document.getElementById("widgetEditorPreview"));
+});
+
+
+/////////// save widget /////////////////////////////////////////////////////////////////////
+$("#saveButton").click(function() {
+//alert("save");
+    var content_desc = $("#cw_content_desc").val();
+    var approval_flag = $("input[name=cw_approval_flag]:checked").val();//$("#cw_approval_flag").val();
+    //alert("approval_flag="+approval_flag);
+
+    if (content_desc.trim() == "")
+    {
+        //alert("Please eneter a description");
+        w2alert('Please eneter a description for your widget','Warning');
+        return;
+    }
+    
+    if (approval_flag == 10)
+    {
+        w2confirm("<?php echo $txtSaveConfirm;?>")
+        .yes(function () { 
+            doSave();
+        })
+        .no(function () { 
+
+        });
+    }
+    else
+        doSave();
+});
+
+
+function doSave()
+{
+    var updatedContent = m_fullWidget["widget"]["dac_widget"]["content"];
+    contentJson = JSON.stringify(updatedContent);
+    console.log("save" + contentJson);
+    //w2alert("save contentJson="+contentJson);
+
+    var options = {
+        msg          : contentJson,
+        title        : 'Content JSON to submit',
+        width        : 950,       // width of the dialog
+        height       : 520,       // height of the dialog
+        yes_text     : 'Yes',     // text for yes button
+        yes_class    : '',        // class for yes button
+        yes_style    : '',        // style for yes button
+        yes_callBack : null,      // callBack for yes button
+        no_text      : 'No',      // text for no button
+        no_class     : '',        // class for no button
+        no_style     : '',        // style for no button
+        no_callBack  : null,      // callBack for no button
+        callBack     : null       // common callBack
+    };
+    
+    w2confirm (options);
+    
+
+
+    ///////
+}
+
+
+/// widget ////////////////
+
+
+/// widget ////////////////
+function showHideWidgetHeaderInfo(){
+    if(widgetHeaderOn){
+        $('#widgetHeaderInfo').hide(400);
+        widgetHeaderOn = false;
+        $("#metaDataChevron").attr('class', 'glyphicon glyphicon-plus-sign');
+    }
+    else{
+         $('#widgetHeaderInfo').show(400);
+        widgetHeaderOn = true;
+        $("#metaDataChevron").attr('class', 'glyphicon glyphicon-minus-sign');
+    }
+}
+////////////////
+
+function changeZoneSize(widthHeightStr)
+{
+    var array = widthHeightStr.split("|");
+    var w = parseInt(array[0]);
+    var h = parseInt(array[1]);
+    $('#input_zone_width').val(w);
+    $('#input_zone_height').val(h);
+    
+    content.zone_width = w;
+    content.zone_height = h;
+    m_fullWidget["widget"]["dac_widget"]["content"]["zone_width"]=w;
+    m_fullWidget["widget"]["dac_widget"]["content"]["zone_height"]=h;
+
+    console.log("changeWidgetSize zone_width="+array[0]+" zone_height="+array[1]);
+
+    $('#iframe_edit_view')[0].contentWindow.location.reload();
+    
+} 
+
+function changeWidgetSize(widthHeightStr)
+{
+    var array = widthHeightStr.split("|");
+    var w = parseInt(array[0]);
+    var h = parseInt(array[1]);
+
+    setEditViewSize(w, h);
+    $('#zone_width').html(array[0]);
+    $('#zone_height').html(array[1]);
+    content.zone_width = array[0];
+    content.zone_height = array[1];
+    m_fullWidget["widget"]["dac_widget"]["content"]["zone_width"]=array[0];
+    m_fullWidget["widget"]["dac_widget"]["content"]["zone_height"]=array[1];
+
+    console.log("changeWidgetSize zone_width="+array[0]+" zone_height="+array[1]);
+
+    $('#iframe_edit_view')[0].contentWindow.location.reload();
+
+} 
+
+function initEditViewContent()
+{
+    var zone_width = Number(m_fullWidget["widget"]["dac_widget"]["content"]["zone_width"]);
+    var zone_height = Number(m_fullWidget["widget"]["dac_widget"]["content"]["zone_height"]);
+    setEditViewSize(zone_width, zone_height);
+
+    console.log("initEditViewContent zone_width="+zone_width+" zone_height="+zone_height);
+    //console.log("initEditViewContent m_fullWidget="+JSON.stringify(m_fullWidget));
+    $('#iframe_edit_view')[0].contentWindow.initEditView(m_fullWidget);
+
+}
+
+// set edit view window size
+function setEditViewSize(zone_width, zone_height)
+{
+    if(zone_width>=zone_height) //landscape
+    {
+        var view_width = 600;
+        var view_height = zone_height*(view_width/zone_width);
+    }
+    else //portrait
+    {
+        var view_height = 600;
+        var view_width = zone_width*(view_height/zone_height);
+    }
+
+    var viewSize = {"width":view_width+"px","height":view_height+"px","border":"solid 5px #D1D1D1","border-radius": "5px"};
+    $('#iframe_edit_view').css(viewSize);
+
+}
+// called from right edit_view
+function updateEditorContent(fullWidget){
+    m_fullWidget = fullWidget;
+}
+
+// components
+function initColorPicker(id)
+{
+    initCustomColorPicker(id, fullPalette, true);
+}
+ 
+ 
+function initCustomColorPicker(id, paletteArray, showSelectionPalette)
+{
+    $(id).spectrum({
+        showInput: true,
+        className: "full-spectrum",
+        showInitial: true,
+        showPalette: true,
+        showSelectionPalette: showSelectionPalette,
+        maxPaletteSize: 10,
+        preferredFormat: "hex",
+        localStorageKey: "spectrum.demo",
+        showButtons: false,
+
+        move: function (color) {
+
+        },
+        show: function () {
+
+        },
+        beforeShow: function () {
+
+        },
+        hide: function () {
+
+        },
+        change: function() {
+
+        },
+        palette: paletteArray
+    });
+ }
+ 
+function initFontTypeCombox(id)
+{
+   $(id).combobox([
+       'Arial',
+       'Calibri',
+       'Times New Roman',
+       'Verdana'
+   ]);  
+}
+
+ 
+ /// upload dropzone ////
+var uploadCounter = 0;
+function initUploadDropzone(fieldId, maxFilesize, fileFilters)
+{
+    dropzoneId = "#dropzone_"+fieldId;
+    var dropzone = new Dropzone(dropzoneId, { 
+        url: "widget_editor_file_upload_do.php", // Set the url
+        previewsContainer: "#previews", // Define the container to display the previews
+        paramName: "file", // The name that will be used to transfer the file
+        maxFilesize: maxFilesize, // MB,
+        acceptedFiles: fileFilters,
+        clickable: dropzoneId+"_upload" // Define the element that should be used as click trigger to select files.  //dropzone_background_image_clickable
+    });
+	
+    //// init dropzone fields
+
+    var dac_asset = m_dacUtil.getDacAsset(content, fieldId, accountNo);
+
+    if (dac_asset != null)
+    {
+        console.log("[initUploadDropzone] display_name="+dac_asset["display_name"]);
+        $(dropzoneId+"_fileName").html( dac_asset["display_name"]);
+        $(dropzoneId+"_fileType").html( dac_asset["mime_type"]);
+
+        //console.log("set resolution="+dac_asset["resolution"]);
+        console.log("dropzone="+dac_asset["location"]);
+
+        if (dac_asset["mime_type"] != null && ( dac_asset["mime_type"].indexOf("image")>=0 || dac_asset["mime_type"].indexOf("video")>=0))
+        {
+            $(dropzoneId+"_resolution").html( dac_asset["resolution"]);
+            $(dropzoneId+"_placeholder").attr('src', dac_asset["location"]);
+        }
+
+        if (dac_asset["mime_type"] != null && dac_asset["mime_type"].indexOf("audio")>=0)
+            $(dropzoneId+"_placeholder").attr('src', dac_asset["location"]);	
+        ////
+    }
+	
+    dropzone.on("sending", function(file) {
+        uploadCounter++;
+        $('#uploadContainer').show();
+
+    });
+    
+    dropzone.on("complete", function(file) {
+        uploadCounter--;
+        if(uploadCounter<1){
+           $('#uploadContainer').hide();
+        }
+        dropzone.removeFile(file);
+    });
+		
+    dropzone.on("success", function(file,response) {
+        var jsonObj = JSON.parse(response);
+        var responseCode = jsonObj.rsp.mesg.code;
+        console.log("dropzone done: "+response);
+
+        if(responseCode=="200")
+        {
+            var filepath = jsonObj.rsp.data.asset_path;
+            var filename = jsonObj.rsp.data.unique_name;
+            var location = jsonObj.rsp.data.full_asset_path;
+            var assetUrl = assetAPI+location;
+            var displayName = jsonObj.rsp.data.asset;
+            var mimeType = jsonObj.rsp.data.mime_type;
+            var resolution = jsonObj.rsp.data.resolution;
+            var download = null;
+            var source = null;
+
+            updateAssetField(fieldId, location, displayName, mimeType, resolution, download, source);
+        }
+        else {
+            alert("upload error:"+ response);
+        }
+		
+    });
+    dropzone.on("error", function(file) {
+       //alert(file.name);
+       var thumbUrl = "img/" + file.name;
+       $("#dropzone_"+fieldId+"_placeholder").attr("src",thumbUrl);
+       
+    });
+    $('#uploadContainer').hide();
+ }
+ 
+// asset browser
+var fieldNameSelected, optionSelected, maxAssetsSelected;
+function openAssetBrowserPopup(fieldName,fieldType,selectOption,maxAssets)
+{
+    fieldNameSelected=fieldName;
+    optionSelected= optionSelected;
+    maxAssetsSelected = maxAssetsSelected;
+    //$("#loading").show();
+    //waitingDialog.show('Loading ...', {dialogSize: 'sm', progressType: 'danger'});setTimeout(function () {waitingDialog.hide();}, 2000);
+    waitingDialog.show('Asset browser is not avaliable in this Kit', {dialogSize: 'lg', progressType: 'danger'});setTimeout(function () {waitingDialog.hide();}, 3000);
+
+    //w2popup.load({ url: 'asset_browser.php?fld='+fieldName+"&type="+fieldType+"&option="+selectOption+"&max="+maxAssets, title: "Asset browser", width: 1190, height: 760, showMax: true });
+    // w2popup.load({ url: 'contact.html', title: "Asset browser", width: 1190, height: 680, showMax: true });
+
+    //setTimeout(function() { $("#loading").hide(); },1000)
+}
+
+function selectAsset(recid, fieldName)
+{
+    var record = w2ui['assets_grid'].get(recid);
+
+    var fid= record["FID"];
+    var mimeType = record["MIME_TYPE"];
+    var asset = record["ASSET"];
+    var assetPath = record["ASSET_PATH"];
+    var assetUrl = assetAPI+assetPath;
+    var resolution = record["RESOLUTION"];
+    console.log("select asset="+assetPath+ " "+asset);
+
+    //setAssetRecord(asset,mimeType, assetPath,assetUrl);
+
+    var location = record["ASSET_PATH"];
+    var displayName = record["ASSET"];
+    var mimeType = record["MIME_TYPE"];
+    var download = null;
+    var source = null;
+
+    updateAssetField(fieldName, location, displayName, mimeType, resolution, download, source);
+    w2popup.close();	
+}
+
+function selectMultipleAssets(sel, fieldName)
+{
+    console.log("selectMultipleAssets: field="+fieldName+" selection="+sel+" count="+sel.length);
+    if (sel.length === 1)
+    {
+        recid = sel[0];
+        var record = w2ui['assets_grid'].get(recid);
+        var fid= record["FID"];
+        var mimeType = record["MIME_TYPE"];
+        var asset = record["ASSET"];
+        var assetPath = record["ASSET_PATH"];
+        var assetUrl = assetAPI+assetPath;
+
+        console.log("select asset="+assetPath+ " "+asset);
+
+        //setAssetRecord(asset,mimeType, assetPath,assetUrl);
+
+        var location = record["ASSET_PATH"];
+        var displayName = record["ASSET"];
+        var mimeType = record["MIME_TYPE"];
+        var download = null;
+        var source = null;
+
+        //updateAssetField(fieldName);	
+        updateAssetField(fieldName, location, displayName, mimeType, download, source);
+
+    }
+    else
+    {
+        //alert ("handle multi selection: "+sel);
+    }
+    w2popup.close();
+}
+
+// Field update functions
+
+
+// update indiviudal no boolean UI variable 
+function updateWidgetField(name,value)
+{
+    console.log(name+"="+value);
+    
+    m_fullWidget["widget"]["dac_widget"]["content"][name]=value;
+    $('#iframe_edit_view')[0].contentWindow.updateEditView(m_fullWidget, name, value);
+    
+    if (name=="radio_standard") 
+    {
+        $('#select_zone_size').val("1920|1080");
+        changeWidgetSize("1920|1080");
+    }
+       
+}
+
+function updateWidgetFieldWithReload(name,value)
+{
+    m_fullWidget["widget"]["dac_widget"]["content"][name]=value;
+
+    $('#iframe_edit_view')[0].contentWindow.location.reload();
+}
+
+function updateFeedKey(name,value)
+{
+    console.log("updateFeedKey: "+value);
+    var feedKey = value;
+
+    var getFeedPromise = $.ajax({
+        url : "get_feed_json.php",
+        method: 'POST',
+        dataType : "json",
+        data: {feed:feedKey, maxchars: maxCharsPerPost}
+    });
+
+	
+    getFeedPromise.done(function(data) {
+
+        $json = $(data);
+        var fullFeedObj = $json[0];
+        //console.log("ajax json="+$json[0]);
+
+        if ($json!=null)
+        {
+            //console.log("updateFeedKey get_feed_json ok "+value +"   json="+fullFeedJson);
+
+    //	var fullFeedObj = JSON.parse(fullFeedJson);
+
+            var feedJson = "{}";
+            var feedAssetObj = "{}";
+
+            if (fullFeedObj != null && JSON.stringify(fullFeedObj) != '{}')
+            {
+
+                feedObj = fullFeedObj["feed"];
+
+                feedAssetObj =  fullFeedObj["feedAsset"];
+
+                m_fullWidget["feed"]= feedObj;
+                m_fullWidget["feedAsset"]=feedAssetObj;
+
+                m_fullWidget["widget"]["dac_widget"]["content"][name]=value;
+                //$('#iframe_edit_view')[0].contentWindow.initEditView(m_fullWidget);
+                console.log("[content_widget_editor]updateFeedKey: reload edit view");
+
+                $('#iframe_edit_view')[0].contentWindow.location.reload();
+            }
+
+        }
+        else
+        {
+            alert("feed error: "+status);
+            //$("#saveMessage").fadeIn(500);
+            //$("#saveMessage").delay(1000).fadeOut(500);
+            //$( "#dialog_save_error" ).dialog();
+        } 		
+
+    });
+
+    getFeedPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("get feed error"+textStatus+" "+errorThrown);
+
+    });
+	
+}
+ 
+// update indiviudal boolean UI variable 
+function toggleBooleanField(name,value)
+{
+    if (m_fullWidget["widget"]["dac_widget"]["content"][name]===true)
+        m_fullWidget["widget"]["dac_widget"]["content"][name]=false;
+    else
+        m_fullWidget["widget"]["dac_widget"]["content"][name]=true;
+/*	
+    if (content[name]==true)
+        content[name] = false;
+    else
+        content[name] = true;
+*/
+    console.log("[content_widget_editor]toggleBooleanField "+name+"="+m_fullWidget["widget"]["dac_widget"]["content"][name]);
+    $('#iframe_edit_view')[0].contentWindow.updateEditView(m_fullWidget,name, value);
+
+}
+
+function toggleBooleanButton(field,btn)
+{ 
+    if(btn.className == "dac-btn-boolean-on")
+    {
+        btn.className = "dac-btn-boolean-off";
+        updateWidgetField(field,false);
+    }
+    else if(btn.className == "dac-btn-boolean-off")
+    {
+        btn.className = "dac-btn-boolean-on";
+        updateWidgetField(field,true);
+    }
+}
+
+function toggleTextAlignButton(fieldId,align)
+{
+    //alert("toggleTextAlignButton "+fieldId+ " "+align);
+
+    
+    if (align == "left" && m_fullWidget["widget"]["dac_widget"]["content"][fieldId]!="left" )
+    {
+        //alert("left="+"#"+fieldId+"_left");
+        //alert("before="+$("#"+fieldId+"_align_left").attr("class"));
+        var currentClass = $("#"+fieldId+"_align_left").attr("class");
+
+        $("#"+fieldId+"_left").addClass("dac-btn-boolean-on");
+        $("#"+fieldId+"_left").removeClass("dac-btn-boolean-off"); 
+
+        $("#"+fieldId+"_center").addClass("dac-btn-boolean-off");
+        $("#"+fieldId+"_center").removeClass("dac-btn-boolean-on");
+        $("#"+fieldId+"_right").addClass("dac-btn-boolean-off");
+        $("#"+fieldId+"_right").removeClass("dac-btn-boolean-on");
+    }
+    else if (align == "center"  && m_fullWidget["widget"]["dac_widget"]["content"][fieldId]!="center")
+    {
+        $("#"+fieldId+"_center").className = "dac-btn-boolean-on";
+        $("#"+fieldId+"_left").addClass("dac-btn-boolean-off");
+        
+        $("#"+fieldId+"_left").removeClass("dac-btn-boolean-on");
+        $("#"+fieldId+"_center").addClass("dac-btn-boolean-on");
+        $("#"+fieldId+"_center").removeClass("dac-btn-boolean-off");
+        $("#"+fieldId+"_right").addClass("dac-btn-boolean-off");
+        $("#"+fieldId+"_center").removeClass("dac-btn-boolean-on");
+    }
+    else if (align == "right"  && m_fullWidget["widget"]["dac_widget"]["content"][fieldId]!="right")
+    {
+
+        $("#"+fieldId+"_left").addClass("dac-btn-boolean-off");
+        $("#"+fieldId+"_left").removeClass("dac-btn-boolean-on");
+        
+        $("#"+fieldId+"_center").addClass("dac-btn-boolean-off");
+        $("#"+fieldId+"_center").removeClass("dac-btn-boolean-on");
+        $("#"+fieldId+"_right").addClass("dac-btn-boolean-on");
+        $("#"+fieldId+"_right").addClass("dac-btn-boolean-off");
+    }
+    m_fullWidget["widget"]["dac_widget"]["content"][fieldId]=align;
+    updateWidgetField(fieldId,align);
+}
+
+//asset
+function updateAssetField(fieldName, location, displayName, mimeType, resolution, download, source)
+{
+    //console.log("updateEditView contentJson="+contentJson);
+    var assetUrl = assetAPI+location;
+    $("#dropzone_"+fieldName+"_fileName").html(displayName);
+    $("#dropzone_"+fieldName+"_fileType").html(mimeType);
+
+    if (mimeType.indexOf("audio")<0)
+    {
+        $("#dropzone_"+fieldName+"_resolution").html(resolution);
+        $("#dropzone_"+fieldName+"_placeholder").attr('src', assetUrl);
+    }
+    //content = JSON.parse(contentJson);
+    //console.log("content="+content);
+    //content = contentTemplate.setAsset(content, fieldName, location, displayName, mimeType, resolution, download, source);
+    m_fullWidget = m_dacUtil.setFullWidgetAsset(m_fullWidget, fieldName, location, displayName, mimeType, resolution, download, source,accountNo);
+
+    $('#iframe_edit_view')[0].contentWindow.updateEditView(m_fullWidget);
+}
+
+
+// feed
+function loadFeed()
+{
+    var loadFeedPromise = $.ajax({
+        url : "get_feed_json.php",
+        method: 'POST',
+        dataType : "json",
+        data: {feed:content.feed_key,account_no:accountNo}
+    });
+
+    loadFeedPromise.done(function(data) {
+
+        $json = $(data);
+        console.log("ajax json="+$json[0]);
+        var status = $json[0].rsp.mesg.status;
+        var code = $json[0].rsp.mesg.code;
+        if (status=="ok")
+        {
+            //get feed ...
+            $('#iframe_edit_view')[0].contentWindow.initEditView(m_fullWidget);
+        }
+        else
+        {
+
+        } 		
+    });
+
+    loadFeedPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("save error"+textStatus+" "+errorThrown);
+        
+
+
+    });
+}
+
+
+$("#licensed_players").change(function() 
+{
+    changeLicensedPlayers();
+})
+
+
+function changeLicensedPlayers()
+{
+    var licensed_players = $("#licensed_players").val();
+    var discount = dacUI.getWidgetVolumeDiscount(licensed_players);
+    console.log("discount="+discount);
+   // var unit_price = $("#unit_price").val();
+    var ds_unit_price = unit_price - unit_price * discount;
+    ds_unit_price = parseFloat(Math.round(ds_unit_price * 100) / 100).toFixed(2);
+    $('#your_unit_price').val("$"+ds_unit_price);
+    var total_widget_price = parseFloat(Math.round(licensed_players * ds_unit_price * 100) / 100).toFixed(2);
+    discount = parseFloat(discount*100).toFixed(0) ;
+    $('#volume_discount').val(discount+"%");
+    $('#unit_price').val("$"+unit_price);
+    $('#total_widget_price').val("$"+total_widget_price);
+}
+
+
+
+
+function show_help(id) {
+  $('#'+id).w2popup();
+}
+
+
+var pastValue, pastSelectionStart, pastSelectionEnd;
+
+$("#input_zone_width").on("keydown", function() {
+    pastValue          = this.value;
+    pastSelectionStart = this.selectionStart;
+    pastSelectionEnd   = this.selectionEnd;
+}).on("input propertychange", function() {
+      //var regex = /^[0-9]+\.?[0-9]*$/;
+      var regex = /^[0-9]+$/;
+				
+    if (this.value.length > 0 && !regex.test(this.value)) {
+        this.value          = pastValue;
+        this.selectionStart = pastSelectionStart;
+        this.selectionEnd   = pastSelectionEnd;
+    }
+});
+
+$("#input_zone_height").on("keydown", function() {
+    pastValue          = this.value;
+    pastSelectionStart = this.selectionStart;
+    pastSelectionEnd   = this.selectionEnd;
+}).on("input propertychange", function() {
+      //var regex = /^[0-9]+\.?[0-9]*$/;
+      var regex = /^[0-9]+$/;
+				
+    if (this.value.length > 0 && !regex.test(this.value)) {
+        this.value          = pastValue;
+        this.selectionStart = pastSelectionStart;
+        this.selectionEnd   = pastSelectionEnd;
+    }
+});
+
+$("#post_duration").on("keydown", function() {
+    pastValue          = this.value;
+    pastSelectionStart = this.selectionStart;
+    pastSelectionEnd   = this.selectionEnd;
+}).on("input propertychange", function() {
+      //var regex = /^[0-9]+\.?[0-9]*$/;
+      var regex = /^[0-9]+$/;
+				
+    if (this.value.length > 0 && !regex.test(this.value) || this.value.length > 6) {
+        this.value          = pastValue;
+        this.selectionStart = pastSelectionStart;
+        this.selectionEnd   = pastSelectionEnd;
+    }
+});
+
+
+function getParameterByName(name) {
+    if (name !== "" && name !== null && name != undefined) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    } else {
+        var arr = location.href.split("/");
+        return arr[arr.length - 1];
+    }
+
+}
+
+
+function showHideGroup(groupId)
+{
+    if($('#'+groupId).is(":visible")){
+        $('#'+groupId).hide(400);
+        $('#'+groupId+"_chevron").attr('class', 'glyphicon glyphicon-plus-sign');
+    }
+    else{
+         $('#'+groupId).show(400);
+         $('#'+groupId+"_chevron").attr('class', 'glyphicon glyphicon-minus-sign');
+    }
+}
+
+ 
+</script>
+
+<div class="sp-container sp-hidden sp-light sp-buttons-disabled sp-palette-buttons-disabled full-spectrum" style="position: absolute; top: 0px; left: 0px;"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#990000" data-color="rgb(153, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 0);"></span></span><span title="#b45f06" data-color="rgb(180, 95, 6)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(180, 95, 6);"></span></span><span title="#bf9000" data-color="rgb(191, 144, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(191, 144, 0);"></span></span><span title="#38761d" data-color="rgb(56, 118, 29)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(56, 118, 29);"></span></span><span title="#134f5c" data-color="rgb(19, 79, 92)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(19, 79, 92);"></span></span><span title="#0b5394" data-color="rgb(11, 83, 148)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(11, 83, 148);"></span></span><span title="#351c75" data-color="rgb(53, 28, 117)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(53, 28, 117);"></span></span><span title="#741b47" data-color="rgb(116, 27, 71)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(116, 27, 71);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"><span title="#993311" data-color="rgb(153, 51, 17)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 51, 17);"></span></span><span title="#ad320f" data-color="rgb(173, 50, 15)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(173, 50, 15);"></span></span><span title="#e59966" data-color="rgb(229, 153, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(229, 153, 102);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#009999" data-color="rgb(0, 153, 153)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 153, 153);"></span></span><span title="#006666" data-color="rgb(0, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 102, 102);"></span></span></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">less</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(255, 0, 0);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="display: block; top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="display: block; top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="display: block; left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"><div class="sp-cf sp-palette-row-initial"><span data-color="" style="background-color:transparent;" class="sp-clear-display" title="No Color Selected"></span><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span></div></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="http://localhost/dac/content_widget_editor.php?cid=-IwY31IDM9TEkuk1RSb5EQeJj6QhiA2N3yb_nskxwJU&amp;t=twitter&amp;mode=e#">cancel</a><button type="button" class="sp-choose">choose</button></div></div></div><input type="file" multiple="multiple" accept=".jpg, .png" style="visibility: hidden; position: absolute; top: 0px; left: 0px; height: 0px; width: 0px;"><div class="sp-container sp-hidden sp-light sp-buttons-disabled sp-palette-buttons-disabled full-spectrum" style="position: absolute; top: 0px; left: 0px;"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#434343" data-color="rgb(67, 67, 67)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(67, 67, 67);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#d9d9d9" data-color="rgb(217, 217, 217)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 217, 217);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#980000" data-color="rgb(152, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(152, 0, 0);"></span></span><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#4a86e8" data-color="rgb(74, 134, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(74, 134, 232);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#e6b8af" data-color="rgb(230, 184, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 184, 175);"></span></span><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#c9daf8" data-color="rgb(201, 218, 248)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(201, 218, 248);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span><span title="#dd7e6b" data-color="rgb(221, 126, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(221, 126, 107);"></span></span><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#a4c2f4" data-color="rgb(164, 194, 244)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(164, 194, 244);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span><span title="#cc4125" data-color="rgb(204, 65, 37)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 65, 37);"></span></span><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6d9eeb" data-color="rgb(109, 158, 235)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(109, 158, 235);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span><span title="#a61c00" data-color="rgb(166, 28, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 28, 0);"></span></span><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3c78d8" data-color="rgb(60, 120, 216)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(60, 120, 216);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span><span title="#5b0f00" data-color="rgb(91, 15, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(91, 15, 0);"></span></span><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#1c4587" data-color="rgb(28, 69, 135)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(28, 69, 135);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"><span title="#993311" data-color="rgb(153, 51, 17)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 51, 17);"></span></span><span title="#ad320f" data-color="rgb(173, 50, 15)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(173, 50, 15);"></span></span><span title="#e59966" data-color="rgb(229, 153, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(229, 153, 102);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#009999" data-color="rgb(0, 153, 153)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 153, 153);"></span></span><span title="#006666" data-color="rgb(0, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 102, 102);"></span></span></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">less</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(0, 134, 255);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="display: block; top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="display: block; top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="display: block; left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"><div class="sp-cf sp-palette-row-initial"><span data-color="" style="background-color:transparent;" class="sp-clear-display" title="No Color Selected"></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span></div></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="http://localhost/dac/content_widget_editor.php?cid=-IwY31IDM9TEkuk1RSb5EQeJj6QhiA2N3yb_nskxwJU&amp;t=twitter&amp;mode=e#">cancel</a><button type="button" class="sp-choose">choose</button></div></div></div><div class="sp-container sp-hidden sp-light sp-buttons-disabled sp-palette-buttons-disabled full-spectrum" style="position: absolute; top: 0px; left: 0px;"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#434343" data-color="rgb(67, 67, 67)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(67, 67, 67);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#d9d9d9" data-color="rgb(217, 217, 217)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 217, 217);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#980000" data-color="rgb(152, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(152, 0, 0);"></span></span><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#4a86e8" data-color="rgb(74, 134, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(74, 134, 232);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#e6b8af" data-color="rgb(230, 184, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 184, 175);"></span></span><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#c9daf8" data-color="rgb(201, 218, 248)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(201, 218, 248);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span><span title="#dd7e6b" data-color="rgb(221, 126, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(221, 126, 107);"></span></span><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#a4c2f4" data-color="rgb(164, 194, 244)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(164, 194, 244);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span><span title="#cc4125" data-color="rgb(204, 65, 37)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 65, 37);"></span></span><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6d9eeb" data-color="rgb(109, 158, 235)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(109, 158, 235);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span><span title="#a61c00" data-color="rgb(166, 28, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 28, 0);"></span></span><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3c78d8" data-color="rgb(60, 120, 216)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(60, 120, 216);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span><span title="#5b0f00" data-color="rgb(91, 15, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(91, 15, 0);"></span></span><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#1c4587" data-color="rgb(28, 69, 135)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(28, 69, 135);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"><span title="#993311" data-color="rgb(153, 51, 17)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 51, 17);"></span></span><span title="#ad320f" data-color="rgb(173, 50, 15)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(173, 50, 15);"></span></span><span title="#e59966" data-color="rgb(229, 153, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(229, 153, 102);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#009999" data-color="rgb(0, 153, 153)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 153, 153);"></span></span><span title="#006666" data-color="rgb(0, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 102, 102);"></span></span></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">less</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(255, 0, 0);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="display: block; top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="display: block; top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="display: block; left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"><div class="sp-cf sp-palette-row-initial"><span data-color="" style="background-color:transparent;" class="sp-clear-display" title="No Color Selected"></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span></div></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="http://localhost/dac/content_widget_editor.php?cid=-IwY31IDM9TEkuk1RSb5EQeJj6QhiA2N3yb_nskxwJU&amp;t=twitter&amp;mode=e#">cancel</a><button type="button" class="sp-choose">choose</button></div></div></div><div class="sp-container sp-hidden sp-light sp-buttons-disabled sp-palette-buttons-disabled full-spectrum" style="position: absolute; top: 0px; left: 0px;"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#434343" data-color="rgb(67, 67, 67)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(67, 67, 67);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#d9d9d9" data-color="rgb(217, 217, 217)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 217, 217);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#980000" data-color="rgb(152, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(152, 0, 0);"></span></span><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#4a86e8" data-color="rgb(74, 134, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(74, 134, 232);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#e6b8af" data-color="rgb(230, 184, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 184, 175);"></span></span><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#c9daf8" data-color="rgb(201, 218, 248)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(201, 218, 248);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span><span title="#dd7e6b" data-color="rgb(221, 126, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(221, 126, 107);"></span></span><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#a4c2f4" data-color="rgb(164, 194, 244)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(164, 194, 244);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span><span title="#cc4125" data-color="rgb(204, 65, 37)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 65, 37);"></span></span><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6d9eeb" data-color="rgb(109, 158, 235)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(109, 158, 235);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span><span title="#a61c00" data-color="rgb(166, 28, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 28, 0);"></span></span><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3c78d8" data-color="rgb(60, 120, 216)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(60, 120, 216);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span><span title="#5b0f00" data-color="rgb(91, 15, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(91, 15, 0);"></span></span><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#1c4587" data-color="rgb(28, 69, 135)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(28, 69, 135);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"><span title="#993311" data-color="rgb(153, 51, 17)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 51, 17);"></span></span><span title="#ad320f" data-color="rgb(173, 50, 15)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(173, 50, 15);"></span></span><span title="#e59966" data-color="rgb(229, 153, 102)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(229, 153, 102);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#009999" data-color="rgb(0, 153, 153)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 153, 153);"></span></span><span title="#006666" data-color="rgb(0, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 102, 102);"></span></span></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">less</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(255, 102, 0);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="display: block; top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="display: block; top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="display: block; left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"><div class="sp-cf sp-palette-row-initial"><span data-color="" style="background-color:transparent;" class="sp-clear-display" title="No Color Selected"></span><span title="#e59966" data-color="rgb(229, 153, 102)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(229, 153, 102);"></span></span></div></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="http://localhost/dac/content_widget_editor.php?cid=-IwY31IDM9TEkuk1RSb5EQeJj6QhiA2N3yb_nskxwJU&amp;t=twitter&amp;mode=e#">cancel</a><button type="button" class="sp-choose">choose</button></div></div></div><div class="sp-container sp-hidden sp-light sp-buttons-disabled sp-palette-buttons-disabled full-spectrum" style="position: absolute; top: 0px; left: 0px;"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#434343" data-color="rgb(67, 67, 67)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(67, 67, 67);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#d9d9d9" data-color="rgb(217, 217, 217)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 217, 217);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#980000" data-color="rgb(152, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(152, 0, 0);"></span></span><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#4a86e8" data-color="rgb(74, 134, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(74, 134, 232);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#e6b8af" data-color="rgb(230, 184, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 184, 175);"></span></span><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#c9daf8" data-color="rgb(201, 218, 248)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(201, 218, 248);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span><span title="#dd7e6b" data-color="rgb(221, 126, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(221, 126, 107);"></span></span><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#a4c2f4" data-color="rgb(164, 194, 244)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(164, 194, 244);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span><span title="#cc4125" data-color="rgb(204, 65, 37)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 65, 37);"></span></span><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6d9eeb" data-color="rgb(109, 158, 235)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(109, 158, 235);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span><span title="#a61c00" data-color="rgb(166, 28, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 28, 0);"></span></span><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3c78d8" data-color="rgb(60, 120, 216)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(60, 120, 216);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span><span title="#5b0f00" data-color="rgb(91, 15, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(91, 15, 0);"></span></span><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#1c4587" data-color="rgb(28, 69, 135)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(28, 69, 135);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"><span title="#993311" data-color="rgb(153, 51, 17)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 51, 17);"></span></span><span title="#ad320f" data-color="rgb(173, 50, 15)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(173, 50, 15);"></span></span><span title="#e59966" data-color="rgb(229, 153, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(229, 153, 102);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#009999" data-color="rgb(0, 153, 153)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 153, 153);"></span></span><span title="#006666" data-color="rgb(0, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 102, 102);"></span></span></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">less</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(255, 0, 0);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="display: block; top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="display: block; top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="display: block; left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"><div class="sp-cf sp-palette-row-initial"><span data-color="" style="background-color:transparent;" class="sp-clear-display" title="No Color Selected"></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="http://localhost/dac/content_widget_editor.php?cid=-IwY31IDM9TEkuk1RSb5EQeJj6QhiA2N3yb_nskxwJU&amp;t=twitter&amp;mode=e#">cancel</a><button type="button" class="sp-choose">choose</button></div></div></div><div class="sp-container sp-hidden sp-light sp-buttons-disabled sp-palette-buttons-disabled full-spectrum" style="position: absolute; top: 0px; left: 0px;"><div class="sp-palette-container"><div class="sp-palette sp-thumb sp-cf"><div class="sp-cf sp-palette-row sp-palette-row-0"><span title="#000000" data-color="rgb(0, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 0);"></span></span><span title="#434343" data-color="rgb(67, 67, 67)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(67, 67, 67);"></span></span><span title="#666666" data-color="rgb(102, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 102, 102);"></span></span><span title="#cccccc" data-color="rgb(204, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(204, 204, 204);"></span></span><span title="#d9d9d9" data-color="rgb(217, 217, 217)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 217, 217);"></span></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-1"><span title="#980000" data-color="rgb(152, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(152, 0, 0);"></span></span><span title="#ff0000" data-color="rgb(255, 0, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 0);"></span></span><span title="#ff9900" data-color="rgb(255, 153, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 153, 0);"></span></span><span title="#ffff00" data-color="rgb(255, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 0);"></span></span><span title="#00ff00" data-color="rgb(0, 255, 0)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 0);"></span></span><span title="#00ffff" data-color="rgb(0, 255, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 255, 255);"></span></span><span title="#4a86e8" data-color="rgb(74, 134, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(74, 134, 232);"></span></span><span title="#0000ff" data-color="rgb(0, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(0, 0, 255);"></span></span><span title="#9900ff" data-color="rgb(153, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(153, 0, 255);"></span></span><span title="#ff00ff" data-color="rgb(255, 0, 255)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 0, 255);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-2"><span title="#e6b8af" data-color="rgb(230, 184, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 184, 175);"></span></span><span title="#f4cccc" data-color="rgb(244, 204, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(244, 204, 204);"></span></span><span title="#fce5cd" data-color="rgb(252, 229, 205)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(252, 229, 205);"></span></span><span title="#fff2cc" data-color="rgb(255, 242, 204)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 242, 204);"></span></span><span title="#d9ead3" data-color="rgb(217, 234, 211)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 234, 211);"></span></span><span title="#d0e0e3" data-color="rgb(208, 224, 227)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(208, 224, 227);"></span></span><span title="#c9daf8" data-color="rgb(201, 218, 248)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(201, 218, 248);"></span></span><span title="#cfe2f3" data-color="rgb(207, 226, 243)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(207, 226, 243);"></span></span><span title="#d9d2e9" data-color="rgb(217, 210, 233)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(217, 210, 233);"></span></span><span title="#ead1dc" data-color="rgb(234, 209, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 209, 220);"></span></span><span title="#dd7e6b" data-color="rgb(221, 126, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(221, 126, 107);"></span></span><span title="#ea9999" data-color="rgb(234, 153, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(234, 153, 153);"></span></span><span title="#f9cb9c" data-color="rgb(249, 203, 156)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(249, 203, 156);"></span></span><span title="#ffe599" data-color="rgb(255, 229, 153)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 229, 153);"></span></span><span title="#b6d7a8" data-color="rgb(182, 215, 168)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(182, 215, 168);"></span></span><span title="#a2c4c9" data-color="rgb(162, 196, 201)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(162, 196, 201);"></span></span><span title="#a4c2f4" data-color="rgb(164, 194, 244)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(164, 194, 244);"></span></span><span title="#9fc5e8" data-color="rgb(159, 197, 232)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(159, 197, 232);"></span></span><span title="#b4a7d6" data-color="rgb(180, 167, 214)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(180, 167, 214);"></span></span><span title="#d5a6bd" data-color="rgb(213, 166, 189)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(213, 166, 189);"></span></span><span title="#cc4125" data-color="rgb(204, 65, 37)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 65, 37);"></span></span><span title="#e06666" data-color="rgb(224, 102, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(224, 102, 102);"></span></span><span title="#f6b26b" data-color="rgb(246, 178, 107)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(246, 178, 107);"></span></span><span title="#ffd966" data-color="rgb(255, 217, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(255, 217, 102);"></span></span><span title="#93c47d" data-color="rgb(147, 196, 125)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(147, 196, 125);"></span></span><span title="#76a5af" data-color="rgb(118, 165, 175)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(118, 165, 175);"></span></span><span title="#6d9eeb" data-color="rgb(109, 158, 235)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(109, 158, 235);"></span></span><span title="#6fa8dc" data-color="rgb(111, 168, 220)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(111, 168, 220);"></span></span><span title="#8e7cc3" data-color="rgb(142, 124, 195)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(142, 124, 195);"></span></span><span title="#c27ba0" data-color="rgb(194, 123, 160)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(194, 123, 160);"></span></span><span title="#a61c00" data-color="rgb(166, 28, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 28, 0);"></span></span><span title="#cc0000" data-color="rgb(204, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(204, 0, 0);"></span></span><span title="#e69138" data-color="rgb(230, 145, 56)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(230, 145, 56);"></span></span><span title="#f1c232" data-color="rgb(241, 194, 50)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(241, 194, 50);"></span></span><span title="#6aa84f" data-color="rgb(106, 168, 79)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(106, 168, 79);"></span></span><span title="#45818e" data-color="rgb(69, 129, 142)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(69, 129, 142);"></span></span><span title="#3c78d8" data-color="rgb(60, 120, 216)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(60, 120, 216);"></span></span><span title="#3d85c6" data-color="rgb(61, 133, 198)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(61, 133, 198);"></span></span><span title="#674ea7" data-color="rgb(103, 78, 167)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(103, 78, 167);"></span></span><span title="#a64d79" data-color="rgb(166, 77, 121)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(166, 77, 121);"></span></span><span title="#5b0f00" data-color="rgb(91, 15, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(91, 15, 0);"></span></span><span title="#660000" data-color="rgb(102, 0, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(102, 0, 0);"></span></span><span title="#783f04" data-color="rgb(120, 63, 4)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(120, 63, 4);"></span></span><span title="#7f6000" data-color="rgb(127, 96, 0)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(127, 96, 0);"></span></span><span title="#274e13" data-color="rgb(39, 78, 19)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(39, 78, 19);"></span></span><span title="#0c343d" data-color="rgb(12, 52, 61)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(12, 52, 61);"></span></span><span title="#1c4587" data-color="rgb(28, 69, 135)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(28, 69, 135);"></span></span><span title="#073763" data-color="rgb(7, 55, 99)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(7, 55, 99);"></span></span><span title="#20124d" data-color="rgb(32, 18, 77)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(32, 18, 77);"></span></span><span title="#4c1130" data-color="rgb(76, 17, 48)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(76, 17, 48);"></span></span></div><div class="sp-cf sp-palette-row sp-palette-row-selection"><span title="#993311" data-color="rgb(153, 51, 17)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(153, 51, 17);"></span></span><span title="#ad320f" data-color="rgb(173, 50, 15)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(173, 50, 15);"></span></span><span title="#e59966" data-color="rgb(229, 153, 102)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(229, 153, 102);"></span></span><span title="#eeeeee" data-color="rgb(238, 238, 238)" class="sp-thumb-el sp-thumb-light"><span class="sp-thumb-inner" style="background-color:rgb(238, 238, 238);"></span></span><span title="#009999" data-color="rgb(0, 153, 153)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 153, 153);"></span></span><span title="#006666" data-color="rgb(0, 102, 102)" class="sp-thumb-el sp-thumb-dark"><span class="sp-thumb-inner" style="background-color:rgb(0, 102, 102);"></span></span></div></div><div class="sp-palette-button-container sp-cf"><button type="button" class="sp-palette-toggle">less</button></div></div><div class="sp-picker-container"><div class="sp-top sp-cf"><div class="sp-fill"></div><div class="sp-top-inner"><div class="sp-color" style="background-color: rgb(255, 0, 0);"><div class="sp-sat"><div class="sp-val"><div class="sp-dragger" style="display: block; top: 0px; left: 0px;"></div></div></div></div><div class="sp-clear sp-clear-display" title="Clear Color Selection" style="display: none;"></div><div class="sp-hue"><div class="sp-slider" style="display: block; top: 0px;"></div></div></div><div class="sp-alpha"><div class="sp-alpha-inner"><div class="sp-alpha-handle" style="display: block; left: 0px;"></div></div></div></div><div class="sp-input-container sp-cf"><input class="sp-input" type="text" spellcheck="false"></div><div class="sp-initial sp-thumb sp-cf"><div class="sp-cf sp-palette-row-initial"><span data-color="" style="background-color:transparent;" class="sp-clear-display" title="No Color Selected"></span><span title="#ffffff" data-color="rgb(255, 255, 255)" class="sp-thumb-el sp-thumb-light sp-thumb-active"><span class="sp-thumb-inner" style="background-color:rgb(255, 255, 255);"></span></span></div></div><div class="sp-button-container sp-cf"><a class="sp-cancel" href="http://localhost/dac/content_widget_editor.php?cid=-IwY31IDM9TEkuk1RSb5EQeJj6QhiA2N3yb_nskxwJU&amp;t=twitter&amp;mode=e#">cancel</a><button type="button" class="sp-choose">choose</button></div></div></div>
+
+</body>
+</html>

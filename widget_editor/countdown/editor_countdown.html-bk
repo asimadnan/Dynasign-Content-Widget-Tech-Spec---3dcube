@@ -1,0 +1,165 @@
+
+ 
+<div class="main-content">
+<div class="row">
+<!---- start left side editor ----->
+<div class="col-md-6" id="left_editor">
+	   
+<div id="accordion">
+    
+<h3>&nbsp;&nbsp;&nbsp;Widget Price and Licensed Devices</h3><div><div style="float:left; margin-left: 0px;"><span class="daclabel daclabel-default" >Number of Devices You Like to Play this Widget on </span><div style="margin-top:5px;"><div class="col-md-1 input-group-sm" ><div class="input-group"><span class="input-group-btn"><button type="button" class="btn btn-default btn-number"  data-type="minus" data-field="quant[1]" style="margin-left:-14px"><span class="glyphicon glyphicon-minus"></span></button></span><input type="text" name="quant[1]" class="form-control input-number" id="licensed_players" value="1" min="1" max="99999"><span class="input-group-btn"><button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"><span class="glyphicon glyphicon-plus"></span> </button></span></div></div></div></div><div style="float:left; margin-left: 0px; margin-top: 10px;"><span class="daclabel daclabel-default" >Unit Price </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="unit_price" value="4.99" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Volume Discount </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="volume_discount" value="0%" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Your Unit Price After Discount </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="your_unit_price" value="0%" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Total Monthly Price </span><div style="margin-top:5px;"><input type="text"  class="form-control"  id="total_widget_price" value="2" readonly="readonly"  style="color:#9C0000;  margin-left:0px; text-align: right; width:100px" /> </div></div><hr style = "width:100%; border: 0; height: 2px;  background: #fff;"><span class="daclabel daclabel-default" style="float:left; margin-left: 0px; margin-bottom: 0px; margin-top: 0px;" >Unit price is per month per device. Volume discount is based on the number of devices</span></div><h3>&nbsp;&nbsp;&nbsp;Widget Size</h3><div><div class=\"dropdown\"><span><input id="input_zone_width" maxlength="5" style="width:60px; height:30px;"  value="1920"></input> x <input id="input_zone_height" maxlength="5" style="width:60px;height:30px;" value="1080"></input></span><button class="btn" data-toggle="dropdown"  style="color: #CCCCCC; min-width: 30px; width: 33px;"><span class="caret" style="color:#333333"></span></button><ul class="dropdown-menu list-dropdown-menu" style="margin-left: 30px; margin-top:-128px;"><li><a href="#" onclick="changeZoneSize('3840|2160');">3840 x 2160 (landscape)</a></li><li><a href="#" onclick="changeZoneSize('1920|1080');">1920 x 1080 (landscape)</a></li><li><a href="#" onclick="changeZoneSize('1280|720');">1280 x 720 (landscape</a></li><li><a href="#" onclick="changeZoneSize('2160|3840');">2160 x 3840 (portrait)</a></li><li><a href="#" onclick="changeZoneSize('1080|1920');">1080 x 1920 (portrait)</a></li><li><a href="#" onclick="changeZoneSize('720|1280');">720 x 1280 (portrait)</a></li></ul><div style="float:right;margin-right:230px;"><button type="button" class="dac-btn-sm" onclick='changeZoneSize($( "#input_zone_width" ).val()+"|"+$( "#input_zone_height" ).val())'>Set Size</button></div><div style="margin-top:10px;">Set the widget size to be the same as the zone size on screen.</div></div></div><h3>&nbsp;&nbsp;&nbsp;Background</h3><div><div style="margin-bottom:4px;  "><input id="background_image_flag" style="font-size:20px;" type="checkbox" checked onClick="toggleBooleanField('background_image_flag', this.checked)"><span class="daclabel daclabel-default" >Background Image</span></div><div style="float: left" id="dropzone_background_image"><div class="dropzone-previews" style="width:440px; margin-top:0px;margin-left:6px"><div class="dz-preview dz-processing dz-success dz-image-preview" style="float:left;  margin-left:0px; width:114px; height:114px; margin-top:0px;"><div class="dz-details" style="float:left"><img data-dz-thumbnail="" id="dropzone_background_image_placeholder" alt="" src=""></div></div><div style="float:right; width:230px; margin-right:75px; display: inline-block;"><div><button type="button" style="width:180px;" class="dac-btn-sm" id="dropzone_background_image_upload">Upload from Local Drive</button><button type="button" style="width:180px;" class="dac-btn-sm" id="dropzone_background_image_assetbrowser" onclick=openAssetBrowserPopup("background_image","image","single","1")>Select from Server</button></div><div id="dropzone_background_image_fileName" style="margin-top:10px;margin-bottom:0px; word-break: break-all;"></div><div class="dz-size" data-dz-size="" id="dropzone_background_image_fileType"></div><div class="dz-size" data-dz-size="" id="dropzone_background_image_resolution"></div></div></div></div><div style="float:left;margin-bottom:10px;"><span class="daclabel daclabel-default" >Background Alpha</span><div style="margin-top:5px;"><select id="background_alpha" onChange="updateWidgetField('background_alpha',this.options[this.selectedIndex].value)"><option value="0">0%</option><option value="0.1">10%</option><option value="0.2">20%</option><option value="0.3">30%</option><option value="0.4">40%</option><option value="0.5">50%</option><option value="0.6">60%</option><option value="0.7">70%</option><option value="0.8">80%</option><option value="0.9">90%</option><option value="1">100%</option> </select></div></div> <div style="float:left; margin-left: 10px;"><span class="daclabel daclabel-default" >Background Theme </span><div style="margin-top:5px;"><select id="background_theme" onChange="updateWidgetField('background_theme',(this.options[this.selectedIndex].value))"><option value="0">Solid Color</option><option value="motion_gradient">Motion Gradient</option><option value="sliding_gradient">Sliding Gradient</option><option value="sliding_bars">Sliding Bars</option><option value="sliding_bars_spacing">Sliding Bars with Spacing</option><option value="falling_snow">Falling Snow</option><option value="bouncing_balls">Bouncing Balls</option><option value="falling_bubbles">Falling Bubbles</option><option value="rising_bubbles">Rising Bubbles</option><option value="lightbeam">Light Beams</option></select></div></div><div style="float:left; margin-left: 10px; margin-right: 10px; margin-bottom: 20px;"><span class="daclabel daclabel-default">Background Color</span><div style="margin-top:5px;"><input type="text" id="background_color"  onchange="updateWidgetField('background_color',this.value);"/></div></div><hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);"><div style="float:left;margin-right: 10px;margin-bottom: 20px"><span class="daclabel daclabel-default">Overlay Color</span><div style="margin-top:5px;"><input type="text" id="overlay_color"  onchange="updateWidgetField('overlay_color',this.value);"/></div></div><div style="float:left;margin-bottom:10px;"><span class="daclabel daclabel-default" >Overlay Alpha</span><div style="margin-top:5px;"><select id="overlay_alpha" onChange="updateWidgetField('overlay_alpha',this.options[this.selectedIndex].value)"><option value="0">0%</option><option value="0.1">10%</option><option value="0.2">20%</option><option value="0.3">30%</option><option value="0.4">40%</option><option value="0.5">50%</option><option value="0.6">60%</option><option value="0.7">70%</option><option value="0.8">80%</option><option value="0.9">90%</option><option value="1">100%</option> </select></div></div> </div>		  
+<h3>&nbsp;&nbsp;&nbsp;Coundown Event</h3>
+<div>
+    <div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Event Name</span><div style="margin-top:5px;margin-bottom:0px" ><input class="form-control" type="text" id="title"  style="width:100%; height:30px" value="" size="200" maxlength="200"></input></div></div><div style="margin-bottom:50px; margin-top:15px;"><div style="clear:left;"><span class="daclabel daclabel-default">Event Name Font Style</span></div><div style="float:left; height: 35px; margin-bottom:10px; margin-top:5px;"><input id="title_font" type="text" value="Arial" class="form-control"  style="margin-top:0px;width:130px;height:30px" size="20" onchange="updateWidgetField('title_font',this.value)"><input id="title_font_size" type="text" value="100" class="form-control" style="height:30px" onchange="updateWidgetField('title_font_size',this.value)" size="2">&nbsp;<input type="text" id="title_font_color" value="#000000" style="margin-top: 0px; height:30px" onchange="updateWidgetField('title_font_color',this.value)"/><button type="button" class="btn btn-default" style="margin-top: 0px; margin-left:5px; min-width: 35px;" onclick="toggleBooleanField('title_bold','')" ><span class="glyphicon glyphicon-bold"></span></button><button type="button" class="btn btn-default" style="min-width: 35px;" onclick="toggleBooleanField('title_italic','')"><span class="glyphicon glyphicon-italic"></span></button></div></div>    <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    <div style="float:left;margin-top: 0px; margin-right: 10px;margin-bottom: 10px;"><span class="daclabel daclabel-default">Event Date Time</span> <div style="margin-top:1px;"><input style="width:100px;padding: 6px;" type="text" id="event_date"  onchange="updateWidgetField('event_date',this.value);"/> <input style="height: 30px;" type="time" id="event_time"  name="hrs1" placeholder="hrs:mins" value="00:00" pattern="^([0-1]?[0-9]|2[0-4]):([0-5][0-9])(:[0-5][0-9])?$" class="inputs duration t1 time hrs" required></div></div>    <div style="float:left;margin-top: 0px; margin-right: 10px;margin-bottom: 10px;"><span class="daclabel daclabel-default">Date Time Display Format Like</span> <div style="margin-top:5px;"> <select style="height: 30px;" id="event_datetime_format" onChange="updateWidgetField('event_datetime_format',this.options[this.selectedIndex].value)"> <option value="mmmm/dd/yyyy">December 25, 2016</option> <option value="mmm/dd/yyyy">Dec 25, 2016</option> <option value="eeee,mmmm/dd/yyyy">Sunday, December 25, 2016</option> <option value="eee,mmm/dd/yyyy">Sun, Dec 25, 2016</option> <option value="mmmm/dd/yyyy h12:mi">December 25, 2016 02:00pm</option> <option value="mmm/dd/yyyy h12:mi">Dec 25, 2016 02:00pm</option> <option value="eee,mmm/dd/yyyy h12:mi">Sun, Dec 25, 2016 02:00pm</option> <option value="mm/dd/yyyy">12/25/2016</option> <option value="mm/dd/yyyy h12:mi">12/25/2016 02:00pm</option> <option value="dd/mm/yyyy">25/12/2016</option> <option value="dd/mm/yyyy h12:mi">25/12/2016 02:00pm</option> <option value="yyyy-mm-dd">2016-12-25</option> <option value="yyyy-mm-dd h12:mi">2016-12-25 02:00pm </option> </select></div></div>    <div style="margin-bottom:50px; margin-top:15px;"><div style="clear:left;"><span class="daclabel daclabel-default">Event Date Time Font Style</span></div><div style="float:left; height: 35px; margin-bottom:10px; margin-top:5px;"><input id="event_datetime_font" type="text" value="Arial" class="form-control"  style="margin-top:0px;width:130px;height:30px" size="20" onchange="updateWidgetField('event_datetime_font',this.value)"><input id="event_datetime_font_size" type="text" value="100" class="form-control" style="height:30px" onchange="updateWidgetField('event_datetime_font_size',this.value)" size="2">&nbsp;<input type="text" id="event_datetime_font_color" value="#000000" style="margin-top: 0px; height:30px" onchange="updateWidgetField('event_datetime_font_color',this.value)"/><button type="button" class="btn btn-default" style="margin-top: 0px; margin-left:5px; min-width: 35px;" onclick="toggleBooleanField('event_datetime_bold','')" ><span class="glyphicon glyphicon-bold"></span></button><button type="button" class="btn btn-default" style="min-width: 35px;" onclick="toggleBooleanField('event_datetime_italic','')"><span class="glyphicon glyphicon-italic"></span></button></div></div>    <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    <div style="margin-bottom:50px; margin-top:15px;"><div style="clear:left;"><span class="daclabel daclabel-default">Countdown Font Style</span></div><div style="float:left; height: 35px; margin-bottom:10px; margin-top:5px;"><input id="counting_font" type="text" value="Arial" class="form-control"  style="margin-top:0px;width:130px;height:30px" size="20" onchange="updateWidgetField('counting_font',this.value)"><input id="counting_font_size" type="text" value="100" class="form-control" style="height:30px" onchange="updateWidgetField('counting_font_size',this.value)" size="2">&nbsp;<input type="text" id="counting_font_color" value="#000000" style="margin-top: 0px; height:30px" onchange="updateWidgetField('counting_font_color',this.value)"/><button type="button" class="btn btn-default" style="margin-top: 0px; margin-left:5px; min-width: 35px;" onclick="toggleBooleanField('counting_bold','')" ><span class="glyphicon glyphicon-bold"></span></button><button type="button" class="btn btn-default" style="min-width: 35px;" onclick="toggleBooleanField('counting_italic','')"><span class="glyphicon glyphicon-italic"></span></button></div></div>    <div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Day Label</span><div style="margin-top:5px;margin-bottom:0px;margin-right:10px" ><input class="form-control" type="text" id="day_label" style="width:90px; height:30px" value="" size="90" maxlength="200"></input></div></div><div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Hour Label</span><div style="margin-top:5px;margin-bottom:0px;margin-right:10px" ><input class="form-control" type="text" id="hour_label" style="width:90px; height:30px" value="" size="90" maxlength="200"></input></div></div><div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Minute Label</span><div style="margin-top:5px;margin-bottom:0px;margin-right:10px" ><input class="form-control" type="text" id="minute_label" style="width:90px; height:30px" value="" size="90" maxlength="200"></input></div></div><div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Second Label</span><div style="margin-top:5px;margin-bottom:0px;margin-right:10px" ><input class="form-control" type="text" id="second_label" style="width:90px; height:30px" value="" size="90" maxlength="200"></input></div></div>
+  <div style="float:left; margin-bottom: 15px">
+      <span class="daclabel daclabel-default" >Countdown Label Option </span>
+      <div style="margin-top:5px;">
+      <select style="height: 30px;" id="counting_label_option" onChange="updateWidgetField('counting_label_option',this.options[this.selectedIndex].value)">
+          <option value="DAYS-HOURS-MINUTES-SECONDS">DAYS HOURS MINUTES SECONDS</option>
+          <option value="DAYS-HOURS-MINUTES">DAYS HOURS MINUTES</option>
+          <option value="DAYS-HOURS">DAYS HOURS</option>
+          <option value="DAYS">DAYS</option>
+        </select>
+      </div>
+
+  </div>
+        <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">        <div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Countdown Ending Message</span> <span class="daclabel daclabel-default" style="float:right; margin-top: 0px; height:20px;padding-top:3px">Check Ending Message in Edit View</span><input id="counting_end_mesg_show" style="font-size:20px;float:right; margin-right: 1px; " type="checkbox"  onClick="toggleBooleanField('counting_end_mesg_show', this.checked)"><div style="margin-top:5px;margin-bottom:0px" ><input class="form-control" type="text" id="counting_end_mesg" style="width:100%; height:30px" value="" size="200" maxlength="200"></input></div></div><div style="margin-bottom:50px; margin-top:15px;"><div style="clear:left;"><span class="daclabel daclabel-default">Countdown Ending Message Font Style</span></div><div style="float:left; height: 35px; margin-bottom:10px; margin-top:5px;"><input id="counting_end_mesg_font" type="text" value="Arial" class="form-control"  style="margin-top:0px;width:130px;height:30px" size="20" onchange="updateWidgetField('counting_end_mesg_font',this.value)"><input id="counting_end_mesg_font_size" type="text" value="100" class="form-control" style="height:30px" onchange="updateWidgetField('counting_end_mesg_font_size',this.value)" size="2">&nbsp;<input type="text" id="counting_end_mesg_font_color" value="#000000" style="margin-top: 0px; height:30px" onchange="updateWidgetField('counting_end_mesg_font_color',this.value)"/></div></div>
+
+</div>
+            <h3>&nbsp;&nbsp;&nbsp;QR Code</h3><div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Enter Text or URL for your QR Code</span> <span class="daclabel daclabel-default" style="float:right; margin-top: 0px; height:20px;padding-top:3px">Show QR Code</span><input id="qr_flag" style="font-size:20px;float:right; margin-right: 1px; " type="checkbox"  onClick="toggleBooleanField('qr_flag', this.checked)"><div style="margin-top:5px;margin-bottom:10px" ><input class="form-control" type="text" id="qr_text"  style="width:100%; height:30px" value="" size="200" maxlength="200"></input></div><div style="float:left;margin-top: 0px; margin-right: 10px;margin-bottom: 10px;"><span class="daclabel daclabel-default">QR Code Color</span>  <div style="margin-top:5px;"><input type="text" id="qr_color"  onchange="updateWidgetField('qr_color',this.value);"/></div></div></div></div> 
+
+</div>
+<!---- end left side editor ----->	  
+<!---- start right side edit view ----->
+<div class="col-md-6" id="right_edit_view">
+<div style="margin-bottom:0px;float:left;"><span class="daclabel daclabel-default">Edit View</span></div>
+<div>
+    <iframe id="iframe_edit_view" src="widget_editor/countdown/view_countdown.php" scrolling="no" style="width:600px;height:333px;border:solid 5px #E1E1E1;border-radius: 10px "></iframe>
+</div>
+<span>To position QR code or certain draggable items in the Edit View, use Drag and Drop.</span>
+<div class="alert alert-success" role="alert" id="saveMessage" style="display:none;">
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+    <span class="sr-only">Error:</span>Saving Content Widget ...</div>
+</div>
+<!---- end right side edit view ----->
+</div>
+</div>           
+ 
+<script>
+
+
+
+$(document).ready(function()
+{
+
+    console.log("[editor_countdown] content = "+content);
+    initWidgetEditor();
+    initCommonBackground();
+
+    initColorPicker("#overlay_color");
+    $("#overlay_color").spectrum("set", content.overlay_color);
+    $('#overlay_alpha').val(content.overlay_alpha);
+    
+    //event title 
+    initFontTypeCombox('#title_font');
+    $('#title_font_size').combobox(['50','60','70','80','90','100','110','115','120','125','130','135','140']);  
+    initColorPicker("#title_font_color");
+
+    $('#title').attr('value', content.title);
+    $('#title_font').attr('value', content.title_font);
+    $('#title_font_size').attr('value', content.title_font_size);
+    $("#title_font_color").spectrum("set", content.title_font_color);
+
+    $("#event_date").datepicker();
+    $("#event_date").datepicker("option", "dateFormat","mm/dd/yy");
+    $('#event_date').datepicker("setDate", new Date(content.event_date) );
+    $('#event_time').attr('value', content.event_time);
+    
+    //event_datetime
+    initFontTypeCombox('#event_datetime_font');
+    $('#event_datetime_font_size').combobox(['50','60','70','80','90','100','110','115','120','125','130','135','140','145','150','155','160','165','170','180','190','200','210','220','230','240','250']);  
+    initColorPicker("#event_datetime_font_color");
+
+    $('#event_datetime_font').attr('value', content.event_datetime_font);
+    $('#event_datetime_font_size').attr('value', content.event_datetime_font_size);
+    $("#event_datetime_font_color").spectrum("set", content.event_datetime_font_color);
+
+    //counting
+    initFontTypeCombox('#counting_font');
+    $('#counting_font_size').combobox(['50','60','70','80','90','100','110','120','125','130','135','140','145','150','155','160','165','170','180','190','200','210','220','230','240','250']);  
+    initColorPicker("#counting_font_color");
+
+    $('#counting_font').attr('value', content.counting_font);
+    $('#counting_font_size').attr('value', content.counting_font_size);
+    $("#counting_font_color").spectrum("set", content.counting_font_color);
+    
+    
+    $('#day_label').attr('value', content.day_label);
+    $('#hour_label').attr('value', content.hour_label);
+    $('#minute_label').attr('value', content.minute_label);
+    $('#second_label').attr('value', content.second_label);
+
+    $('#event_datetime_format').val(content.event_datetime_format);
+    $('#counting_label_option').val(content.counting_label_option);
+    
+    
+    $('#counting_end_mesg').attr('value', content.counting_end_mesg);
+    initFontTypeCombox('#counting_end_mesg_font');
+    $('#counting_end_mesg_font_size').combobox(['100','110','115','120','125','130','135','140']);  
+    initColorPicker("#counting_end_mesg_font_color");
+    $('#counting_end_mesg_font').attr('value', content.counting_end_mesg_font);
+    $('#counting_end_mesg_font_size').attr('value', content.counting_end_mesg_font_size);
+    $("#counting_end_mesg_font_color").spectrum("set", content.counting_end_mesg_font_color);
+    
+    $('#uploadContainer').hide();       
+	
+    //setTimeout(initEditViewContent,1000);   
+    //initQRCode();
+    //initEditViewContent();
+    //$('#iframe_edit_view').attr('src',"widget_editor/countdown/view_countdown.php");
+});
+
+$( "#title" ).on('input', function() {
+    updateWidgetField("title",$( "#title" ).val());
+});
+
+$( "#event_date" ).on('input', function() {
+    updateWidgetField("event_date",$( "#event_date" ).val());
+});
+
+$( "#event_time" ).on('input', function() {
+    updateWidgetField("event_time",$( "#event_time" ).val());
+});
+
+$( "#day_label" ).on('input', function() {
+    updateWidgetField("day_label",$( "#day_label" ).val());
+});
+
+$( "#hour_label" ).on('input', function() {
+    updateWidgetField("hour_label",$( "#hour_label" ).val());
+});
+
+$( "#minute_label" ).on('input', function() {
+    updateWidgetField("minute_label",$( "#minute_label" ).val());
+});
+
+$( "#second_label" ).on('input', function() {
+    updateWidgetField("second_label",$( "#second_label" ).val());
+});
+
+$( "#counting_end_mesg" ).on('input', function() {
+  
+    updateWidgetField("counting_end_mesg",$( "#counting_end_mesg" ).val());
+});
+
+
+function setTextFontSize(title_font_size,event_datetime_font_size,counting_font_size,time_label_font_size )
+{
+    $('#title_font_size').attr('value', title_font_size);
+    $('#event_datetime_font_size').attr('value', event_datetime_font_size);
+    $('#counting_font_size').attr('value', counting_font_size);
+    $('#event_datetime_font_size').attr('value', time_label_font_size);
+}
+
+
+</script>

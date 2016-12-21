@@ -1,0 +1,95 @@
+{  
+   "template":"weather",
+   "standard_tabs":[  
+      {"tab_id":"background","open":"true"},
+      { "tab_id":"qr"}
+   ],
+   "custom_tabs":[  
+      {  
+         "tab_id":"sample",
+         "tab_name":"Sample Fields",
+         "groups":[  
+            {  
+               "group_id":"grp_group1",
+               "group_name":"Group1 - Basic Components",
+               "open":true,
+               "fields":[
+                        {"field_id":"text1","field_name":"Text Input without Style","field_type":"text","component":"input","field_width":"350","max_length":"200","placeholder":"enter text"}
+                        ,{"field_id":"text2","field_name":"Text Input with Style","field_type":"text","component":"input","field_width":"350","max_length":"200","placeholder":"Enter Location Name"
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std"}
+                        ,{"field_id":"textarea1","field_name":"Textarea with Style","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter title"
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"checkbox1","field_name":"Checkbox","field_type":"text","component":"checkbox","field_width":"400","field_height":"100"}
+                        ,{"field_id":"radio1","field_name":"Radio Buttons","field_type":"text","component":"radio", "val_list":"radio_button_list" }
+                        ,{"field_id":"select1","field_name":"Select","field_type":"text","component":"select","field_width":"150","val_list":"select_list"}
+                        ,{"field_id":"combo1","field_name":"Combo","field_type":"text","component":"combo","field_width":"150","val_list":"combo_list"}
+                        ,{"field_id":"dropzone1","field_name":"File","field_type":"image","component":"dropzone"}
+                        ]
+            },
+            {  
+               "group_id":"grp_group2",
+               "group_name":"Group2 - Style",
+               "open":true,
+               "fields":[
+                        {"field_id":"text_style1","field_name":"Text Style1","field_type":"text","component":"text_style","font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","align":"std"}
+                        ,{"field_id":"text_style2","field_name":"text_style2","field_type":"text","component":"text_style","font_type":"font_type_list","font_size":"font_size_list","color":"std"}
+                        ,{"field_id":"text_style3","field_name":"text_style3","field_type":"text","component":"text_style","font_type":"font_type_list"}
+
+                        ,{"field_id":"overlay","field_name":"Overlay","field_type":"text","component":"overlay"}
+                        ,{"field_id":"color1","field_name":"Standard Color Picker","field_type":"text","component":"color"}
+
+                        ]
+            }
+            ,{  
+               "group_id":"grp_group3",
+               "group_name":"Group3 - Datetime",
+               "open":true,
+               "fields":[
+                        {"field_id":"datetime1","field_name":"Date Time with format","field_type":"text","component":"datetime","display_format":"std"
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"datetime2","field_name":"Date Time without format","field_type":"text","component":"datetime","display_format":""
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"datetime3","field_name":"Date Time without format","field_type":"text","component":"datetime","display_format":""
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"datetime4","field_name":"Date Time without format and style","field_type":"text","component":"datetime","display_format":""}
+                        ]
+            }
+            ,{  
+               "group_id":"grp_group4",
+               "group_name":"Group4 - Date",
+               "open":true,
+               "fields":[
+                        {"field_id":"date1","field_name":"Date with format","field_type":"text","component":"date","display_format":"std"
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"date2","field_name":"Date without format","field_type":"text","component":"date","display_format":""
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"date3","field_name":"Date without format and style","field_type":"text","component":"date","display_format":""
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ]
+            }
+            ,{  
+               "group_id":"grp_group5",
+               "group_name":"Group5 - Time",
+               "open":true,
+               "fields":[
+                        {"field_id":"time1","field_name":"Time with format","field_type":"text","component":"time","display_format":"std"
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"time2","field_name":"Time without format","field_type":"text","component":"time","display_format":""
+                            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std"}
+                        ,{"field_id":"time3","field_name":"Time without format and style","field_type":"text","component":"time","display_format":""}
+                        ]
+            }
+         ]
+      }
+   ],
+   "val_lists":{  
+       "alpha_list": ["0|0% (Completely Transparent)","0.1|10%","0.2|20%","0.3|30%","0.4|40%","0.5|50%","0.6|60%","0.7|70%","0.8|80%","0.9|90%","1|100% (Not Transparent At All)"],
+       "select_list": ["3|3 Days","4|4 Days","5|5 Days"],
+       "combo_list": ["3 Days","4 Days","5 Days"],
+       "font_type_list": ["Arial","Calibri","Times New Roman","Verdana"],
+       "font_size_list": ["50","60","70","80","90","100","110","115","120","125","130"],
+       "radio_button_list": ["red|Red","G|Green","B|Blue"]
+      }
+}
+
+

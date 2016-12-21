@@ -1,0 +1,26 @@
+CACHE MANIFEST
+# 2016-07-29.01
+../../js/jquery/jquery.js
+../../js/util/pixi.min.js
+../../js/util/moment.js
+../../js/greensock/TweenMax.min.js
+../../js/greensock/TimelineMax.min.js
+../../js/greensock/jquery.gsap.min.js
+
+../../js/dac/dac_pixi.js
+../../js/dac/dac_util.js?v=20160622-2
+
+../../templates/template_base.js
+../../templates/template_socialmedia.js?v=20160627-1
+../../templates/twitter/template_twitter.js
+#media
+../../templates/twitter/media/twitter_logo_295x150.png
+
+NETWORK:
+*
+
+
+
+
+
+

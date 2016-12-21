@@ -1,0 +1,19 @@
+CACHE MANIFEST
+# 2016-05-21.0004
+
+../../js/jquery/jquery.js
+../../js/util/pixi.min.js
+../../js/greensock/TweenMax.min.js
+../../js/greensock/TimelineMax.min.js
+../../js/greensock/jquery.gsap.min.js
+
+../../js/dac/dac_pixi.js
+../../js/dac/dac_util.js
+
+../../templates/template_base.js
+../../templates/cube/template_cube.js
+
+NETWORK:
+*
+
+

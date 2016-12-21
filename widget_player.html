@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<title>wplayer</title>
+<style>
+    body { margin: 0; padding: 0; overflow:hidden; -ms-overflow-style: none;}
+</style>
+
+</head>   
+<body>
+
+<iframe id="wplayer" frameborder="0" src="" style="width:90%;height:90%;"></iframe>
+<script src="htmlplayer/js/jquery/jquery.js"></script>
+
+<script>
+
+
+var debug = 1;
+var templateName = ''; 
+var m_fullWidget = {};
+
+/////////////////////////////////////////////////
+
+$(document).ready(function()
+{
+    //loadTemplateHtml(m_fullWidget);
+    loadFullWidgetJson();
+    console.log("[wplayer]m_fullWidget="+JSON.stringify(m_fullWidget));
+});
+///////////////////////////////////////////////////////////
+
+function loadFullWidgetJson()
+{
+    templateName = getParameterByName("template");
+    if (templateName == null || templateName == "")
+        templateName = "twitter";
+    var dataFile = "widget_editor/"+templateName+"/data_"+templateName+".json";     
+
+    var loadFullWidgetPromise = $.getJSON(dataFile);
+    
+    loadFullWidgetPromise.done(function(data) {
+         m_fullWidget = data;
+         content = m_fullWidget["widget"]["dac_widget"]["content"];
+         console.log( "[widget_editor]loadFullWidgetJson ok m_fullWidget=" + JSON.stringify(m_fullWidget)); 
+         //alert("full widget json ok");
+         loadTemplateHtml(m_fullWidget);
+    });
+    
+    loadFullWidgetPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("[widget_editor]loadFullWidgetJson error"+textStatus+" "+errorThrown);
+    });
+}
+
+
+function loadTemplateHtml(fullWidget)
+{
+    console.log("[wplayer]loadTemplateHtml");
+    m_fullWidget = fullWidget;
+    var d = new Date();
+
+    var templateHtmlPath = "htmlplayer/templates/"+ templateName +"/template_" + templateName + ".html" + "?playmode=standalone&cache=0&debug="+debug;
+    //alert(templateHtmlPath);
+    //console.log("[wplayer] templateHtmlPath= "+templateHtmlPath);
+    $(document).on("templateReadyToPlay", playWidgetStandalone); 
+    $('#wplayer').attr('src',templateHtmlPath);
+}
+	 
+function playWidgetStandalone()
+{
+    console.log("[wplayer]playWidgetStandalone");
+    $('#wplayer')[0].contentWindow.initAndPlayTemplate(m_fullWidget);
+}
+
+function getParameterByName(name) {
+    if (name !== "" && name !== null && name != undefined) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    } else {
+        var arr = location.href.split("/");
+        return arr[arr.length - 1];
+    }
+}
+
+</script>
+
+</body>    
+</html>
+

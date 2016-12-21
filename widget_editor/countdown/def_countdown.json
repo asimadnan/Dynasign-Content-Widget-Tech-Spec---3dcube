@@ -1,0 +1,60 @@
+{  
+   "zone_width":"1920",
+   "zone_height":"1080",
+   "zone_size_option":"custom",
+   "background_theme":"0",
+   "background_alpha":"1",
+   "background_color":"113366",
+   "background_image_flag":true,
+   "overlay_color":"ffffff",
+   "overlay_alpha":"0.3",
+   "title":"Enter Event Name",
+   "title_font":"Arial",
+   "title_font_size":"100",
+   "title_font_color":"FFFFFF",
+   "title_italic":false,
+   "event_date":"01/01/2017",
+   "event_time":"00:00",
+   "event_datetime_font":"Arial",
+   "event_datetime_font_size":"100",
+   "event_datetime_font_color":"FFFFFF",
+   "event_datetime_format":"eeee,mmmm/dd/yyyy",
+   "counting_label_option":"DAYS-HOURS-MINUTES-SECONDS",
+   "counting_font":"Arial",
+   "counting_font_size":"170",
+   "counting_font_color":"FFFFFF",
+   "time_label_font_size":"50",
+   "day_label":"DAYS",
+   "hour_label":"HRS",
+   "minute_label":"MINS",
+   "second_label":"SECS",
+   "counting_end_mesg":"",
+   "counting_end_mesg_font":"Arial",
+   "counting_end_mesg_font_size":"140",
+   "counting_end_mesg_font_color":"FFFFFF",
+   "edit_view_width":"300",
+   "edit_view_height":"250",
+   "qr_flag":false,
+   "qr_text":"http://www.dynasignstudios.com/",
+   "qr_size":"60",
+   "qr_x":"-1",
+   "qr_y":"150",
+   "qr_color":"#000000",
+   "dac_asset":[  
+      {  
+         "field_name":"background_image",
+         "display_name":"",
+         "location":"",
+         "download":"true",
+         "type":"dac_upload"
+      }
+   ]
+}
+
+
+        
+
+        
+
+        
+	

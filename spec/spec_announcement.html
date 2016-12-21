@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dynasign Studios Developer Guide - Dynasign Content Widget Tech Spec</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../css/non-responsive.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">	
+
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- The mobile navbar-toggle button can be safely removed since you do not need it in a non-responsive implementation -->
+          <a class="navbar-brand" href="../index.html" style="color:#990000;">Dynasign Studios Developer Guide</a> 
+        </div>
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="navbar-header">
+            <br>
+        <p class="text-muted">Dynasign 	&copy; 2016. This document is proprietary and confidential. No part of this document may be disclosed in any manner
+to a third party without the prior written consent of Dynasign.</p>
+        </div>
+      </div>
+    </nav>
+    
+
+    <div class="container">
+
+     <h2>Sample Dynasign Content Widget Tech Spec</h2>
+     <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);"> 
+      <h3>Template Definition</h3>
+      <p>
+          This template displays a title and description text objects with a color overlay on top of the standard background. 
+          Users can enter their own text and upload an image for the standard background.
+          The template should be able to dynamically adjust the position of objects according to the display zone size.
+      </p>
+       <ol>
+        <li>Name: announcement</li>
+        <li>Zones: capable of display in various horizontal, vertical and square zone sizes w:h ratio from 5:1 to 1:5</li>
+        <li>Type: Pixi</li>
+        <li>External libs: </li>
+     </ol>
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>Template Visual Design</h3>
+      <img src="../img/sample_visual.jpg">
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>Template Objects</h3>
+      <p>
+
+
+      </p>
+      <ul>
+          <li>Background (color and optional image)</li>
+          <li>Text Overlay with color and alpha options</li>
+          <li>Title Text Object with text style</li>
+          <li>Description text Object with text style</li>
+          <li>Standard QR code</li>
+      </ul>
+        <p>
+
+        </p>
+
+
+
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">  
+      <h3>Template Variables</h3>
+      <p></p>
+      <ul>
+        <li>background_image</li>
+        <li>title</li>
+        <li>title_font</li>
+        <li>title_font_size</li>
+        <li>title_font_color</li>
+        <li>title_italic</li>
+        <li>title_bold</li>
+        <li>title_x</li>
+        <li>title_y</li>
+        <li>description</li>
+        <li>description_font</li>
+        <li>description_font_size</li>
+        <li>description_font_color</li>
+        <li>description_italic</li>
+        <li>description_alignment</li>
+        <li>description_bold</li>
+        <li>description_x</li>
+        <li>description_y</li>
+        <li>overlay_color</li>
+        <li>overlay_x</li>
+        <li>overlay_y</li>
+        <li>overlay_alpha</li>
+        <li>overlay_width</li>
+        <li>overlay_height</li>
+
+
+        </ul>
+
+  
+
+       
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>Object Animation</h3>
+        <p></p>
+        <ol>
+            <li>Display background</li>
+            <li>Fade in title and description together with overlay</li>
+
+
+        </ol>
+
+
+        
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>Editing Features</h3>
+      <p></p>
+        <ul>
+            <li>Define zone size</li>
+            <li>Enter title, select text style</li>
+            <li>Enter description, select text style</li>
+            <li>Drag and drop to reszie text overlay in edit view</li>
+            <li>Change background color or image</li>
+            <li>Add QR code</li>
+        </ul>
+
+    
+
+
+
+      <p></p>
+      
+
+
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #eee, #333, #eee);"> 
+
+    </div> <!-- /container -->
+
+<br><br><br>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+  </body>
+</html>

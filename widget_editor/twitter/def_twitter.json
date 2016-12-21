@@ -1,0 +1,53 @@
+{  
+   "zone_width":"1920",
+   "zone_height":"1080",
+   "zone_size_option":"custom",
+   "feed_key":"select0",
+   "post_duration":"10",
+   "feed_title":"Enter title text",
+   "feed_title_font":"Arial",
+   "feed_title_italic":false,
+   "feed_title_alignment":"left",
+   "feed_title_bold":false,
+   "feed_title_font_size":"40",
+   "feed_title_x":"0",
+   "feed_title_y":"0",
+   "body_font_size":"28",
+   "body_background_gradient_color":"3D85C6",
+   "body_background_color":"3D85C6",
+   "background_color":"3D85C6",
+   "body_font":"arial",
+   "background_alpha":"1",
+   "hr_line_color":"EEEEEE",
+   "posttime_font_color":"E59966",
+   "feed_title_font_color":"FFFFFF",
+   "body_font_color":"FFFFFF",
+   "edit_view_width":"300",
+   "edit_view_height":"250",
+   "qr_flag":false,
+   "qr_text":"http://www.dynasignstudios.com/",
+   "qr_size":"60",
+   "qr_x":"-1",
+   "qr_y":"150",
+   "qr_color":"#000000",
+   "qr_option":"widget",
+   "background_image_flag":true,
+   "dac_asset":[  
+      {  
+         "field_name":"background_image",
+         "display_name":"",
+         "location":"",
+         "download":"true",
+         "type":"dac_upload"
+      }
+   ]
+}
+
+
+
+
+
+
+
+
+

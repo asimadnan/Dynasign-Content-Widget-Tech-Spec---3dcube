@@ -1,0 +1,70 @@
+{  
+   "wid":"1",
+   "template":"countdown",
+   "widget":{  
+      "dac_widget":{  
+         "header":{  
+            "account_no":"DY1303806194",
+            "id":"100",
+            "title":"New Year",
+            "template":"countdown",
+            "last_updated_time":"2015-11-17 16:25:11"
+         },
+         "content":{  
+            "zone_width":"1920",
+            "zone_height":"1080",
+            "zone_size_option":"custom",
+            "background_theme":"4",
+            "background_color":"000000",
+            "overlay_color":"ffffff",
+            "overlay_x":100,
+            "overlay_y":100,
+            "overlay_alpha":"0.5",
+            "overlay_width":1720,
+            "overlay_height":880,
+            "background_image_flag":true,
+            "title":"Enter event name",
+            "title_font":"Arial",
+            "title_font_size":"100",
+            "title_font_color":"FFFFFF",
+            "title_italic":false,
+            "title_x":"100",
+            "title_y":"180",
+            "event_date":"01/01/2017",
+            "event_time":"00:00",
+            "event_datetime_font":"Arial",
+            "event_datetime_font_size":"100",
+            "event_datetime_font_color":"FFFFFF",
+            "counting_font":"Arial",
+            "counting_font_size":"140",
+            "counting_font_color":"FFFFFF",
+            "day_label":"DAYS",
+            "hour_label":"HRS",
+            "minute_label":"MINS",
+            "second_label":"SECS",
+            "time_label_font_size":"30",
+            "counting_label_option":"DAYS-HOURS-MINUTES-SECONDS",
+            "dac_asset":[  
+               {  
+                  "field_name":"background_image",
+                  "display_name":"bg006b_1920x1080.jpg",
+                  "location":"http://localhost/ds_widget/img/bg006b_1920x1080.jpg",
+                  "download":"true",
+                  "type":"dac_upload",
+                  "mime_type":"image/jpeg"
+               }
+            ]
+         }
+      }
+   },
+   "widgetAsset":{ 
+      "w1-countdown-background_image":"http://localhost/ds_widget/img/bg006b_1920x1080.jpg"
+   },
+
+   "feed":{  
+
+   },
+   "feedAsset":{  
+
+   }
+}

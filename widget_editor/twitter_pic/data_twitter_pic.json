@@ -1,0 +1,971 @@
+{  
+   "wid":"226",
+   "template":"twitter_pic",
+   "widget":{  
+      "dac_widget":{  
+         "header":{  
+            "account_no":"DY1303806194",
+            "id":"226",
+            "desc":"cnn ",
+            "template":"twitter_pic",
+            "last_updated_time":"2016-06-06 12:07:42"
+         },
+         "content":{  
+            "zone_width":"1920",
+            "zone_height":"1080",
+            "zone_size_option":"custom",
+            "feed_key":"TWA9699870863",
+            "post_duration":"10",
+            "theme_color":"brown",
+            "feed_title":"Enter title text",
+            "feed_title_font_size":81,
+            "feed_title_font":"Arial",
+            "feed_title_x":"0",
+            "feed_title_y":"0",
+            "body_font_size":"28",
+            "body_font":"arial",
+            "body_background_gradient_color":"3D85C6",
+            "body_background_color":"3D85C6",
+            "hr_line_color":"FFF2CC",
+            "posttime_font_color":"E59966",
+            "feed_title_font_color":"#7D6E51",
+            "body_font_color":"FFFFFF",
+            "edit_view_width":590,
+            "edit_view_height":328,
+            "qr_flag":false,
+            "qr_text":"http:\/\/www.dynasignstudios.com\/",
+            "qr_size":"60",
+            "qr_x":"-1",
+            "qr_y":"150",
+            "qr_color":"#000000",
+            "location_font_color":"#e59966",
+            "feed_title_italic":false,
+            "feed_title_alignment":"left",
+            "feed_title_bold":false,
+            "body":""
+         }
+      }
+   },
+   "widgetAsset":{  
+
+   },
+   "widgetAssetInfo":{  
+
+   },
+   "feed":{  
+      "feed_posts":{  
+         "header":{  
+            "key":"TWA9699870863",
+            "source":"twitter",
+            "last_updated_time":"2016-08-01 14:00:16"
+         },
+         "favored_posts":[  
+
+         ],
+         "approved_posts":[  
+            {  
+               "postid":"760217260443172864",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 20:54:53 +0000 2016",
+               "text":[  
+                  "New York Governor Andrew Cuomo wants sex offenders off Pokemon Go cnn.it/2asXajT https://t.co/mgBZ1bVUrU "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CozVkYOWEAE1nNd.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CozVkYOWEAE1nNd.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CozVkYOWEAE1nNd.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CozVkYOWEAE1nNd.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760211885807509504",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 20:33:32 +0000 2016",
+               "text":[  
+                  ".@drsanjaygupta is answering your questions about the #ZikaVirus. Watch live on Facebook: https://t.co/vDcHUAwzF5 https://t.co/ypZJOrpxrl "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CozQaC8WAAA1nyF.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CozQaC8WAAA1nyF.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CozQaC8WAAA1nyF.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CozQaC8WAAA1nyF.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760209993798979589",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 20:26:01 +0000 2016",
+               "text":[  
+                  "The Olympic athletes to follow on Instagram as Team USA aims to make its mark at #Rio2016 https://t.co/0nd6RyvifB https://t.co/ngbw7Gnjzl "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CozO9aZXgAAbCRh.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CozO9aZXgAAbCRh.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CozO9aZXgAAbCRh.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CozO9aZXgAAbCRh.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760187919625752578",
+               "userid":"41602160",
+               "source":"twitter",
+               "username":"cnnhealth",
+               "avatar":"http://pbs.twimg.com/profile_images/2181626355/healthlogo.jpg",
+               "location":"",
+               "posttime":"Mon Aug 01 18:58:18 +0000 2016",
+               "text":[  
+                  "\u201cA split second took my wife.\u201d See \"Distracted While Driving\" Saturday at 2:30 pm #CNN. https://t.co/9T2tqF04pi https://t.co/dm9WdB3V4O "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Coy6BaLWYAIcj3j.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Coy6BaLWYAIcj3j.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Coy6BaLWYAIcj3j.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Coy6BaLWYAIcj3j.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760208229771206660",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 20:19:00 +0000 2016",
+               "text":[  
+                  "Donald Trump's bad 72 hours https://t.co/MbMXpmhs7I "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760203867615289344",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 20:01:40 +0000 2016",
+               "text":[  
+                  "Why MTV is going back to being MTV https://t.co/8c4KCFKRUK https://t.co/QTWu93PVKl "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CozJYxaXEAQ5YpE.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CozJYxaXEAQ5YpE.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CozJYxaXEAQ5YpE.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CozJYxaXEAQ5YpE.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760194534898802688",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 19:24:35 +0000 2016",
+               "text":[  
+                  "Verizon wants to run every part of your life https://t.co/ZiQG8iQhU1 https://t.co/RybcrAskVf "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CozA5kFWEAMifnP.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CozA5kFWEAMifnP.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CozA5kFWEAMifnP.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CozA5kFWEAMifnP.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760191371932303360",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 19:12:01 +0000 2016",
+               "text":[  
+                  "#Rio2016 kicks off this week! Can you pass our Olympics trivia quiz? https://t.co/QTQGUzAV5Z https://t.co/mu8nxBAxow "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Coy-BdAXgAQJmjI.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Coy-BdAXgAQJmjI.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Coy-BdAXgAQJmjI.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Coy-BdAXgAQJmjI.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760186325333110784",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 18:51:58 +0000 2016",
+               "text":[  
+                  "The Washington Post hits Hillary Clinton\u2019s email defense with four \u201cPinnochios\u201d https://t.co/Cvdt6qMn7W https://t.co/pxJqAp5773 "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Coy5bugWAAEe3Vz.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Coy5bugWAAEe3Vz.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Coy5bugWAAEe3Vz.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Coy5bugWAAEe3Vz.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760182932204056577",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 18:38:29 +0000 2016",
+               "text":[  
+                  "The hot air balloon company involved in a crash that killed 16 has suspended operations https://t.co/1G0LD66gBc https://t.co/jIA6RPZqgU "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Coy2WNNXgAARVZm.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Coy2WNNXgAARVZm.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Coy2WNNXgAARVZm.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Coy2WNNXgAARVZm.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760177167720386564",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 18:15:34 +0000 2016",
+               "text":[  
+                  "President Obama: \"No one has given more for our freedom and our security than our Gold Star families\" https://t.co/cJBAXWLmgO "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760173391953395712",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 18:00:34 +0000 2016",
+               "text":[  
+                  "Pope Francis says the rise of terrorism is being fueled by the worship of money https://t.co/1K7ImkFlsU https://t.co/8lalW7dYjp "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Coytq2nWcAQI7Y3.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Coytq2nWcAQI7Y3.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Coytq2nWcAQI7Y3.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Coytq2nWcAQI7Y3.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760168471304998915",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 17:41:01 +0000 2016",
+               "text":[  
+                  "John McCain releases statement on Donald Trump\u2019s criticism of Khan family\u2019s DNC speech https://t.co/zEMOI084uq https://t.co/60mCJSdhGe "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoypMceWgAETuQC.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoypMceWgAETuQC.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoypMceWgAETuQC.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoypMceWgAETuQC.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760165453985611776",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 17:29:02 +0000 2016",
+               "text":[  
+                  "U.S. launches airstrikes on ISIS targets in Libya https://t.co/95UCRVOopS https://t.co/JARy9o7ysQ "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoymcxdWEAALU3L.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoymcxdWEAALU3L.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoymcxdWEAALU3L.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoymcxdWEAALU3L.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760163439717322752",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 17:21:01 +0000 2016",
+               "text":[  
+                  "Just In: 10 more cases of local Zika transmission in Florida https://t.co/ZRIbfbPJCk https://t.co/W0r0zLsD2A "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoyknhhWcAAojZQ.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoyknhhWcAAojZQ.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoyknhhWcAAojZQ.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoyknhhWcAAojZQ.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760158660404412417",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 17:02:02 +0000 2016",
+               "text":[  
+                  "New York Governor Andrew Cuomo wants s*x offenders off Pokemon Go https://t.co/oqrvPS6wpw https://t.co/UWsiIXvPth "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoygRQaWAAEw0Yb.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoygRQaWAAEw0Yb.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoygRQaWAAEw0Yb.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoygRQaWAAEw0Yb.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760155636625711104",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 16:50:01 +0000 2016",
+               "text":[  
+                  "Washington State is suing Comcast for $100 million https://t.co/ZZHh9OX6mo https://t.co/6GRczeCUfm "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoydhXYWcAA-kpz.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoydhXYWcAA-kpz.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoydhXYWcAA-kpz.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoydhXYWcAA-kpz.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760152363806097408",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 16:37:01 +0000 2016",
+               "text":[  
+                  "First on CNN: Top Jeb Bush adviser leaves GOP, will vote for Clinton if Florida is close https://t.co/asmz0Jd9ze https://t.co/ABaGNQq9Qf "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Coyai4EW8AIErk_.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Coyai4EW8AIErk_.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Coyai4EW8AIErk_.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Coyai4EW8AIErk_.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760150101889253377",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 16:28:01 +0000 2016",
+               "text":[  
+                  "Justin Timberlake's moving speech and more top moments from the Teen Choice Awards https://t.co/pWTc69mKM4 https://t.co/2Gf0m4CiJv "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoyYfMbWEAASR_O.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoyYfMbWEAASR_O.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoyYfMbWEAASR_O.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoyYfMbWEAASR_O.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"760145848395304960",
+               "userid":"759251",
+               "source":"twitter",
+               "username":"CNN",
+               "avatar":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+               "location":"",
+               "posttime":"Mon Aug 01 16:11:07 +0000 2016",
+               "text":[  
+                  "Verizon wants to run every part of your life https://t.co/q5uOfyveKX https://t.co/rf34ZOYcBp "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoyUno4WAAIC2lP.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoyUno4WAAIC2lP.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoyUno4WAAIC2lP.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoyUno4WAAIC2lP.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            }
+         ]
+      }
+   },
+   "feedAsset":{  
+      "TWA9699870863-http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png":"http://pbs.twimg.com/profile_images/508960761826131968/LnvhR8ED.png",
+      "TWA9699870863-http://pbs.twimg.com/media/CozVkYOWEAE1nNd.jpg:large":"http://pbs.twimg.com/media/CozVkYOWEAE1nNd.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CozQaC8WAAA1nyF.jpg:large":"http://pbs.twimg.com/media/CozQaC8WAAA1nyF.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CozO9aZXgAAbCRh.jpg:large":"http://pbs.twimg.com/media/CozO9aZXgAAbCRh.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/profile_images/2181626355/healthlogo.jpg":"http://pbs.twimg.com/profile_images/2181626355/healthlogo.jpg",
+      "TWA9699870863-http://pbs.twimg.com/media/Coy6BaLWYAIcj3j.jpg:large":"http://pbs.twimg.com/media/Coy6BaLWYAIcj3j.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CozJYxaXEAQ5YpE.jpg:large":"http://pbs.twimg.com/media/CozJYxaXEAQ5YpE.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CozA5kFWEAMifnP.jpg:large":"http://pbs.twimg.com/media/CozA5kFWEAMifnP.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/Coy-BdAXgAQJmjI.jpg:large":"http://pbs.twimg.com/media/Coy-BdAXgAQJmjI.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/Coy5bugWAAEe3Vz.jpg:large":"http://pbs.twimg.com/media/Coy5bugWAAEe3Vz.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/Coy2WNNXgAARVZm.jpg:large":"http://pbs.twimg.com/media/Coy2WNNXgAARVZm.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/Coytq2nWcAQI7Y3.jpg:large":"http://pbs.twimg.com/media/Coytq2nWcAQI7Y3.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CoypMceWgAETuQC.jpg:large":"http://pbs.twimg.com/media/CoypMceWgAETuQC.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CoymcxdWEAALU3L.jpg:large":"http://pbs.twimg.com/media/CoymcxdWEAALU3L.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CoyknhhWcAAojZQ.jpg:large":"http://pbs.twimg.com/media/CoyknhhWcAAojZQ.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CoygRQaWAAEw0Yb.jpg:large":"http://pbs.twimg.com/media/CoygRQaWAAEw0Yb.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CoydhXYWcAA-kpz.jpg:large":"http://pbs.twimg.com/media/CoydhXYWcAA-kpz.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/Coyai4EW8AIErk_.jpg:large":"http://pbs.twimg.com/media/Coyai4EW8AIErk_.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CoyYfMbWEAASR_O.jpg:large":"http://pbs.twimg.com/media/CoyYfMbWEAASR_O.jpg:large",
+      "TWA9699870863-http://pbs.twimg.com/media/CoyUno4WAAIC2lP.jpg:large":"http://pbs.twimg.com/media/CoyUno4WAAIC2lP.jpg:large"
+   }
+}

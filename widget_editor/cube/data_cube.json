@@ -1,0 +1,70 @@
+{  
+   "wid":"100",
+   "template":"cube",
+   "widget":{  
+      "dac_widget":{  
+         "header":{  
+            "account_no":"DY1303806194",
+            "id":"100",
+            "desc":"test test cube",
+            "template":"cube",
+            "last_updated_time":"2015-11-17 16:25:11"
+         },
+         "content":{  
+            "zone_width":"1920",
+            "zone_height":"1080",
+            "zone_size_option":"custom",
+            "background_color":"000000",
+            "overlay_color":"660000",
+
+            "text1":"Side-1",
+            "text1_font":"Calibri",
+            "text1_font_color":"red",
+            "text1_bold":false,
+            "text1_italic":true,
+            "text1_align":"center",
+            "text1_font_size": "90",
+
+
+            "text2":"Side-2",
+            "text3":"Side-3",
+            "text4":"Side-4",
+            "text5":"Side-5",
+            "text6":"Side-6",
+            "same_font":"false",
+            "text_or_image": "off",
+            "rotating_style":"style1",
+            "rotating_speed":"0",
+            "image1":"http://localhost/ds_widget/img/bg006a_1920x1080.jpg",
+            "image2":"http://localhost/ds_widget/img/bg003b_1920x1080.jpg",
+            "image3":"http://localhost/ds_widget/img/bg004a_1920x1080.jpg",
+            "image4":"http://localhost/ds_widget/img/bg004b_1920x1080.jpg",
+            "image5":"http://localhost/ds_widget/img/bg004c_1920x1080.jpg",
+            "image6":"http://localhost/ds_widget/img/bg006a_1920x1080.jpg",
+            "dac_asset":[  
+               {  
+                  "field_name":"background_image",
+                  "display_name":"FernandoTogniBW.jpg",
+                  "location":"http://localhost/ds_widget/img/FernandoTogniBW.png",
+                  "download":"true",
+                  "type":"dac_upload",
+                  "mime_type":"image/jpeg"
+               }
+            ]
+         
+         
+         }
+      }
+   },
+   "widgetAsset":{ 
+      "w100-cube-background_image":"http://localhost/ds_widget/img/FernandoTogniBW.png"
+
+   },
+
+   "feed":{  
+
+   },
+   "feedAsset":{  
+
+   }
+}

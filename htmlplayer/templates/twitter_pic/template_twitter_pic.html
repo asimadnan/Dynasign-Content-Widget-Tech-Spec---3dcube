@@ -1,0 +1,77 @@
+<html manifest="template_twitter_pic.appcache">
+
+<head>
+<style>
+body { margin: 0; padding: 0; overflow:hidden; -ms-overflow-style: none; background-color:"#3D85C6"}
+</style>
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css"/>
+<title>template twitter pic</title>
+</head>
+
+<body>
+    
+    
+
+
+<script src="../../js/jquery/jquery.js"></script>
+<script src="../../js/jquery/jquery-ui.js"></script>
+<script src="../../js/jquery/jquery.qrcode-0.12.0.js"></script>
+<script src="../../js/util/qrcode.js"></script>
+<script src="../../js/util/pixi.min.js"></script>
+<script src="../../js/util/moment.js"></script>
+
+<script src="../../js/greensock/TweenMax.min.js"></script>
+<script src="../../js/greensock/TimelineMax.min.js"></script>
+<script src="../../js/greensock/jquery.gsap.min.js"></script>
+
+<script src="../../js/dac/dac_pixi.js"></script>
+<script src="../../js/dac/dac_util.js?v=20160622-2"></script>
+<script src="../../templates/template_base.js"></script>
+<script src="../../templates/template_socialmedia_pic.js?v=20160622-2"></script>
+<script src="../../templates/twitter_pic/template_twitter_pic.js"></script>
+<script>
+var m_playIntro = 0;
+var m_template = new TemplateTwitterPic(1);
+
+$(document).ready(function()
+{
+    console.log("[template_twitter_pic.html]run .....");
+    m_template.run();
+
+});
+
+
+function initAndPlayTemplate(fullWidget)
+{
+    console.log("[template_twitter_pic.html]initAndPlayTemplate ... m_playIntro="+m_playIntro);
+    if (m_playIntro == 1)
+    {
+        m_template.playIntro(fullWidget);
+        m_playIntro = 0;
+    }
+    else 
+        m_template.initAndPlayTemplate(fullWidget);
+}
+
+
+function sendUpdatesToWidget(fullWidget)
+{
+    console.log("[template_twitter_pic.html]sendUpdatesToWidget ... ");
+    m_template.updateWidget(fullWidget);
+}
+
+
+function animate() 
+{
+    m_template.animate();
+}
+
+
+function logLastPlay(widgetId, playTime, index, postId, posttime)
+{
+
+}
+
+
+</script>
+</body>

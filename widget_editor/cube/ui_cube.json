@@ -1,0 +1,148 @@
+{  
+   "template":"cube",
+   "standard_tabs":[  
+      {"tab_id":"background","open":"true","overlay":true},
+      { "tab_id":"qr"}
+   ],
+   "custom_tabs":[  
+      {  
+         "tab_id":"text_message",
+         "tab_name":"Text Message",
+         "groups":[  
+
+                                    {  
+               "group_id":"grp_image1",
+               "group_name":"Cube",
+               "open":true,
+               "fields":[
+                        {"field_id":"text_or_image","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" },
+                        {"field_id":"same_font","field_name":"Same Font Sizeee","field_type":"text","component":"radio", "val_list":"same_font" },
+                        {"field_id":"rotating_style", "field_name":"Rotating Style", "field_type":"text","component":"select","field_width":"150","val_list":"rotating_style"},
+                        {"field_id":"rotating_speed","field_name":"Rotating Speed","field_type":"text","component":"select","field_width":"150","val_list":"rotating_speed"},
+                         {"field_id":"image1","field_name":"Image1","field_type":"image","component":"dropzone"}
+
+                        
+
+
+                        ]
+            },
+            {  
+               "group_id":"grp_text1",
+               "group_name":"Text1",
+               "open":true,
+               "fields":[
+
+                        {"field_id":"text1","field_name":"Text1","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
+                        ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"},
+                        {"field_id":"valign1","field_name":"Vertical Align","field_type":"text","component":"radio", "val_list":"valignlist" }
+
+                        ]
+            },
+
+                                                {  
+               "group_id":"grp_image2",
+               "group_name":"Image2",
+               "open":true,
+               "fields":[
+                        {"field_id":"image2","field_name":"Image2","field_type":"image","component":"dropzone"}
+                        ]
+            },
+            {  
+               "group_id":"grp_text2",
+               "group_name":"Text2",
+               "open":true,
+               "fields":[
+                        {"field_id":"text2","field_name":"Text2","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
+                        ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+                        ]
+            },
+
+                                                {  
+               "group_id":"grp_image3",
+               "group_name":"Image3",
+               "open":true,
+               "fields":[
+                        {"field_id":"image3","field_name":"Image3","field_type":"image","component":"dropzone"}
+                        ]
+            },
+            {  
+               "group_id":"grp_text3",
+               "group_name":"Text3",
+               "open":true,
+               "fields":[
+                        {"field_id":"text3","field_name":"Text3","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
+                        ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+                        ]
+            },
+
+                                                {  
+               "group_id":"grp_image4",
+               "group_name":"Image4",
+               "open":true,
+               "fields":[
+                        {"field_id":"image4","field_name":"Image4","field_type":"image","component":"dropzone"}
+                        ]
+            },
+            {  
+               "group_id":"grp_text4",
+               "group_name":"Text4",
+               "open":true,
+               "fields":[
+                        {"field_id":"text4","field_name":"Text4","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
+                        ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+                        ]
+            },
+
+                                                {  
+               "group_id":"grp_image5",
+               "group_name":"Image5",
+               "open":true,
+               "fields":[
+                        {"field_id":"image5","field_name":"Image5","field_type":"image","component":"dropzone"}
+                        ]
+            },
+            {  
+               "group_id":"grp_text5",
+               "group_name":"Text5",
+               "open":true,
+               "fields":[
+                        {"field_id":"text5","field_name":"Text5","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
+                        ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+                        ]
+            },
+
+
+                                                {  
+               "group_id":"grp_image6",
+               "group_name":"Image6",
+               "open":true,
+               "fields":[
+                        {"field_id":"image6","field_name":"Image6","field_type":"image","component":"dropzone"}
+                        ]
+            },
+            {  
+               "group_id":"grp_text6",
+               "group_name":"Text6",
+               "open":true,
+               "fields":[
+                        {"field_id":"text6","field_name":"Text6","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
+                        ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+                        ]
+            }
+
+         ]
+      }
+   ],
+   "val_lists":{  
+        "alpha_list": ["0|0%","0.1|10%","0.2|20%","0.3|30%","0.4|40%","0.5|50%","0.6|60%","0.7|70%","0.8|80%","0.9|90%","1|100%"],
+       "font_type_list": ["Arial","Calibri","Times New Roman","Verdana"],
+       "font_size_list": ["50","60","70","80","90","100","110","115","120","125","130"],
+       "same_font":  ["false|False","true|True"],
+       "rotating_speed": ["0","1","2"],
+       "rotating_style": ["style1|STYLE1","style2|STYLE2"],
+       "textOrImage": ["on|ON","off|OFF"],
+       "valignlist": ["top|Top","middle|Middle","bottom|Bottom"]
+      }
+}
+
+

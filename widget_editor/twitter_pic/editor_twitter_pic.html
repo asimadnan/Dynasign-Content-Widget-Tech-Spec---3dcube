@@ -1,0 +1,103 @@
+
+ 
+<div class="main-content">
+    <div class="row">
+<!---- start left side editor ----->
+        <div class="col-md-6" id="left_editor">
+            <div id="accordion">
+                <h3>&nbsp;&nbsp;&nbsp;Widget Price and Licensed Devices</h3><div><div style="float:left; margin-left: 0px;"><span class="daclabel daclabel-default" >Number of Devices You Like to Play this Widget on </span><div style="margin-top:5px;"><div class="col-md-1 input-group-sm" ><div class="input-group"><span class="input-group-btn"><button type="button" class="btn btn-default btn-number"  data-type="minus" data-field="quant[1]" style="margin-left:-14px"><span class="glyphicon glyphicon-minus"></span></button></span><input type="text" name="quant[1]" class="form-control input-number" id="licensed_players" value="1" min="1" max="99999"><span class="input-group-btn"><button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"><span class="glyphicon glyphicon-plus"></span> </button></span></div></div></div></div><div style="float:left; margin-left: 0px; margin-top: 10px;"><span class="daclabel daclabel-default" >Unit Price </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="unit_price" value="4.99" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Volume Discount </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="volume_discount" value="0%" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Your Unit Price After Discount </span><div style="margin-top:5px;"><input type="text"  class="form-control" id="your_unit_price" value="0%" readonly="readonly"  style="text-align: right; width:62px" /> </div></div><div style="float:left; margin-left: 10px; margin-top: 10px;"><span class="daclabel daclabel-default" >Total Monthly Price </span><div style="margin-top:5px;"><input type="text"  class="form-control"  id="total_widget_price" value="2" readonly="readonly"  style="color:#9C0000;  margin-left:0px; text-align: right; width:100px" /> </div></div><hr style = "width:100%; border: 0; height: 2px;  background: #fff;"><span class="daclabel daclabel-default" style="float:left; margin-left: 0px; margin-bottom: 0px; margin-top: 0px;" >Unit price is per month per device. Volume discount is based on the number of devices</span></div>            <h3>&nbsp;&nbsp;&nbsp;Widget Size</h3><div><div class=\"dropdown\"><span><input id="input_zone_width" maxlength="5" style="width:60px; height:30px;"  value="1920"></input> x <input id="input_zone_height" maxlength="5" style="width:60px;height:30px;" value="1080"></input></span><button class="btn" data-toggle="dropdown"  style="color: #CCCCCC; min-width: 30px; width: 33px;"><span class="caret" style="color:#333333"></span></button><ul class="dropdown-menu list-dropdown-menu" style="margin-left: 30px; margin-top:-128px;"><li><a href="#" onclick="changeZoneSize('3840|2160');">3840 x 2160 (landscape)</a></li><li><a href="#" onclick="changeZoneSize('1920|1080');">1920 x 1080 (landscape)</a></li><li><a href="#" onclick="changeZoneSize('1280|720');">1280 x 720 (landscape</a></li><li><a href="#" onclick="changeZoneSize('2160|3840');">2160 x 3840 (portrait)</a></li><li><a href="#" onclick="changeZoneSize('1080|1920');">1080 x 1920 (portrait)</a></li><li><a href="#" onclick="changeZoneSize('720|1280');">720 x 1280 (portrait)</a></li></ul><div style="float:right;margin-right:230px;"><button type="button" class="dac-btn-sm" onclick='changeZoneSize($( "#input_zone_width" ).val()+"|"+$( "#input_zone_height" ).val())'>Set Size</button></div><div style="margin-top:10px;">Set the widget size to be the same as the zone size on screen.</div></div></div>            <h3>&nbsp;&nbsp;&nbsp;Properties</h3>
+
+                <div>
+
+	<div style="float:left;margin-bottom: 15px;" class="input-group-sm"><span class="daclabel daclabel-default">Feed</span> <div style="margin-top:5px;margin-bottom:0px" class="class="col-md-3" input-group-sm"><span><span><select class="form-control" style="width: 450px; height:30px; margin-right:10px;" id="feed_key"  onChange="updateFeedKey('feed_key',this.value)"><option value="select0" >Please select a feed</option><option value="TWA3817721390" >#disney (TWA3817721390)</option><option value="TWA2496019480" >49ers (TWA2496019480)</option><option value="TWA3068001545" >ABCNEWS (TWA3068001545)</option><option value="TWA1689862975" >advanced search - ken (TWA1689862975)</option><option value="TWA1910073315" >advanced search - nba final (TWA1910073315)</option><option value="TWA1382700353" >advanced search - nba tnt final (TWA1382700353)</option><option value="TWA2352651337" >advanced search 123 (TWA2352651337)</option><option value="TWA9820692754" >advanced search NBA (TWA9820692754)</option><option value="TWA1352205891" >advanced search nba (TWA1352205891)</option><option value="TWA1394581654" >BarackObama - User Timeline (TWA1394581654)</option><option value="TWA1056233926" >basic search (TWA1056233926)</option><option value="TWA7409559963" >basic search - NBA final (TWA7409559963)</option><option value="TWA3038025798" >basic search NBA (TWA3038025798)</option><option value="TWA1698504770" >basic search NBA (TWA1698504770)</option><option value="TWA4413736590" >beautiful flowers (TWA4413736590)</option><option value="TWA1352967518" >beautiful flowers - advacned (TWA1352967518)</option><option value="TWA9725713269" >BillGates (TWA9725713269)</option><option value="TWA2872599282" >BleacherReport (TWA2872599282)</option><option value="TWA2133794974" >BMW (TWA2133794974)</option><option value="TWA2111046614" >BMW (TWA2111046614)</option><option value="TWA2227329384" >BMW Timeline (TWA2227329384)</option><option value="TWA1429934954" >cavs (TWA1429934954)</option><option value="TWA1803538618" >CBS (TWA1803538618)</option><option value="TWA2097099636" >CBS - no filter (TWA2097099636)</option><option value="TWA1285739461" >cbsnews (TWA1285739461)</option><option value="TWA1094481229" >CNET (TWA1094481229)</option><option value="TWA2666284186" >CNN (TWA2666284186)</option><option value="TWA4305929502" >cnn (TWA4305929502)</option><option value="TWA2266746305" >cnn (TWA2266746305)</option><option value="TWA2969631477" >cnn (TWA2969631477)</option><option value="TWA9699870863" >cnn (TWA9699870863)</option><option value="TWA1098859871" >CNN - NEW (TWA1098859871)</option><option value="TWA2940162601" >cnn - test1 (TWA2940162601)</option><option value="TWA8540581945" >CNN new2 (TWA8540581945)</option><option value="TWA2089661775" >cnn test3 (TWA2089661775)</option><option value="TWA1655573287" >cnn1231312312 (TWA1655573287)</option><option value="TWA2267102995" >cnn5 (TWA2267102995)</option><option value="TWA1777366530" >cnnbrk (TWA1777366530)</option><option value="TWA1618700296" >dynasign (TWA1618700296)</option><option value="TWA9514424171" >dynasign (TWA9514424171)</option><option value="TWA2464473996" >dynasign adv (TWA2464473996)</option><option value="TWA2600251655" >ericlu (TWA2600251655)</option><option value="TWA6470954247" >festivalmusic (TWA6470954247)</option><option value="TWA2706325661" >FOXNEWS (TWA2706325661)</option><option value="TWA1820547845" >FOXNEWS (TWA1820547845)</option><option value="TWA1557716009" >hillary (TWA1557716009)</option><option value="TWA2699896774" >historytime_ (TWA2699896774)</option><option value="TWA2624227148" >katyperry (TWA2624227148)</option><option value="TWA4718171184" >Katyperry - User Timeline (TWA4718171184)</option><option value="TWA5444375407" >london (TWA5444375407)</option><option value="TWA2017602914" >los angeles (TWA2017602914)</option><option value="TWA2702641091" >msnbc (TWA2702641091)</option><option value="TWA1478969704" >msnbc (TWA1478969704)</option><option value="TWA2657109741" >NBA (TWA2657109741)</option><option value="TWA1646407065" >nba (TWA1646407065)</option><option value="TWA6433771692" >nba (TWA6433771692)</option><option value="TWA7859128216" >nba (TWA7859128216)</option><option value="TWA2197728204" >NBA NFL (TWA2197728204)</option><option value="TWA2027192169" >nba test 2 (TWA2027192169)</option><option value="TWA2239734267" >NBANEWS (TWA2239734267)</option><option value="TWA7666440795" >new test - "san francisco" (TWA7666440795)</option><option value="TWA7343272644" >news (TWA7343272644)</option><option value="TWA9967199520" >san francisco (TWA9967199520)</option><option value="TWA2820802773" >san francisco  superbowl (TWA2820802773)</option><option value="TWA3393637624" >san francisco - advanced (TWA3393637624)</option><option value="TWA2511322132" >San Jose - near this place (TWA2511322132)</option><option value="TWA2453941945" >shootings (TWA2453941945)</option><option value="TWA2661120997" >StephenCurry30 (TWA2661120997)</option><option value="TWA7356819610" >superbowl (TWA7356819610)</option><option value="TWA2653222337" >superbowl, los angeles (TWA2653222337)</option><option value="TWA1788106979" >Superbowl50 (TWA1788106979)</option><option value="TWA1862599888" >test (TWA1862599888)</option><option value="TWA1226256897" >test (TWA1226256897)</option><option value="TWA9269228754" >test (TWA9269228754)</option><option value="TWA2513725297" >test 123123123 (TWA2513725297)</option><option value="TWA2788305408" >test 2 users (TWA2788305408)</option><option value="TWA1904424467" >test advanced  (TWA1904424467)</option><option value="TWA2941531046" >test cnn (TWA2941531046)</option><option value="TWA1049797762" >test curry (TWA1049797762)</option><option value="TWA3735614400" >test nba (TWA3735614400)</option><option value="TWA7700861046" >test wizard cnn (TWA7700861046)</option><option value="TWA1337051490" >test wizard2 (TWA1337051490)</option><option value="TWA1958996937" >test wizard3 (TWA1958996937)</option><option value="TWA2212693063" >test wz (TWA2212693063)</option><option value="TWA3108739090" >test2 (TWA3108739090)</option><option value="TWA1218758807" >test3 (TWA1218758807)</option><option value="TWA2553467893" >TheDemocrats (TWA2553467893)</option><option value="TWA1933999082" >timeline (TWA1933999082)</option><option value="TWA8578331407" >twitter - yourhong3 (TWA8578331407)</option><option value="TWA8046451962" >twitter basic search (TWA8046451962)</option><option value="TWA7857274308" >twitter search (TWA7857274308)</option><option value="TWA2593228366" >user timeline - dynasign 6/3 (TWA2593228366)</option><option value="TWA1165232132" >user timeline dynasign1 (TWA1165232132)</option><option value="TWA1237179930" >user timeline dynasign123 (TWA1237179930)</option><option value="TWA6247798471" >user timeline test2 (TWA6247798471)</option><option value="TWA1144160872" >user timline 12345 (TWA1144160872)</option><option value="TWA8549866544" >usertimline test1 (TWA8549866544)</option><option value="TWA5175050937" >www (TWA5175050937)</option><option value="TWA1484604775" >www (TWA1484604775)</option><option value="TWA2459746799" >www (TWA2459746799)</option><option value="TWA6640182810" >www (TWA6640182810)</option><option value="TWA1167630709" >www (TWA1167630709)</option><option value="TWA1239507785" >yourhong (TWA1239507785)</option><option value="TWA6964366029" >yourhong (TWA6964366029)</option><option value="TWA7610188586" >yourhong 2 (TWA7610188586)</option><option value="TWC1927432220" >ABCNEWS - 123 (TWC1927432220)</option><option value="TWA2368271151" >ewewe (TWA2368271151)</option><option value="TWC2735682926" >steph (TWC2735682926)</option><option value="TWC3416917222" >test - public (TWC3416917222)</option><option value="TWC1266560543" >test changed to public (TWC1266560543)</option></select><button id="new_feed_button" class="dac-btn-sm"  style="margin-top:3px;"  onclick="location.href='feed_config.php?f=twitter';" >New Feed</button></span></div></div>	<div style="float:left;margin-bottom: 15px;margin-right: 5px" class="input-group-sm"><span class="daclabel daclabel-default">Duration per Post (sec)</span> <div style="margin-top:5px;margin-bottom:0px" class="input-group-sm"><input class="form-control" type="text" id="post_duration" maxlength="200" style="float:left;width:140px;height:30px" value="" onchange="updateWidgetField('post_duration',this.value)" ></input></div></div>		
+	<div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Title</span><div style="margin-top:5px;margin-bottom:0px" ><input class="form-control" type="text" id="feed_title"  style="width:100%; height:30px" value="" size="200" maxlength="200"></input></div></div><div style="margin-bottom:50px; margin-top:15px;"><div style="clear:left;"><span class="daclabel daclabel-default">Title Font Style</span></div><div style="float:left; height: 35px; margin-bottom:10px; margin-top:5px;"><input id="feed_title_font" type="text" value="Arial" class="form-control"  style="margin-top:0px;width:130px;height:30px" size="20" onchange="updateWidgetField('feed_title_font',this.value)"></div></div>	<div style="margin-bottom:50px; margin-top:15px;"><div style="clear:left;"><span class="daclabel daclabel-default">Body Font Style</span></div><div style="float:left; height: 35px; margin-bottom:10px; margin-top:5px;"><input id="body_font" type="text" value="Arial" class="form-control"  style="margin-top:0px;width:130px;height:30px" size="20" onchange="updateWidgetField('body_font',this.value)"></div></div>			
+
+
+            <div style="float:left;">
+             <span class="label label-default" >Color Theme </span>
+             <div style="margin-top:5px;">
+             <select id="theme_color" onChange="updateWidgetFieldWithReload('theme_color',(this.options[this.selectedIndex].value))">
+                       <option value="black">Black</option>
+                       <option value="blue">Blue</option>
+                       <option value="brown">Brown</option>
+                       <option value="green">Green</option>
+                       <option value="orange">Orange</option>
+                       <option value="red">Red</option>
+                       <option value="teal">Teal</option>
+                       <option value="bloody_orange">Bloody Orange</option>
+                       <option value="ocean">Ocean</option>
+                       <option value="rainbow">Rainbow</option>
+                       <option value="seashore">Seashore</option>
+                       <option value="sunrise">Sunrise</option>
+               </select>
+             </div>
+            </div>
+	     <div style="margin-top:110px; color:#FFFFFF;">.</div>
+                </div>
+
+	  <h3>&nbsp;&nbsp;&nbsp;QR Code</h3><div style="float:left;margin-bottom: 15px;" ><span class="daclabel daclabel-default">Enter Text or URL for your QR Code</span> <span class="daclabel daclabel-default" style="float:right; margin-top: 0px; height:20px;padding-top:3px">Show QR Code</span><input id="qr_flag" style="font-size:20px;float:right; margin-right: 1px; " type="checkbox"  onClick="toggleBooleanField('qr_flag', this.checked)"><div style="margin-top:5px;margin-bottom:10px" ><input class="form-control" type="text" id="qr_text"  style="width:100%; height:30px" value="" size="200" maxlength="200"></input></div><div style="float:left;margin-top: 0px; margin-right: 10px;margin-bottom: 10px;"><span class="daclabel daclabel-default">QR Code Color</span>  <div style="margin-top:5px;"><input type="text" id="qr_color"  onchange="updateWidgetField('qr_color',this.value);"/></div></div></div>          </div>
+		  
+      </div>
+<!---- end left side editor ----->	  
+<!---- start right side edit view ----->
+	 <div class="col-md-6" id="right_edit_view">
+	  <div style="margin-bottom:0px;float:left;"><span class="label label-default">Edit View</span></div>
+		 <div>
+			 <iframe id="iframe_edit_view" src="widget_editor/twitter_pic/view_twitter_pic.html?width=500&height=333" scrolling="no" style="width:600px;height:333px;border:solid 5px #E1E1E1;border: 0px "></iframe>
+		 </div>
+              <span style="color:#555555;">To position QR code or certain draggable items in the Edit View, use Drag and Drop.</span>
+		 <div class="alert alert-success" role="alert" id="saveMessage" style="display:none;">
+			 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+			 <span class="sr-only">Error:</span>Saving Content Widget ...		 </div>
+	 </div>
+<!---- end right side edit view ----->
+		</div>
+</div>            
+<script>
+
+
+ //this initializes the Edit Template
+ $(document).ready(function()
+ {
+    initWidgetEditor();
+
+    var feed_key = "select0";
+    if (content!= null)
+        feed_key = content.feed_key;
+    if (mode != "e" && mode != "c")
+    {
+        feed_key = fkey;
+        updateFeedKey('feed_key',feed_key);
+    }
+//alert("feed_key="+feed_key);
+    $('#feed_key').val(feed_key);
+
+    $('#post_duration').attr('value', content.post_duration);
+    $('#post_duration').combobox(['5', '10','15','20','25']);  
+
+    //feed_title
+    //alert("content.feed_title="+content.feed_title);
+    $('#feed_title').attr('value', content.feed_title);
+    initFontTypeCombox('#feed_title_font');
+    $('#feed_title_font').attr('value', content.feed_title_font);
+
+    // body
+    initFontTypeCombox('#body_font');
+    $('#body_font').attr('value', content.body_font);
+    $('#theme_color').val(content.theme_color);
+
+    //initEditViewContent();
+    //$('#iframe_edit_view').attr('src',"widget_editor/twitter_pic/view_twitter_pic.php?width=500&height=333");
+});
+
+$( "#feed_title" ).on('input', function() {
+    updateWidgetField("feed_title",$( "#feed_title" ).val());
+});
+
+
+
+
+
+
+</script>
+ 

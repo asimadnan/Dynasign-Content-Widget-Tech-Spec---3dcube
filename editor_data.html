@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dynasign Content Widget Development Kit</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/non-responsive.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">	
+    
+      <style>
+
+    </style>
+    
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- The mobile navbar-toggle button can be safely removed since you do not need it in a non-responsive implementation -->
+          <a class="navbar-brand" href="index.html" style="color:#990000;">Dynasign Studios Developer Guide</a>
+        </div>
+
+      </div>
+    </nav>
+    
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="navbar-header">
+            <br>
+        <p class="text-muted">Dynasign 	&copy; 2016. This document is proprietary and confidential.<br>
+All information contained herein is, and remains
+the property of Dynasign Corporation and its suppliers.
+The intellectual and technical concepts contained
+herein are proprietary to Dynasign Corporation and its suppliers and may be covered by U.S. and Foreign Patents,
+patents in process, and are protected by trade secret or copyright law.
+Dissemination of this information or reproduction of this material is strictly forbidden without the prior written consent of Dynasign Corporation.</p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div >
+        <h1>Build Widget Editor Data JSON File</h1>
+        <p class="lead">Data JSON File includes the test data for the widget editor and the player</p>
+
+        
+
+        <h3>Editor Test Data JSON File  (<code>data_[template name].json</code>)</h3>
+             To test the widget editor and widget player, you can change the field variable values in the test data file.<br>
+
+        <br>
+
+Explore sample test data files: 
+<br>
+<a href="widget_editor/announcement/data_announcement.json" target="ds"><code style='text-decoration: underline;'>data_announcement.json</code></a>
+<br>
+<a href="widget_editor/weather/data_weather.json" target="ds"><code style='text-decoration: underline;'>data_weather.json</code></a>
+<br>
+<a href="widget_editor/sample/data_sample.json" target="ds"><code style='text-decoration: underline;'>data_sample.json</code></a>
+<br>
+    <div id="editor_data_json"></div>
+    
+    <br>
+        
+<h3>Steps to Build</h3>
+<ul>
+    <li>Copy from <code>data_announcement.json</code>, then edit to make your own test data file <code>data_[template name].json</code></li>
+    <li>Define Template name: <code> e.g. "template": "announcement"</code></li>
+    <li><code>widget</code> section (required for all widgets): add all field variables inside the <code>content</code> section</li>
+    <li><code>widgetAsset</code> section (required for widgets with media assets): add media assets for testing. </li>
+        <ul>
+        <li>For asset id, use w[wid]-[templateName]-[fieldId], e.g. w100-announcement-background_image</li>
+        </ul>
+    <li><code>feed</code> section (required for widgets with feeds): add feed data for testing</li>
+    <li><code>feedAsset</code> section (required for feeds with media assets): add feed assets for testing</li>
+</ul>
+
+    
+    
+
+
+
+
+
+
+
+
+  
+
+        
+        
+        
+        <br><br>
+
+      <p></p>
+      
+
+
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #eee, #333, #eee);"> 
+
+    </div> <!-- /container -->
+
+<br><br><br>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/renderjson.js"></script>
+    
+<script>
+
+    
+$(function(){
+
+ //  loadEditorDataJson();
+       
+});
+    
+    
+function loadEditorDataJson()
+{
+    var deferred = $.Deferred();
+    var templateName = "announcement";
+    var dataFile = "widget_editor/"+templateName+"/data_"+templateName+".json";          
+    var loadEditorDataPromise = $.getJSON(dataFile);
+    
+    loadEditorDataPromise.done(function(data) {
+
+        document.getElementById("editor_data_json").appendChild(
+        renderjson(data)
+    );
+
+        deferred.resolve(data);
+    });
+
+            
+    loadEditorDataPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("[widget_editor]loadEditorDataJson error"+textStatus+" "+errorThrown);
+        deferred.resolve(null);
+    });
+    return deferred.promise();
+}
+
+</script>
+
+  </body>
+</html>

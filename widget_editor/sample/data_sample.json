@@ -1,0 +1,77 @@
+{  
+   "wid":"1",
+   "template":"sample",
+   "widget":{  
+      "dac_widget":{  
+         "header":{  
+            "account_no":"DY1303806194",
+            "id":"228",
+            "desc":"Fremont Weather",
+            "template":"weather",
+            "last_updated_time":"2016-06-27 14:27:58"
+         }
+		 ,
+         "content":{  
+            "zone_width":1920,
+            "zone_height":1080,
+            "zone_size_option":"custom",
+            "background_color":"1185C6",
+            "text1":"Dynasign .....",
+            "text2":"Dynasign Studios .....",
+            "textarea1":"Dynasign, we bring life to screens, one screen at a time",
+            "checkbox1":true,
+            "radio1":"red",
+            "select1":"4",
+            "combo1":"5 Days",
+            "text_style1_font":"Calibri",
+            "text_style1_font_color":"3D85C6",
+            "text_style1_bold":false,
+            "text_style1_italic":true,
+            "text_style2_font":"Times New Roman",
+            "text_style2_font_color":"990000",
+            "overlay_alpha":"0.2",
+            "color1":"00FF00",
+            "qr_flag":false,
+            "qr_text":"http://www.dynasignstudios.com/",
+            "qr_size":"60",
+            "qr_x":"-1",
+            "qr_y":"150",
+            "qr_color":"#000000",
+            "qr_option":"",
+            "dac_asset":[  
+               {  
+                    "field_name":"background_image",
+                    "display_name":"genguins_antarctica_1024x768.jpg",
+                    "location":"account\/DY1303806194\/asset\/alex_wang_dynasign_net\/image\/jpeg\/20150824\/genguins_antarctica_1024x768_1440451075113.jpg",
+                    "download":"true",
+                    "type":"dac_upload",
+                    "mime_type":"image\/jpeg"
+               }
+            ],            
+            "dac_asset":[  
+               {  
+                    "field_name":"image1",
+                    "display_name":"genguins_antarctica_1024x768.jpg",
+                    "location":"account\/DY1303806194\/asset\/alex_wang_dynasign_net\/image\/jpeg\/20150824\/genguins_antarctica_1024x768_1440451075113.jpg",
+                    "download":"true",
+                    "type":"dac_upload",
+                    "mime_type":"image\/jpeg"
+               }
+            ],
+
+
+
+
+            "location_font_color":"#e59966",
+            "body":""
+         }
+      }
+   },
+   "widgetAsset":{  
+      "w1-weather-background_image":"http://localhost/ds_widget/img/genguins_antarctica_1024x768.jpg"
+   },
+   "widgetAssetInfo":{},
+   "feed": {}
+  
+}
+

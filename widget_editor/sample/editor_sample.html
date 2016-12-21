@@ -1,0 +1,51 @@
+
+ 
+<div class="main-content">
+  <div class="row">
+<!---- start left side editor ----->
+    <div class="col-md-6" id="left_editor">
+	   
+	<div id="accordion">
+
+
+        </div> 
+    </div>
+<!---- end left side editor ----->	  
+
+
+<!---- start right side edit view ----->
+    <div class="col-md-6" id="right_edit_view">
+        <div style="margin-bottom:0px;float:left;"><span class="label label-default">Edit View</span></div>
+        <div>
+            <iframe id="iframe_edit_view" src="" scrolling="no" style="width:600px;height:333px;border:solid 5px #E1E1E1;border-radius: 10px "></iframe>
+        </div>
+    <span style="color:#555555;">To position QR code or certain draggable items in the Edit View, use Drag and Drop.</span>
+        <div class="alert alert-success" role="alert" id="saveMessage" style="display:none;">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>Saving Content Widget ...		 
+        </div>
+    </div>
+<!---- end right side edit view ----->
+	</div>
+</div> 
+       
+ 
+<script>
+
+$(document).ready(function()
+{
+    // load rigth side edit view
+    var t= Date.now();
+    var edit_view_url = "widget_editor/"+templateName+"/view_"+templateName+".html?t="+t;
+    $('#iframe_edit_view').attr('src', edit_view_url);
+    
+    // load left fields
+    dacWidgetEditor.startEditor();
+    initWidgetEditor();
+});
+
+
+
+
+</script>
+ 

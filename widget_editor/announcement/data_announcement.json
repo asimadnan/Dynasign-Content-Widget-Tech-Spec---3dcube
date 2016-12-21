@@ -1,0 +1,71 @@
+{  
+   "wid":"100",
+   "template":"announcement",
+   "widget":{  
+      "dac_widget":{  
+         "header":{  
+            "account_no":"DY1303806194",
+            "id":"100",
+            "desc":"test test announcement",
+            "template":"announcement",
+            "last_updated_time":"2015-11-17 16:25:11"
+         },
+         "content":{  
+            "zone_width":"1920",
+            "zone_height":"1080",
+            "zone_size_option":"custom",
+            "background_color":"000000",
+            "overlay_color":"660000",
+            "overlay_x":50,
+            "overlay_y":80,
+            "overlay_alpha":"0.6",
+            "overlay_width":1800,
+            "overlay_height":800,
+            "background_image_flag":true,
+            "title":"Dynasign",
+            "title_font":"Arial",
+            "title_font_size":"100",
+            "title_font_color":"#FFFFFF",
+            "title_italic":false,
+            "title_alignment":"right",
+            "title_bold":false,
+            "title_x":67.386526751495,
+            "title_y":143.97879532357,
+            "description":"We bring life to screens\none screen at a time",
+            "description_font":"Arial",
+            "description_font_size":"100",
+            "description_font_color":"#FFFFFF",
+            "description_italic":false,
+            "description_alignment":"left",
+            "description_bold":false,
+            "description_x":62.261200866651,
+            "description_y":266.65416389769,
+            "falling_object":"snowflake",
+            "falling_object_count":"0",
+            "background_audio_flag":false,
+            "background_audio":"",
+            "dac_asset":[  
+               {  
+                  "field_name":"background_image",
+                  "display_name":"bg006b_1920x1080.jpg",
+                  "location":"http://localhost/ds_widget/img/bg006b_1920x1080.jpg",
+                  "download":"true",
+                  "type":"dac_upload",
+                  "mime_type":"image/jpeg"
+               }
+
+            ]
+         }
+      }
+   },
+   "widgetAsset":{ 
+      "w100-announcement-background_image":"http://localhost/ds_widget/img/bg006b_1920x1080.jpg"
+   },
+
+   "feed":{  
+
+   },
+   "feedAsset":{  
+
+   }
+}

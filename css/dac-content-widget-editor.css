@@ -1,0 +1,61 @@
+/* DAC CSS added by JS */
+.dac-widget-text-toolbar {
+color:#9c0000;
+font-family: "Oswald", sans-serif;
+font-weight:normal;
+padding-bottom: 5px;
+}
+
+.dac-widget-font-toolbar {
+color:#9c0000;
+font-family: "Oswald", sans-serif;
+font-weight:normal;
+padding-bottom: 5px;
+}
+
+.dac-widget-font-toolbar-select {
+  width:150px;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  color:#000000;
+  background-color: #ffffff;
+}
+.dac-widget-font-toolbar-select-small {
+  width:50px;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  color:#000000;
+  background-color: #ffffff;
+}
+.dac-widget-screen-vertical {
+  height:110px;
+  width:85px;
+  background-color: #e1e1e1;
+  color:9a9a9a;
+  text-align: center;
+  padding-top:30px;
+}
+.dac-widget-screen-horizontal {
+  height:85px;
+  width:110px;
+  background-color: #e1e1e1;
+  color:9a9a9a;
+  text-align: center;
+  padding-top:20px;
+}
+.dac-widget-screen-parent {  
+  text-align: center;
+  
+}
+.dac-widget-screen-holder-vertical {
+  margin-left: 11%;
+  margin-top: 10px;
+  float:left;
+}
+.dac-widget-screen-holder-horizontal {
+  margin-left: 8%;
+  margin-top: 10px;
+  float:left;
+}

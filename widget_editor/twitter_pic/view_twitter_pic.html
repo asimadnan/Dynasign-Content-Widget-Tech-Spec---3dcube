@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<style>
+body {margin: 0; padding: 0; }
+</style>
+<link rel="stylesheet" type="text/css" href="../../htmlplayer/css/jquery-ui.css"/>
+<script src="../../htmlplayer/js/jquery/jquery.js"></script>
+<script src="../../htmlplayer/js/jquery/jquery-ui.js"></script>
+<script src="../../htmlplayer/js/jquery/jquery.qrcode-0.12.0.js"></script>
+<script src="../../htmlplayer/js/util/qrcode.js"></script>
+<script src="../../htmlplayer/js/util/pixi.min.js"></script>
+<script src="../../htmlplayer/js/util/moment.js"></script>
+
+<script src="../../htmlplayer/js/greensock/TweenMax.min.js"></script>
+<script src="../../htmlplayer/js/greensock/TimelineMax.min.js"></script>
+<script src="../../htmlplayer/js/greensock/jquery.gsap.min.js"></script>
+
+<script src="../../htmlplayer/js/dac/dac_pixi.js"></script>
+<script src="../../htmlplayer/js/dac/dac_util.js"></script>
+<script src="../../htmlplayer/templates/template_base.js"></script>
+<script src="../../htmlplayer/templates/template_socialmedia_pic.js"></script>
+<script src="../../htmlplayer/templates/twitter_pic/template_twitter_pic.js"></script>
+</head>
+
+<body>
+
+<script>
+
+var m_template = new TemplateTwitterPic(1);
+
+	
+m_template.setPlaymode("editor");
+var m_fullWidget;
+ 
+$(document).ready(function(){  
+    var ready = eval('typeof parent.initEditViewContent') === 'function' || false;
+    if (ready)
+        parent.initEditViewContent();
+    else
+        setTimeout(function(){ parent.initEditViewContent(); }, 500);
+}); 
+ 
+
+// call this one the first time
+function initEditView(fullWidget)
+{
+    m_fullWidget = fullWidget;
+    m_template.initEditView(fullWidget)
+} 
+
+function resizeEditView(fullWidget)
+{
+    m_fullWidget = fullWidget;
+    m_template.resizeEditView(fullWidget)
+} 
+
+// call this one when variables in the editor have changed
+function updateEditView(fullWidget, fieldName, value)
+{
+    console.log("[view_twitter_pic] updateEditView fieldName="+fieldName+" val="+value);
+    m_fullWidget = fullWidget;
+    m_fullWidget["widget"]["dac_widget"]["content"][fieldName]=value;
+    m_template.updateEditView(fullWidget, fieldName, value);
+}
+
+function updateEditorVariable(name,value)
+{
+    m_fullWidget["widget"]["dac_widget"]["content"][name] = value;
+    parent.updateEditorContent(m_fullWidget);
+}
+ 
+function animate() 
+{
+    m_template.animate();
+}
+
+
+
+
+
+</script>
+</body>

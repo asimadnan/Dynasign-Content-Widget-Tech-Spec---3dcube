@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dynasign Content Widget Development Kit</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/w2ui-1.4.3.min.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/non-responsive.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">	
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- The mobile navbar-toggle button can be safely removed since you do not need it in a non-responsive implementation -->
+          <a class="navbar-brand" href="index.html" style="color:#990000;">Dynasign Studios Developer Guide</a>
+        </div>
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="navbar-header">
+            <br>
+            <p class="text-muted">Dynasign 	&copy; 2016. This document is proprietary and confidential.<br>
+All information contained herein is, and remains
+the property of Dynasign Corporation and its suppliers.
+The intellectual and technical concepts contained
+herein are proprietary to Dynasign Corporation and its suppliers and may be covered by U.S. and Foreign Patents,
+patents in process, and are protected by trade secret or copyright law.
+Dissemination of this information or reproduction of this material is strictly forbidden without the prior written consent of Dynasign Corporation.
+        
+        </p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div >
+        <h1>Dynasign Content Widget Development Kit</h1>
+        <p class="lead">This is the guide for developing HTML5 Content Widgets for Dynasign Studios, a HTML5 content service for digital signage. For more information about Dynasign Studios, please go to <a href="http://www.dynasignstudios.com/" target="ds">www.dynasignstudios.com</a>.</p>
+        <p>Last Updated: 11/21/2016  </p>
+        <p>Copyright © 2016 Dynasign Corporation</p>
+      </div>
+
+    <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>Developer Skills Required</h3>
+      <ul>
+          <li>HTML5, CSS, Bootstrap, JQuery, Ajax, JSON and WebGL</li>
+          <li>HTML5 Canvas API, 2D/3D Graphics and Animation Javascript libraries including Pixi.js, Three.js, GreenSock</li>
+          <li>Javscript Programming with Text, Image, Video and Audio</li>
+          <li>Object-Oriented JavaScript Programming</li>
+          <li>Javascipt UI Libraries (e.g. w2ui, jquery-ui)   </li>
+          <li>Javascipt Charting Libraries (ChartJS, Google Charts, D3.js)  </li>
+          <li>Javascipt/Bootstrap UI Components </li>
+          <li>Cross Browser Programming Experience (Chrome, Edge, IE and Firefox)</li>
+          <li>Responsive Web Design for Mobile and Desktop (different display sizes)</li>
+          <li>Content Design Experience</li>
+      </ul>
+    <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>Resource Links</h3>
+      <ul>
+          <li><a href ="http://www.w3schools.com/jquery/default.asp">W3schools</a></li>
+          <li><a href ="http://getbootstrap.com/">Bootstrap </a></li>
+          <li><a href ="http://jquery.com/">JQuery</a></li>
+          <li><a href ="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">HTML5 Canvas API</a></li>
+          <li><a href ="http://www.pixijs.com/">Pixi (2D WebGL)</a></li>  
+          <li><a href ="http://threejs.org/">three.js (3D)</a></li>  
+          <li><a href ="https://greensock.com/">Greensock Animation (GSAP)</a></li>  
+          <li><a href ="https://www.sitepoint.com/15-best-javascript-charting-libraries/">Javscript Charting (ChartJS, Google Charts, D3.js)</a></li>  
+      </ul>
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>About this Kit</h3>
+      <p>
+          Dynasign Content Widget Development Kit allows you to develop Dynasign Content Widgets on your computer (localhost) without connecting to Dynasign Studios backend servers. 
+          It provides a local environment for you to develop and test widget templates on your computer. 
+
+      </p>
+      <ul>
+          <li>Widget Template: a content presentation template with a number of programmable parameters such as text, color, image, style, or external data feeds.</li>
+          <li>Widget Editor: a content programming user interface for end users to program and publish a widget for a given widget template. </li>
+          <li>Widget Player: a testing utility that plays the widget published from Widget Editor. </li>
+
+      </ul>
+        <p>
+          This development kit includes the basic framework for you to develop and test both a widget template and its editor. 
+          The kit also includes a few sample widgets that you can use as a reference for building your new widgets.
+
+        </p>
+
+      <h3>Setup</h3>
+      <p>To use this kit for development work, you need to setup a local Web server on your working computer. Any Web Server is fine.  <a href="https://www.apachefriends.org/index.html" target="ds">Apache HTTP Server</a> is recommended. </p>
+      
+      <ol>
+          <li>Download <a href="#" onclick="showDownloadPopup();"><code style='text-decoration: underline;'>ds_widget.zip</a></code> <i class="fa fa-download"></i>.</li>
+          <li>Unzip ds_widget.zip. Copy the ds_widget folder into a location where you can map to your local Web server, e.g. <code>c:\mywork\ds_widget</code></li>
+          <li>Map your local Web server so you can access the "<code>ds_widget</code>" folder via localhost in your Web Browser (Chrome is preferred), e.g. by entering <code>http://localhost/ds_widget/</code> in your Web browser, you should see the content of this page.</li>
+          <li>This kit includes a few sample widget templates and widget editors, plus the basic library files you need to use in your development.</li>
+      </ol>
+      
+      <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">  
+      
+      <h3>Content Widget Development Process</h3>
+       <ol>
+        <li>Develop ideas and visual design</li>
+        <li>Develop technical specification (template variables, objects, animation, layout, size and position for different zones)</li>
+        <li>Develop widget editor (using widget development kit)</li>
+        <li>Build and test widget template (using widget development kit and relevant Javascript libraries)</li>
+        <li>Submit your widget code to support@dynasign.net. </li>
+        <ul>
+            <li>Zip the entire ds_widget folder with both your template files and editor files in it.</li>
+            <li>Rename the zip file to something like <code>ds_widget_[your template name].zip.rename</code> to avoid rejection by email services.</li>
+            <li>In the email subject line, enter "Dynasign Content Widget -  [your widget name]", attach the renamed zip file and send the email to  support@dynasign.net.</li>
+        </ul>
+     </ol>
+      <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">  
+
+
+      <h3>A Sample Widget  "announcement" </h3>
+           <p>By reviewing those widget files, you will understand all the building blocks for a widget.</p>
+      <ul>
+
+          <li>Widget Technical Spec: <code style='text-decoration: underline;'><a href="./spec/spec_announcement.html"><code style='text-decoration: underline;'>spec_announcement.html</code></a></code><i class="fa fa-eye"></i></li> 
+        <li>Widget Editor Files: <i class="fa fa-arrow-circle-right"></i> <a href="widget_editor.html?template=announcement" target="ds"><code style='text-decoration: underline;'>widget_editor.html?template=announcement</code></a> <i class="fa fa-eye"></i></li>
+        <ul>
+            <li>Main editor file: use this file to start the editor, no need to change this file   <code>widget_editor.html</code> </i></li>
+            <li>Template field file(left template fields): <code>widget_editor/announcement/editor_announcement.html</code></li>
+            <li>Template view file (right side edit view): <code>widget_editor/announcement/view_announcement.html</code></li>
+            <li>Template ui file: editor UI definition for auto generation <a href="widget_editor/announcement/ui_announcement.json" target="ds" ><code style='text-decoration: underline;'>widget_editor/announcement/ui_announcement.json</code></a> <i class="fa fa-eye"></i></li>
+            <li>Template test data file: test data used by both editor and player <a href="widget_editor/announcement/data_announcement.json" target="ds"><code style='text-decoration: underline;'>widget_editor/announcement/data_announcement.json</code></a> <i class="fa fa-eye"></i></li>
+            <li>Template def file (not directly used by the kit): template field default values <a href="widget_editor/announcement/def_announcement.json" target="ds"><code style='text-decoration: underline;'>widget_editor/announcement/def_announcement.json</code></a> <i class="fa fa-eye"></i></li>
+        </ul>
+        <li>Widget Template Files: </li>
+        <ul>
+            <li>Template css folder: <code>htmlplayer/css</code></li>
+            <li>Template js folder: <code>htmlplayer/js</code></li>
+            <li>Template folder: <code>htmlplayer/templates</code></li>
+            <li>Template HTML file: <code>htmlplayer/templates/announcement/template_announcement.html</code></li>
+            <li>Template JS file: <code>htmlplayer/templates/announcement/template_announcement.js</code></li>
+            <li>Template Base JS file: to be inherited by all template JS files. No need to change this file <code>htmlplayer/templates/template_base.js</code></li>
+            <li>Template Appcache Manifest file: <code>htmlplayer/templates/announcement/template_announcement.appcache</code></li>
+        </ul>
+
+                
+        <li>Player: use this file to play the widget, no need to change this file <a href="widget_player.html?template=announcement" target="ds"><code style='text-decoration: underline;'>widget_player.html?template=announcement</code></a> <i class="fa fa-eye"></i></li>
+         </ul>
+    
+
+
+       
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>How to Build Widget Editor</h3>
+        <p>The widget editor user interface is generated automatically based on the editor ui json file. Please follow the steps below to build your widget editor.</p>
+        <ol>
+            <li>Use the "announcement" editor files for your reference to create your own editor files</li>
+            <li>Create an editor folder <code>widget_editor/[template name]/</code> using the template name, e.g. <code>announcement</code> if the folder doesn't exist</li>
+            <li>Build the 4 editor files using the sample editor files, follow the same naming convention as used in the sample widget editor:</li>
+            <ul>
+                <li>Copy <code>editor_announcement.html</code> to the editor folder, rename it to <code>editor_[template name].html</code>. </li>
+                <li>Copy <code>view_announcement.html</code> to the editor folder, rename it to <code>view_[template name].html</code>. </li>
+                <li>Edit <code>view_[template name].html</code> to replace <code>src="../../htmlplayer/templates/announcement/template_announcement.js"></code> in the script include section to your template js file. You may not have the template js developed yet. That is fine for now. </li>
+                 <li>Edit <code>view_[template name].html</code> to replace <code>var m_template = new TemplateAnnouncement(1);</code> with your template name </li>
+                <li>Build editor ui JSON file: <code>ui_[template name].json</code>, refer to <a href="editor_ui.html">Build Widget Editor UI JSON File</a></li>
+                <li>Build template test data file: <code>Template test data file: data_[template name].json</code>, refer to <a href="editor_data.html">Build Data JSON File</a></li>
+            </ul>
+            <li>Launch your editor: enter <code style='text-decoration: underline;'>widget_editor.html?template=[template name]</code> in browser</li>
+        </ol>
+        At this point, you should see all the fields are populated in the left side of the editor. If you haven't had your template code ready yet, your right side edit view will not work.
+        After you finish to code your template, you may continue to the following steps to test your editor and template together.<br><br>
+        <ol start="5">
+            <li>Test Update: change field values to see if they change in Edit View accordingly.</li>
+            <li>Test Preview: click the "Preview" button to make sure the field values in the editor will reflect in the popup preview.</li>
+            <li>Test Save: click the "Save" button to make sure all the field values in the editor are part of Content JSON to be sent.</li>
+            <li>Test all browsers: test your editor in Chrome, Edge, IE, Firefox, and Safari.</li>
+        </ol>
+        
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+      <h3>How to Build Widget Template</h3>
+      <p>Please follow the steps below to develop your template</p>
+        <ol>
+            <li>Define a system name for your new template, all lower cases, using _ to connect 2 words, e.g. <code>announcement</code>, <code>countdown</code></li>
+            <li>Create a new folder under <code>htmlplayer/templates/</code> using the template name, e.g. <code>announcement</code> </li>
+            <li>Create template files using the sample template files, follow the naming convention below: </code></li>
+                <ul>
+                    <li>Template HTML file: <code>htmlplayer/templates/[template name]/template_[template name].html</code></li>
+                    <li>Template JS file: <code>htmlplayer/templates/[template name]/template_[template name].js</code></li>
+                    <li>Template Appcache Manifest file: <code>htmlplayer/templates/[template name]/template_[template name].appcache</code></li>
+                    <li>Make sure <code>template test data file: data_[template name].json</code> is present in the editor folder (created during building the editor)</li>
+                </ul>
+            <li>Develop template JS file (<code>template_[template name].js</code>). 
+                This is the core of a template. To develop a template, you can choose one of the following methods for your stage:
+                <ul>
+                    <li>Pixi with transparent stage</li>
+                    <li>Pixi with non-transparent stage (without standard widget background)</li>
+                    <li>HTML5 canvas stage</li>
+                    <li>HTML5 non-Canvas stage</li>
+                </ul>
+                Please refer to the sample template for general code flow and structure. Use <a href="htmlplayer/templates/sample/template_sample.js" target="ds">
+                <code style='text-decoration: underline;'>htmlplayer/templates/sample/template_sample.js</code></a> <i class="fa fa-eye"></i> 
+                for your reference. Template JS should always inherit from <code>template_base.js</code>, which includes the basic methods shared by all templates. 
+                In addition, you must develop the following methods in your <code>template_[template name].js</code>: </li>
+                <ul>
+                    <li><code>initTemplateFields</code>: initialize all template fields</li>
+                    <li><code>determineObjInfo</code>: calculate object sizes and positions for different zone sizes</li>
+                    <li><code>initTemplateUI</code>: build template UI objects</li>
+                    <li><code>playTemplate</code>: start to play template</li>
+                    <li><code>initEditView</code>: initialize the edit view</li>
+                    <li><code>updateEditView</code>: rebuild UI objects to handle updates from the editor</li>
+                </ul>
+            
+            <li>Develop additional methods needed for your template </li>
+            <li>Launch your editor widget_editor.html?template=[template name] in browser to test your template (see step 5 - 8 under "Build Widget Editor")</li>
+            <li>Test your template using Widget Player <code>widget_player.html?template=[template name]</code> </li>
+
+        </ol>
+
+    
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">    
+
+
+        <h3>Coding Guidelines</h3>
+        <p>Please follow the coding style in the sample widgets to code:</p>
+        <ul>
+          
+
+
+        </ul>
+      <!---  <hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);">  --->
+        <br><br>
+  <!---    <p>................<strong class="text-danger"> End of doc </strong> ....................</p>--->
+      <p></p>
+      
+
+
+
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #eee, #333, #eee);"> 
+
+    </div> <!-- /container -->
+
+<br><br><br>
+
+<!-- Begin popup Modal -->
+<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Dynasign Widget Development Kit Download</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+         <div class="form-group">
+           <label>Name</label>
+           <input type="text" class="form-control" id="req_name" placeholder="Enter Your Name" minlength="3" minlength="30" >
+         </div>
+         <div class="form-group">
+           <label>Email</label>
+           <input type="text" class="form-control" id="req_email" placeholder="Enter Your Email">
+         </div>
+       </form>      
+      </div>
+<div class="modal-footer">
+ 
+<div><button type="button" class="btn btn-default" onClick="doDownload();">Download</button></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Popup Modal -->
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/w2ui-1.4.3.min.js"></script>
+    
+    
+    <script>
+        
+function doDownload()
+{
+
+    var name = $("#req_name").val().trim();
+    var email = $("#req_email").val().trim();
+    
+    var ok = true;
+    //alert("download name=|"+name+"| email="+email);
+    if (name == null || name.length == 0) ok = false;
+
+    
+    var emailOK = validateEmail(email);
+    //alert("emailOK="+emailOK);
+
+    if (emailOK == false) ok = false;
+
+    if (ok == true)
+    {
+        /*
+        $.ajax({
+            url: 'dsw_download.php',
+            data: {name: name, email:email},
+            type: 'POST',
+            success: function() {
+                window.location = 'dsw_download.php';
+            }
+        });
+        */
+        window.location = 'dsw_download.php?name='+name+'&email='+email;
+        
+        $('#downloadModal').modal('hide');
+        alert("Check ds_widget.zip in your browser download folder");
+    }
+    else
+        alert("Please enter your name and email");
+  
+}
+
+        ////
+function showDownloadPopup() 
+{
+    $('#downloadModal').modal('show');
+}
+
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+</script>
+  </body>
+</html>

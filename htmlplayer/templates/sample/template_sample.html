@@ -1,0 +1,51 @@
+
+<head>
+<style>
+body { margin: 0; padding: 0; overflow:hidden; -ms-overflow-style: none; background-color:black}
+
+</style>
+<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css"/>
+<title>template sample</title>
+</head>
+<body>
+<script> var t= Date.now();</script>
+<script src="../../js/jquery/jquery.js"></script>
+<script src="../../js/jquery/jquery.qrcode-0.12.0.js"></script>
+<script src="../../js/util/pixi.min.js"></script>
+
+<script src="../../js/createjs-2015.05.21.min.js"></script>
+<script src="../../js/dac/widget_background.js?t="+t"></script>
+
+<script src="../../js/dac/dac_pixi.js?t="+t"></script>
+<script src="../../js/dac/dac_util.js?t="+t"></script>
+<script src="../../templates/template_base.js?t="+t"></script>
+
+
+
+<script src="../../templates/sample/template_sample.js?t="+t></script>
+		 
+<script>
+var m_template = new TemplateSample(1);
+m_template.run();
+
+
+function initAndPlayTemplate(fullWidget)
+{
+    m_template.initAndPlayTemplate(fullWidget);
+}
+
+function animate() 
+{
+    m_template.animate();
+}
+
+function sendUpdatesToWidget(fullWidget)
+{
+// do nothing
+}
+
+
+</script>
+
+
+</body>

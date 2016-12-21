@@ -1,0 +1,301 @@
+/* Red Color CSS */
+
+body{
+border-top:1px solid #aa3333;
+}
+
+.color{
+color:#aa3333;
+}
+
+a, a:visited{
+color:#aa3333;
+}
+
+a:hover{
+color:#aa3333;
+}
+
+.navbar{
+background: #aa3333 !important;
+border-top:1px solid #d01216 !important;
+border-bottom:1px solid #d01216 !important; 
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+   border-color: #d71317;
+}
+
+.navbar button{
+background:#d01216 !important;  
+}
+
+.navbar button:hover{
+background:#d01216 !important;
+}
+
+.navbar .nav{
+border-right:1px solid #d71317;
+}
+
+.navbar .nav > li > a{
+background: #aa3333; 
+border-left:1px solid #d71317;
+}
+
+.navbar .nav > li > a:hover{
+background:#d01216 !important;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .active > a:focus {
+background: #d01216 !important;
+}
+
+.dropdown-toggle{
+background: #aa3333 !important;
+}
+
+
+.dropdown-menu{
+background:#aa3333 ;
+border:1px solid #d01216 !important;
+}
+
+.dropdown-menu a{
+background:#aa3333 ;
+border-bottom:1px solid #d01216 !important;
+}
+
+.dropdown-menu a:hover,.dropdown-menu a:focus{
+background:#d01216 !important;
+}
+
+.social i{
+background:#aa3333;
+}
+
+.social i:hover{
+background:#d01216;
+}
+
+.flex-caption{
+border-left:4px solid #aa3333;
+}
+
+.service i{
+color:#aa3333;
+}
+
+/* Timeline */
+
+.time .tidate{
+background:#aa3333;
+}
+
+.time .timatter{
+border-bottom:2px solid #aa3333;
+}
+
+/* Events - Accordion*/
+
+.events .panel-heading h5{
+background:#aa3333;
+}
+
+/* Slider */
+
+.da-slider{
+border-top: 4px solid #aa3333;
+border-bottom: 4px solid #aa3333;
+}
+
+.da-slide h2{
+color:#aa3333;
+}
+
+.da-slide .da-link{
+background:#aa3333;
+}
+
+/* Testimonial */
+
+.test{
+border-bottom:2px solid #aa3333;
+}
+
+.test-arrow{
+border-top-color: #aa3333;
+}
+
+/* Feature alt */
+
+.afeature:hover{
+border:5px solid #aa3333;
+}
+
+.afmatter i{
+color:#aa3333;
+}
+
+
+.rpost1:hover,.rpost2:hover{
+border-bottom:2px solid #aa3333;
+}
+
+.panel-heading i{
+color:#aa3333;
+}
+
+.process i{
+color:#aa3333;
+}
+
+.process-meta span{
+background:#aa3333;
+}
+
+.feat h4 i{
+color:#aa3333;
+}
+
+.blog .meta i{
+color:#aa3333;
+}
+
+.posts .tags a{
+background:#aa3333;
+border:1px solid #d01216;
+border-bottom:3px solid #d01216;
+}
+
+.posts .tags a:hover{
+border-bottom:3px solid #aa3333;
+background:#d01216;
+border:1px solid #d01216;
+}
+
+.paging a:hover{
+background: #aa3333;
+border:1px solid #d01216;
+}
+
+.paging .current{
+background: #aa3333;
+border:1px solid #d01216;
+}
+
+.serv .simg i{
+color:#aa3333;
+}
+
+.button a, .button a:visited{
+background:#aa3333;
+border-bottom:2px solid #d01216;
+}
+
+.button a:hover{
+background:#d01216;
+}
+
+.pricel .phead-top{
+background:#aa3333;
+border:1px solid #d01216;
+}
+
+.pricel .phead-bottom{
+border-top:1px solid #d01216;
+}
+
+.nav-tabs > li > a:hover{
+background:#aa3333;
+}
+
+.about .asocial i{
+background:#aa3333;
+}
+
+.resume h4{
+background:#aa3333;
+}
+
+.resume h5{
+color:#aa3333;
+}
+.content ul li i { color:#aa3333;}
+footer ul li i { color:#aa3333;}
+footer{
+border-top:3px solid #aa3333;
+}
+
+/* DAC added by PW */
+.title1 {
+color:#aa3333;
+font-family: "Oswald", sans-serif;
+font-weight:normal;
+}
+
+.navbar-brand-text {
+color:#ffffff;
+font-family: "Oswald", sans-serif;
+font-weight:normal;
+}
+
+.logreg2-page{
+width:600px;
+margin:40px auto;
+background:#fff;
+padding:20px 10px;
+border-radius:10px;
+box-shadow:0px 0px 3px #aaa;
+}
+
+/* form page */
+
+
+
+.formpage h3 {
+text-align:center;
+}
+
+.formpage h4 {
+text-align:center;
+}
+
+.formpage .title_bar{
+	font-size:18px;
+	line-height:30px;
+	color:#aa3333;
+	font-family: "Oswald", sans-serif;
+	font-weight:normal;
+	text-align:center;
+	margin:0px;
+}
+
+.formpage .bottom_bar{
+
+text-align:center;
+}
+
+.formpage .message{
+padding:10px 10px;
+text-align:center;
+}
+
+.formpage{
+/*background:#eee url('../img/header-back.png') repeat;*/
+background:#fff;
+width:750px;
+margin:10px auto;
+padding:10px 10px;
+border:1px solid #ddd;
+border-radius:10px;
+box-shadow:0px 0px 10px #aaa;
+
+}
+
+
+.formpage .form{
+margin-top:30px;
+}

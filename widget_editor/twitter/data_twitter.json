@@ -1,0 +1,989 @@
+{  
+   "wid":"232",
+   "template":"twitter",
+   "widget":{  
+      "dac_widget":{  
+         "header":{  
+            "account_no":"DY1303806194",
+            "id":"232",
+            "desc":"preview",
+            "template":"twitter",
+            "last_updated_time":"2016-07-27 09:26:38"
+         },
+         "content":{  
+            "zone_width":"1920",
+            "zone_height":"1080",
+            "zone_size_option":"custom",
+            "feed_key":"TWA9725713269",
+            "post_duration":"10",
+            "feed_title":"Enter title text",
+            "feed_title_font":"Arial",
+            "feed_title_italic":false,
+            "feed_title_alignment":"left",
+            "feed_title_bold":false,
+            "feed_title_font_size":81,
+            "feed_title_x":"0",
+            "feed_title_y":"0",
+            "body_font_size":"28",
+            "body_background_gradient_color":"3D85C6",
+            "body_background_color":"3D85C6",
+            "background_color":"3D85C6",
+            "body_font":"arial",
+            "background_alpha":"1",
+            "hr_line_color":"EEEEEE",
+            "posttime_font_color":"E59966",
+            "feed_title_font_color":"FFFFFF",
+            "body_font_color":"FFFFFF",
+            "edit_view_width":"300",
+            "edit_view_height":"250",
+            "qr_flag":false,
+            "qr_text":"http:\/\/www.dynasignstudios.com\/",
+            "qr_size":"60",
+            "qr_x":"-1",
+            "qr_y":"150",
+            "qr_color":"#000000",
+            "qr_option":"widget",
+            "background_image_flag":true,
+            "dac_asset":[  
+               {  
+                  "field_name":"background_image",
+                  "display_name":"",
+                  "location":"",
+                  "download":"true",
+                  "type":"dac_upload"
+               }
+            ]
+         }
+      }
+   },
+   "widgetAsset":{  
+
+   },
+   "widgetAssetInfo":{  
+
+   },
+   "feed":{  
+      "feed_posts":{  
+         "header":{  
+            "key":"TWA9725713269",
+            "source":"twitter",
+            "last_updated_time":"2016-07-27 09:26:38"
+         },
+         "favored_posts":[  
+
+         ],
+         "approved_posts":[  
+            {  
+               "postid":"758304555880906752",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Wed Jul 27 14:14:29 +0000 2016",
+               "text":[  
+                  "@AlikoDangote Your support has helped make this milestone possible. There is still much work to be done but today we are closer than ever. "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"758297759896264708",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Wed Jul 27 13:47:29 +0000 2016",
+               "text":[  
+                  "@MBuhari I look forward to working with you and the people of Nigeria to help sustain this great progress toward a polio-free world. "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"758035886986653696",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Tue Jul 26 20:26:53 +0000 2016",
+               "text":[  
+                  "In my latest book review, I explain why I\u2019m hopeful about the future of American innovation: https://t.co/hXYUfULGmJ https://t.co/Pz1FlOYKSN "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CoUVnpxWYAEg7pu.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CoUVnpxWYAEg7pu.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CoUVnpxWYAEg7pu.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CoUVnpxWYAEg7pu.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"756546307888558080",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Fri Jul 22 17:47:50 +0000 2016",
+               "text":[  
+                  "Nelson Mandela\u2019s humility and courage left an impression on me that I\u2019ll never forget: https://t.co/xWSfXzoFEr\nhttps://t.co/Gp1KNf1Jpn "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"755778809094209537",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Wed Jul 20 14:58:04 +0000 2016",
+               "text":[  
+                  "The battle against AIDS is one we can win. I explain how in this short video: https://t.co/tmDrhZ6KEK #AIDS2016\nhttps://t.co/apMtjEjzOx "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"755109639755276289",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Mon Jul 18 18:39:02 +0000 2016",
+               "text":[  
+                  "Nelson Mandela is one of my heroes. I share his optimism about Africa\u2019s future: https://t.co/sW0JJ236rq https://t.co/sw73Tf5D8y "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CnqwNqdWIAAPf-U.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CnqwNqdWIAAPf-U.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CnqwNqdWIAAPf-U.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CnqwNqdWIAAPf-U.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"754694396054872064",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Sun Jul 17 15:09:00 +0000 2016",
+               "text":[  
+                  "Honored to deliver the Nelson Mandela Annual Lecture. I believe, as he did, that progress is possible: https://t.co/5MbAhbgBej #NMAL2016 "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"754022884473843712",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Fri Jul 15 18:40:39 +0000 2016",
+               "text":[  
+                  "Michael Elliott was a tremendous leader and an inspiration to many (including me). I'm sad to learn of his death: https://t.co/aywGRh7Cmg "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"753640707743707136",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Thu Jul 14 17:22:01 +0000 2016",
+               "text":[  
+                  "There are many reasons to be optimistic, but we haven\u2019t turned the corner on AIDS... https://t.co/tmGgpQpr0a https://t.co/LO8mNT8OuC "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CnV4Oj8WAAADSa1.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CnV4Oj8WAAADSa1.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CnV4Oj8WAAADSa1.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CnV4Oj8WAAADSa1.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"753259068068798465",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Wed Jul 13 16:05:31 +0000 2016",
+               "text":[  
+                  "Thank you @David_Cameron for your leadership on fighting diseases and reducing inequality around the world. "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"752916435308048385",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Tue Jul 12 17:24:01 +0000 2016",
+               "text":[  
+                  "I\u2019m always impressed by the innovative spirit in Africa. Here\u2019s a great list of African innovators. https://t.co/HjeD1hf5LS "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"751048894096769024",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Thu Jul 07 13:43:04 +0000 2016",
+               "text":[  
+                  "I\u2019ll never forget the first time I met @WarrenBuffett. It\u2019s been an amazing 25 years: https://t.co/YjccRhpMnb #TBT https://t.co/IFp5umyRLa "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CmxC-UTXEAAF7TR.jpg:large",
+                     "http://pbs.twimg.com/media/CmxC-q1W8AAvupX.jpg:large",
+                     "http://pbs.twimg.com/media/CmxC-5aWcAAqeen.jpg:large",
+                     "http://pbs.twimg.com/media/CmxC_HjW8AA8WRZ.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CmxC-UTXEAAF7TR.jpg:small",
+                     "http://pbs.twimg.com/media/CmxC-q1W8AAvupX.jpg:small",
+                     "http://pbs.twimg.com/media/CmxC-5aWcAAqeen.jpg:small",
+                     "http://pbs.twimg.com/media/CmxC_HjW8AA8WRZ.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CmxC-UTXEAAF7TR.jpg:medium",
+                     "http://pbs.twimg.com/media/CmxC-q1W8AAvupX.jpg:medium",
+                     "http://pbs.twimg.com/media/CmxC-5aWcAAqeen.jpg:medium",
+                     "http://pbs.twimg.com/media/CmxC_HjW8AA8WRZ.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CmxC-UTXEAAF7TR.jpg:large",
+                     "http://pbs.twimg.com/media/CmxC-q1W8AAvupX.jpg:large",
+                     "http://pbs.twimg.com/media/CmxC-5aWcAAqeen.jpg:large",
+                     "http://pbs.twimg.com/media/CmxC_HjW8AA8WRZ.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"750746639225217026",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Wed Jul 06 17:42:01 +0000 2016",
+               "text":[  
+                  "Warren Buffett loves to play the ukulele. He asked me to sing along in our first #VR video: https://t.co/VZE9h0KWcu https://t.co/ZsuJ6Dhxhb "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CmswFoeWAAAgsc8.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CmswFoeWAAAgsc8.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CmswFoeWAAAgsc8.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CmswFoeWAAAgsc8.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"750389004470747136",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Tue Jul 05 18:00:54 +0000 2016",
+               "text":[  
+                  "I met @WarrenBuffett 25 years ago today. We\u2019ve been laughing &amp; learning together ever since: https://t.co/1bSS9DQYqf https://t.co/9sBOKt821U "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Cmnq0ioXgAAWlBw.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Cmnq0ioXgAAWlBw.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Cmnq0ioXgAAWlBw.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Cmnq0ioXgAAWlBw.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"749619467466973184",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Sun Jul 03 15:03:02 +0000 2016",
+               "text":[  
+                  "Beautiful map showing progress against malaria\u2014and how much work we still have to do. https://t.co/IYkBQrZNiH "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"749212782084653056",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Sat Jul 02 12:07:01 +0000 2016",
+               "text":[  
+                  "I\u2019m a big fan of @andy_murray. It\u2019s great to see him support the fight to #endmalaria: https://t.co/zj5ivlXfgc https://t.co/zcG9bPKwLv "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CmW9DTvW8AASj-A.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CmW9DTvW8AASj-A.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CmW9DTvW8AASj-A.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CmW9DTvW8AASj-A.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"748976226656718848",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Fri Jul 01 20:27:02 +0000 2016",
+               "text":[  
+                  "Fantastic research is going on to make batteries better and more affordable: https://t.co/2XHO1V47PS https://t.co/MJWWQUUVJE "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CmTl50SXEAAl7dn.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CmTl50SXEAAl7dn.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CmTl50SXEAAl7dn.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CmTl50SXEAAl7dn.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"748910308647923712",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Fri Jul 01 16:05:06 +0000 2016",
+               "text":[  
+                  "Millions of people with HIV are receiving treatment, &amp; the Global Fund is a big reason why: https://t.co/bfEqqHBJ5j https://t.co/ZUqL58pu84 "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/CmSp9JWWIAAT4WC.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/CmSp9JWWIAAT4WC.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/CmSp9JWWIAAT4WC.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/CmSp9JWWIAAT4WC.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"748568280131117056",
+               "userid":"50393960",
+               "source":"twitter",
+               "username":"BillGates",
+               "avatar":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+               "location":"",
+               "posttime":"Thu Jun 30 17:26:00 +0000 2016",
+               "text":[  
+                  ".@GlobalFund has helped save 17M lives since 2002. I\u2019m inspired by the leaders who are stepping up to support it: https://t.co/fyS0bfwgdo "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+
+                  ],
+                  "small":[  
+
+                  ],
+                  "medium":[  
+
+                  ],
+                  "large":[  
+
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            },
+            {  
+               "postid":"747397153845284865",
+               "userid":"140897183",
+               "source":"twitter",
+               "username":"AFD_France",
+               "avatar":"http://pbs.twimg.com/profile_images/757494271071117312/JSyJ82_W.jpg",
+               "location":"",
+               "posttime":"Mon Jun 27 11:52:22 +0000 2016",
+               "text":[  
+                  ".@RiouxRemy meets @BillGates to develop the operational partnership between AFD and @gatesfoundation #health https://t.co/YCikL8hn3P "
+               ],
+               "desc":[  
+
+               ],
+               "picture":{  
+                  "default":[  
+                     "http://pbs.twimg.com/media/Cl9JJYsXEAQUgy5.jpg:large"
+                  ],
+                  "small":[  
+                     "http://pbs.twimg.com/media/Cl9JJYsXEAQUgy5.jpg:small"
+                  ],
+                  "medium":[  
+                     "http://pbs.twimg.com/media/Cl9JJYsXEAQUgy5.jpg:medium"
+                  ],
+                  "large":[  
+                     "http://pbs.twimg.com/media/Cl9JJYsXEAQUgy5.jpg:large"
+                  ]
+               },
+               "video":{  
+                  "default":[  
+
+                  ],
+                  "webm":[  
+
+                  ],
+                  "mp4":[  
+
+                  ],
+                  "duration":""
+               },
+               "attributes":{  
+                  "place":""
+               }
+            }
+         ]
+      }
+   },
+   "feedAsset":{  
+      "TWA9725713269-http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg":"http://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg",
+      "TWA9725713269-http://pbs.twimg.com/media/CoUVnpxWYAEg7pu.jpg:large":"http://pbs.twimg.com/media/CoUVnpxWYAEg7pu.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CnqwNqdWIAAPf-U.jpg:large":"http://pbs.twimg.com/media/CnqwNqdWIAAPf-U.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CnV4Oj8WAAADSa1.jpg:large":"http://pbs.twimg.com/media/CnV4Oj8WAAADSa1.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmxC-UTXEAAF7TR.jpg:large":"http://pbs.twimg.com/media/CmxC-UTXEAAF7TR.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmxC-q1W8AAvupX.jpg:large":"http://pbs.twimg.com/media/CmxC-q1W8AAvupX.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmxC-5aWcAAqeen.jpg:large":"http://pbs.twimg.com/media/CmxC-5aWcAAqeen.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmxC_HjW8AA8WRZ.jpg:large":"http://pbs.twimg.com/media/CmxC_HjW8AA8WRZ.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmswFoeWAAAgsc8.jpg:large":"http://pbs.twimg.com/media/CmswFoeWAAAgsc8.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/Cmnq0ioXgAAWlBw.jpg:large":"http://pbs.twimg.com/media/Cmnq0ioXgAAWlBw.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmW9DTvW8AASj-A.jpg:large":"http://pbs.twimg.com/media/CmW9DTvW8AASj-A.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmTl50SXEAAl7dn.jpg:large":"http://pbs.twimg.com/media/CmTl50SXEAAl7dn.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/media/CmSp9JWWIAAT4WC.jpg:large":"http://pbs.twimg.com/media/CmSp9JWWIAAT4WC.jpg:large",
+      "TWA9725713269-http://pbs.twimg.com/profile_images/757494271071117312/JSyJ82_W.jpg":"http://pbs.twimg.com/profile_images/757494271071117312/JSyJ82_W.jpg",
+      "TWA9725713269-http://pbs.twimg.com/media/Cl9JJYsXEAQUgy5.jpg:large":"http://pbs.twimg.com/media/Cl9JJYsXEAQUgy5.jpg:large"
+   }
+}
+

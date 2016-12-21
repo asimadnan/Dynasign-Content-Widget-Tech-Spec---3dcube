@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dynasign Content Widget Development Kit</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/non-responsive.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">	
+    
+    <style>
+
+    </style>
+    
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- The mobile navbar-toggle button can be safely removed since you do not need it in a non-responsive implementation -->
+          <a class="navbar-brand" href="index.html" style="color:#990000;">Dynasign Studios Developer Guide</a>
+        </div>
+
+      </div>
+    </nav>
+    
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <div class="navbar-header"><br>
+            <p class="text-muted">Dynasign 	&copy; 2016. This document is proprietary and confidential.<br>
+All information contained herein is, and remains
+the property of Dynasign Corporation and its suppliers.
+The intellectual and technical concepts contained
+herein are proprietary to Dynasign Corporation and its suppliers and may be covered by U.S. and Foreign Patents,
+patents in process, and are protected by trade secret or copyright law.
+Dissemination of this information or reproduction of this material is strictly forbidden without the prior written consent of Dynasign Corporation.
+        
+        </p>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div >
+        <h1>Build Widget Editor UI JSON File</h1>
+        <p class="lead">Editor UI will be generated automatically based on the editor ui JSON file</p>
+
+      </div>
+        <h3>Editor UI:</h3>
+        The widget editor includes the left side (editable fields) and right side (edit view) as illustrated below.
+        The left side includes a number of tabs. Template editable fields are grouped inside the tabs.
+          <ul>
+            <li>Tab (Accordion)</li> 
+            <li>Group (Expand/Collapse) </li> 
+            <li>Template Fields</li> 
+        </ul>
+<img src="img/editor.png">
+        <h3>Editor UI JSON File  (<code>ui_[template name].json</code>)</h3>
+                
+             Add ui JSON file under <code>widget_editor/[template name]/</code>. 
+             To build the widget editor, you need to add at least one custom tab to include template specific fields.
+             To start, you can copy ui_annoucement.json and rename it to <code>ui_[template name].json</code>, then edit for your widget temmplate.
+        
+        <br>
+<code>
+{  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"template":"announcement",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"standard_tabs":[  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"tab_id":"background","open":"true","overlay":true},
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "tab_id":"qr"}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"custom_tabs":[  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tab_id":"text_message",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"tab_name":"Text Message",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"groups":[  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"group_id":"grp_title",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"group_name":"Title",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"open":true,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fields":[
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"field_id":"title","field_name":"Title","field_type":"text","component":"textarea","field_width":"400","field_height":"50",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"placeholder":"Enter title","font_type":"font_type_list","font_size":"font_size_list","color":"std",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bold":"std","italic":"std","underline":"std"}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"group_id":"grp_description",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"group_name":"Description",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"open":true,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fields":[
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"field_id":"description","field_name":"Description","field_type":"text","component":"textarea","field_width":"400","field_height":"100",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"placeholder":"Enter description","font_type":"font_type_list","font_size":"font_size_list","color":"std",
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"bold":"std","italic":"std","underline":"std"}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"val_lists":{  
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"alpha_list": ["0|0%","0.1|10%","0.2|20%","0.3|30%","0.4|40%","0.5|50%","0.6|60%","0.7|70%","0.8|80%","0.9|90%","1|100%"],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"font_type_list": ["Arial","Calibri","Times New Roman","Verdana"],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"font_size_list": ["50","60","70","80","90","100","110","115","120","125","130"]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>}
+
+</code>
+<br><br>
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);"> 
+<h4>Examples:</h4>
+<h5><b>announcement widget editor:</b> </h5>
+Widget Editor - <a href="widget_editor.html?template=announcement" target="ds"><code style='text-decoration: underline;'>announcement</code></a> <i class="fa fa-eye"></i>
+<br>
+ui JSON file - <a href="widget_editor/announcement/ui_announcement.json" target="ds"><code style='text-decoration: underline;'>ui_announcement.json</code></a> <i class="fa fa-eye"></i>
+<br>
+Explore in JSON tree:<br>
+<div id="editor_ui_json_announcement"></div>
+
+<br>
+<h5><b>countdown widget editor:</b> </h5>
+Widget Editor - <a href="widget_editor.html?template=countdown" target="ds"><code style='text-decoration: underline;'>widget_editor.html?template=countdown</code></a> <i class="fa fa-eye"></i>
+<br>
+ui JSON file -  <a href="widget_editor/countdown/ui_countdown.json" target="ds"><code style='text-decoration: underline;'>ui_countdown.json</code></a> <i class="fa fa-eye"></i>
+<br>
+Explore in JSON tree:<br>
+<div id="editor_ui_json_countdown"></div>
+
+<br>
+<h5><b>weather forecast widget editor:</b> </h5>
+Widget Editor - <a href="widget_editor.html?template=weather_forecast" target="ds"><code style='text-decoration: underline;'>widget_editor.html?template=weather_forecast</code></a> <i class="fa fa-eye"></i>
+<br>
+ui JSON file -  <a href="widget_editor/weather_forecast/ui_weather_forecast.json" target="ds"><code style='text-decoration: underline;'>ui_weather_forecast.json</code></a> <i class="fa fa-eye"></i>
+<br>
+Explore in JSON tree:<br>
+<div id="editor_ui_json_weather"></div>
+
+
+<br>
+<h5><b>sample widget editor:</b> </h5>
+Widget Editor - <a href="widget_editor.html?template=sample" target="ds"><code style='text-decoration: underline;'>widget_editor.html?template=sample</code></a> <i class="fa fa-eye"></i>
+<br>
+ui JSON file -  <a href="widget_editor/sample/ui_sample.json" target="ds"><code style='text-decoration: underline;'>ui_sample.json</code></a> <i class="fa fa-eye"></i>
+<br>
+Explore in JSON tree:<br>
+<div id="editor_ui_json_sample"></div>
+
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #ccc, #998888, #eee);"> 
+
+<h3>Define Template Name (<code>template</code>):</h3>
+Template name should be all lower cases, no space and no special characters, '_' is allowed, e.g. announcement, twitter, twitter_pic, countdown
+<h3>Define Standard Tab (<code>standard_tabs</code>):</h3>
+There are 2 optional standard tabs. Add the following lines to include the tabs in the editor.
+<ul>
+    <li>Background: <code>{"tab_id":"background","overlay":true}</code> The optional overlay on the background can be set to either true or false</li> 
+    <li>QR Code: <code>{"tab_id":"qr"}</code></li> 
+</ul>   
+        
+<h3>Define Custom Tabs (<code>custom_tabs</code>):</h3>
+Editor has one or more custom tabs to contain template fields. custom_tabs is a JSON array.
+<ul>
+    <li>Tab ID (<code>tab_id</code>): tab_id should be all lower cases, no space and no special characters, e.g. text_message</li> 
+    <li>Tab Name (<code>tab_name</code>): tab name will show up in the tab,e.g. Text Messages</li> 
+</ul>
+
+<h3>Define Groups (<code>groups</code>):</h3>
+<code>groups</code> is a JSON array inside a given custom tab.
+<ul>
+    <li>Group ID (<code>group_id</code>): group_id should be all lower cases, no space and no special characters, '_' is allowed, e.g. title</li> 
+    <li>Group Name (<code>group_name</code>): group name will show up in the tab,e.g. Title</li> 
+    <li>Open or Close (<code>open</code>): "true": open the group by default </li> 
+</ul>
+
+
+<h3>Define Template Field Object (<code>fields</code>):</h3>
+<ul>
+    <li>Field ID (<code>field_id</code>): field_id should be all lower cases, no space and no special characters. '_' is allowed</li>
+    <li>Field Display Name (<code>field_name</code>): make it as short as possible</li>
+    <li>Field Content Type (<code>field_type</code>): text, image, video, audio, shape</li>
+    <li>Field Component (<code>field_component</code>): name of the HTML component, see "HTML Components" for all supported components</li>
+    <li>Field Default Value (<code>default</code>)</li>
+    <li>Field Width (<code>field_width</code>) in pixel</li>
+    <li>Field Height (<code>field_height</code>) in pixel</li>
+    
+</ul>
+In addition to the above common attributes, each component may have its own specific attributes
+
+
+<li>Field Value List (<code>val_list</code>)</li>
+
+
+</ul>
+
+<h3>HTML Components:</h3>
+<ul>
+    <li><code>text_style</code></li>
+        <ul>
+            <li><code>font_type</code></li>
+            <li><code>font_size</code></li>
+            <li><code>color</code></li>
+            <li><code>bold</code></li>
+            <li><code>italic</code></li>
+            <li><code>align</code></li>
+            <li><code>underline</code> (not supported yet)</li>
+            <li><code>shadow</code> (not supported yet)</li>
+            <li><code>background_color</code> (not supported yet)</li>
+            <li><code>background_opacity</code> (not supported yet)</li>
+            <li><code>border</code> (not supported yet)</li>
+            <li><code>rotate</code> (not supported yet)</li>
+        </ul> 
+    <li><code>input (text_input)</code></li>
+            <ul>
+                <li><code>placeholder</code></li>
+                <li><code>maxlength</code></li>
+                <li>all attributes in <code>text_style</code> can be included as options
+            </ul> 
+    <li><code>textarea</code></li>
+        <ul>
+            <li><code>placeholder</code></li>
+            <li>all attributes in <code>text_style</code> can be included as options
+        </ul> 
+    <li><code>checkbox</code> </li>
+    <li><code>radio</code>Radio button</li>
+        <ul>
+            <li><code>val_list</code>: a list of selection values</li>
+        </ul>
+    <li><code>select</code>Select Dropdown</li>
+        <ul>
+            <li><code>val_list</code>: a list of radio button values</li>
+        </ul>
+    <li><code>combo</code>Combo Dropdown</li>
+        <ul>
+            <li><code>val_list</code>: a list of selection values</li>
+        </ul>
+    <li><code>overlay (overlay_rectangle)</code></li>
+    <li><code>color</code>: Color Picker</li>
+    <li><code>date</code>: Date Picker</li>
+    <li><code>time</code>: Time Picker</li>
+    <li><code>dropzone</code>File Upload: to simulate file upload from your local drive in this kit, please copy your image files into /ds_widget/img/ folder</li>
+    <li><code>button_on_off</code> On/Off button</li>
+    <li><code>number_plus_minus</code>Number Selector</li>
+    <li><code>range</code>Range Slider</li>
+    <li><code>label</code></li>
+    <li><code>hidden</code></li>
+</ul>
+
+
+
+<h3>Value Lists (<code>val_lists</code>):</h3>
+include an array of coded values and display values (coded value | display value). If the coded values are the same as the display values, include the coded values only.
+Examples:
+<ul>
+    <li>"alpha_list": ["0|0%","0.1|10%","0.2|20%","0.3|30%","0.4|40%","0.5|50%","0.6|60%","0.7|70%","0.8|80%","0.9|90%","1|100%"]</li>
+    <li>"font_type_list": ["Arial","Calibri","Times New Roman","Verdana"]</li>
+
+</ul>
+ 
+
+        
+        
+        
+<br><br>
+
+<p></p>
+      
+
+
+
+<hr style = "width:100%; border: 0; height: 2px;  background: #333; background-image: linear-gradient(to right, #eee, #333, #eee);"> 
+
+    </div> <!-- /container -->
+
+<br><br><br>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/renderjson.js"></script>
+    
+<script>
+
+    
+$(function(){
+
+   loadEditorUIJson("announcement");
+   loadEditorUIJson("weather");
+   loadEditorUIJson("sample");
+});
+    
+    
+function loadEditorUIJson(templateName)
+{
+    var deferred = $.Deferred();
+    //var templateName = template;//"announcement";
+    var dataFile = "widget_editor/"+templateName+"/ui_"+templateName+".json";          
+    var loadEditorUIPromise = $.getJSON(dataFile);
+    
+    loadEditorUIPromise.done(function(data) {
+        editorUIObj = data;
+        console.log( "[widget_editor]loadEditorUIJson ok editorUIObj=" + JSON.stringify(editorUIObj)); 
+        //loadTemplateSpecificFields();
+         //alert("full widget json ok");
+        document.getElementById("editor_ui_json_"+templateName).appendChild(
+        renderjson(editorUIObj)
+    );
+
+        deferred.resolve(editorUIObj);
+    });
+
+            
+    loadEditorUIPromise.fail(function(jqXHR, textStatus, errorThrown ) {
+        alert("[widget_editor]loadEditorUIJson error"+textStatus+" "+errorThrown);
+        deferred.resolve(null);
+    });
+    return deferred.promise();
+}
+
+</script>
+
+  </body>
+</html>
