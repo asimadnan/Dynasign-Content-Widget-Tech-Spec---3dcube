@@ -7,7 +7,7 @@
   "custom_tabs":[
     {
       "tab_id":"text_message",
-      "tab_name":"Text Message",
+      "tab_name":"Custom Fields",
       "groups":[
 
         {
@@ -15,11 +15,11 @@
           "group_name":"Image1",
           "open":true,
           "fields":[
-            {"field_id":"text_or_image","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" },
-            {"field_id":"same_font","field_name":"Same Font Sizeee","field_type":"text","component":"radio", "val_list":"same_font" },
             {"field_id":"rotating_style", "field_name":"Rotating Style", "field_type":"text","component":"select","field_width":"150","val_list":"rotating_style"},
             {"field_id":"rotating_speed","field_name":"Rotating Speed","field_type":"text","component":"select","field_width":"150","val_list":"rotating_speed"},
-            {"field_id":"image1","field_name":"Image1","field_type":"image","component":"dropzone"}
+            {"field_id":"image1","field_name":"Image1","field_type":"image","component":"dropzone"},
+            {"field_id":"text_or_image1","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" }
+
 
           ]
         },
@@ -42,7 +42,9 @@
           "group_name":"Image2",
           "open":true,
           "fields":[
-            {"field_id":"image2","field_name":"Image2","field_type":"image","component":"dropzone"}
+            {"field_id":"image2","field_name":"Image2","field_type":"image","component":"dropzone"},
+            {"field_id":"text_or_image2","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" }
+
           ]
         },
         {
@@ -51,7 +53,9 @@
           "open":true,
           "fields":[
             {"field_id":"text2","field_name":"Text2","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
-            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"},
+            {"field_id":"valign2","field_name":"Vertical Align","field_type":"text","component":"radio", "val_list":"valignlist" }
+
           ]
         },
 
@@ -60,7 +64,8 @@
           "group_name":"Image3",
           "open":true,
           "fields":[
-            {"field_id":"image3","field_name":"Image3","field_type":"image","component":"dropzone"}
+            {"field_id":"image3","field_name":"Image3","field_type":"image","component":"dropzone"},
+            {"field_id":"text_or_image3","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" }
           ]
         },
         {
@@ -69,7 +74,9 @@
           "open":true,
           "fields":[
             {"field_id":"text3","field_name":"Text3","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
-            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"},
+            {"field_id":"valign3","field_name":"Vertical Align","field_type":"text","component":"radio", "val_list":"valignlist" }
+
           ]
         },
 
@@ -78,7 +85,8 @@
           "group_name":"Image4",
           "open":true,
           "fields":[
-            {"field_id":"image4","field_name":"Image4","field_type":"image","component":"dropzone"}
+            {"field_id":"image4","field_name":"Image4","field_type":"image","component":"dropzone"},
+            {"field_id":"text_or_image4","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" }
           ]
         },
         {
@@ -87,7 +95,9 @@
           "open":true,
           "fields":[
             {"field_id":"text4","field_name":"Text4","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
-            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"},
+            {"field_id":"valign4","field_name":"Vertical Align","field_type":"text","component":"radio", "val_list":"valignlist" }
+
           ]
         },
 
@@ -96,7 +106,8 @@
           "group_name":"Image5",
           "open":true,
           "fields":[
-            {"field_id":"image5","field_name":"Image5","field_type":"image","component":"dropzone"}
+            {"field_id":"image5","field_name":"Image5","field_type":"image","component":"dropzone"},
+            {"field_id":"text_or_image5","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" }
           ]
         },
         {
@@ -105,7 +116,8 @@
           "open":true,
           "fields":[
             {"field_id":"text5","field_name":"Text5","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
-            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"},
+            {"field_id":"valign5","field_name":"Vertical Align","field_type":"text","component":"radio", "val_list":"valignlist" }
           ]
         },
 
@@ -115,7 +127,8 @@
           "group_name":"Image6",
           "open":true,
           "fields":[
-            {"field_id":"image6","field_name":"Image6","field_type":"image","component":"dropzone"}
+            {"field_id":"image6","field_name":"Image6","field_type":"image","component":"dropzone"},
+            {"field_id":"text_or_image6","field_name":"Text ON/OFF","field_type":"text","component":"radio", "val_list":"textOrImage" }
           ]
         },
         {
@@ -124,7 +137,8 @@
           "open":true,
           "fields":[
             {"field_id":"text6","field_name":"Text6","field_type":"text","component":"textarea","field_width":"400","field_height":"50","placeholder":"Enter text1"
-            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"}
+            ,"font_type":"font_type_list","font_size":"font_size_list","color":"std","bold":"std","italic":"std","underline":"std","align":"std","valign":"std"},
+            {"field_id":"valign5","field_name":"Vertical Align","field_type":"text","component":"radio", "val_list":"valignlist" }
           ]
         }
 

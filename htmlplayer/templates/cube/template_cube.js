@@ -35,22 +35,76 @@ function TemplateCube(debug) {
         data['imageOrText'] = this.m_contentArray.text_or_image
 
         data['text1'] = this.m_contentArray.text1
-        data['text2'] = this.m_contentArray.text2
-        data['text3'] = this.m_contentArray.text3
-        data['text4'] = this.m_contentArray.text4
-        data['text5'] = this.m_contentArray.text5
-        data['text6'] = this.m_contentArray.text6
-
-        data['text1_alignment'] = this.m_contentArray.text1_alignment
+        data['text1_align'] = this.m_contentArray.text1_align
         data['text1_bold'] = this.m_contentArray.text1_bold
         data['text1_font'] = this.m_contentArray.text1_font
         data['text1_font_color'] = this.m_contentArray.text1_font_color
         data['text1_font_size'] = this.m_contentArray.text1_font_size
         data['text1_italic'] = this.m_contentArray.text1_italic
+        data['valign1'] = this.m_contentArray.valign1
+        data['text_or_image1'] = this.m_contentArray.text_or_image1
+
+        data['text2'] = this.m_contentArray.text2
+        data['text2_align'] = this.m_contentArray.text2_align
+        data['text2_bold'] = this.m_contentArray.text2_bold
+        data['text2_font'] = this.m_contentArray.text2_font
+        data['text2_font_color'] = this.m_contentArray.text2_font_color
+        data['text2_font_size'] = this.m_contentArray.text2_font_size
+        data['text2_italic'] = this.m_contentArray.text2_italic
+        data['valign2'] = this.m_contentArray.valign2
+        data['text_or_image2'] = this.m_contentArray.text_or_image2
+
+        
+        data['text3'] = this.m_contentArray.text3
+        data['text3_align'] = this.m_contentArray.text3_align
+        data['text3_bold'] = this.m_contentArray.text3_bold
+        data['text3_font'] = this.m_contentArray.text3_font
+        data['text3_font_color'] = this.m_contentArray.text3_font_color
+        data['text3_font_size'] = this.m_contentArray.text3_font_size
+        data['text3_italic'] = this.m_contentArray.text3_italic
+        data['valign3'] = this.m_contentArray.valign3
+        data['text_or_image3'] = this.m_contentArray.text_or_image3
+
+        data['text4'] = this.m_contentArray.text4
+        data['text4_align'] = this.m_contentArray.text4_align
+        data['text4_bold'] = this.m_contentArray.text4_bold
+        data['text4_font'] = this.m_contentArray.text4_font
+        data['text4_font_color'] = this.m_contentArray.text4_font_color
+        data['text4_font_size'] = this.m_contentArray.text4_font_size
+        data['text4_italic'] = this.m_contentArray.text4_italic
+        data['valign4'] = this.m_contentArray.valign4
+        data['text_or_image4'] = this.m_contentArray.text_or_image4
+
+        data['text5'] = this.m_contentArray.text5
+        data['text5_align'] = this.m_contentArray.text5_align
+        data['text5_bold'] = this.m_contentArray.text5_bold
+        data['text5_font'] = this.m_contentArray.text5_font
+        data['text5_font_color'] = this.m_contentArray.text5_font_color
+        data['text5_font_size'] = this.m_contentArray.text5_font_size
+        data['text5_italic'] = this.m_contentArray.text5_italic
+        data['valign5'] = this.m_contentArray.valign5
+        data['text_or_image5'] = this.m_contentArray.text_or_image5
+
+        data['text6'] = this.m_contentArray.text6
+        data['text6_align'] = this.m_contentArray.text6_align
+        data['text6_bold'] = this.m_contentArray.text6_bold
+        data['text6_font'] = this.m_contentArray.text6_font
+        data['text6_font_color'] = this.m_contentArray.text6_font_color
+        data['text6_font_size'] = this.m_contentArray.text6_font_size
+        data['text6_italic'] = this.m_contentArray.text6_italic
+        data['valign6'] = this.m_contentArray.valign6
+        data['text_or_image6'] = this.m_contentArray.text_or_image6
+
+
+        data['same_font'] = this.m_contentArray.same_font
+
+
+
         data['rotation_style'] =  this.m_contentArray.rotating_style
         data['rotation_speed'] =  this.m_contentArray.rotating_speed
         rotation_style = data['rotation_style']
         rotation_speed = data['rotation_speed']
+
 
         this.m_widgetBackground = new WidgetBackground();
 
@@ -93,37 +147,81 @@ function TemplateCube(debug) {
 
         data['imageOrText'] = this.m_contentArray.text_or_image
 
+        
+        
+
         data['text1'] = this.m_contentArray.text1
-        data['text2'] = this.m_contentArray.text2
-        data['text3'] = this.m_contentArray.text3
-        data['text4'] = this.m_contentArray.text4
-        data['text5'] = this.m_contentArray.text5
-        data['text6'] = this.m_contentArray.text6
-// debugger;
-        data['text1_alignment'] = this.m_contentArray.text1_alignment
+        data['text1_align'] = this.m_contentArray.text1_align
         data['text1_bold'] = this.m_contentArray.text1_bold
         data['text1_font'] = this.m_contentArray.text1_font
         data['text1_font_color'] = this.m_contentArray.text1_font_color
         data['text1_font_size'] = this.m_contentArray.text1_font_size
         data['text1_italic'] = this.m_contentArray.text1_italic
+        data['valign1'] = this.m_contentArray.valign1
+        data['text_or_image1'] = this.m_contentArray.text_or_image1
+
+        data['text2'] = this.m_contentArray.text2
+        data['text2_align'] = this.m_contentArray.text2_align
+        data['text2_bold'] = this.m_contentArray.text2_bold
+        data['text2_font'] = this.m_contentArray.text2_font
+        data['text2_font_color'] = this.m_contentArray.text2_font_color
+        data['text2_font_size'] = this.m_contentArray.text2_font_size
+        data['text2_italic'] = this.m_contentArray.text2_italic
+        data['valign2'] = this.m_contentArray.valign2
+        data['text_or_image2'] = this.m_contentArray.text_or_image2
+
+        
+        data['text3'] = this.m_contentArray.text3
+        data['text3_align'] = this.m_contentArray.text3_align
+        data['text3_bold'] = this.m_contentArray.text3_bold
+        data['text3_font'] = this.m_contentArray.text3_font
+        data['text3_font_color'] = this.m_contentArray.text3_font_color
+        data['text3_font_size'] = this.m_contentArray.text3_font_size
+        data['text3_italic'] = this.m_contentArray.text3_italic
+        data['valign3'] = this.m_contentArray.valign3
+        data['text_or_image3'] = this.m_contentArray.text_or_image3
+
+        data['text4'] = this.m_contentArray.text4
+        data['text4_align'] = this.m_contentArray.text4_align
+        data['text4_bold'] = this.m_contentArray.text4_bold
+        data['text4_font'] = this.m_contentArray.text4_font
+        data['text4_font_color'] = this.m_contentArray.text4_font_color
+        data['text4_font_size'] = this.m_contentArray.text4_font_size
+        data['text4_italic'] = this.m_contentArray.text4_italic
+        data['valign4'] = this.m_contentArray.valign4
+        data['text_or_image4'] = this.m_contentArray.text_or_image4
+
+        data['text5'] = this.m_contentArray.text5
+        data['text5_align'] = this.m_contentArray.text5_align
+        data['text5_bold'] = this.m_contentArray.text5_bold
+        data['text5_font'] = this.m_contentArray.text5_font
+        data['text5_font_color'] = this.m_contentArray.text5_font_color
+        data['text5_font_size'] = this.m_contentArray.text5_font_size
+        data['text5_italic'] = this.m_contentArray.text5_italic
+        data['valign5'] = this.m_contentArray.valign5
+        data['text_or_image5'] = this.m_contentArray.text_or_image5
+
+        data['text6'] = this.m_contentArray.text6
+        data['text6_align'] = this.m_contentArray.text6_align
+        data['text6_bold'] = this.m_contentArray.text6_bold
+        data['text6_font'] = this.m_contentArray.text6_font
+        data['text6_font_color'] = this.m_contentArray.text6_font_color
+        data['text6_font_size'] = this.m_contentArray.text6_font_size
+        data['text6_italic'] = this.m_contentArray.text6_italic
+        data['valign6'] = this.m_contentArray.valign6
+        data['text_or_image6'] = this.m_contentArray.text_or_image6
+
+
+        data['same_font'] = this.m_contentArray.same_font
+
+
         data['rotation_style'] =  this.m_contentArray.rotating_style
         data['rotation_speed'] =  this.m_contentArray.rotating_speed
         rotation_style = data['rotation_style']
         rotation_speed = data['rotation_speed']
 
-// text1_alignment:"center"
-// text1_bold:false
-// text1_font:"Calibri"
-// text1_font_color:"3D85C6"
-// text1_font_size:"90"
-// text1_italic:true
 
-        // data.push(fullWidget.widget.dac_widget.content.image1)
-        // data.push(fullWidget.widget.dac_widget.content.image2)
-        // data.push(fullWidget.widget.dac_widget.content.image3)
-        // data.push(fullWidget.widget.dac_widget.content.image4)
-        // data.push(fullWidget.widget.dac_widget.content.image5)
-        // data.push(fullWidget.widget.dac_widget.content.image6)
+
 
 
         startTHREE(data);
@@ -285,105 +383,149 @@ function createScene1(scene,data,update)
     //var a = this.m_fullWidget.widgetAsset['w100-announcement-background_image']
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // IMAGES////
-    var hello = "hello";
-    var images = [
-        new THREE.MeshLambertMaterial({
-            ambient: 0xffffff,
-            map: THREE.ImageUtils.loadTexture(  data['image1'] ) }),
-        new THREE.MeshLambertMaterial({
-            ambient: 0xffffff,
-            map: THREE.ImageUtils.loadTexture( data['image2'] ) }),
-        new THREE.MeshLambertMaterial({
-            ambient: 0xffffff,
-            map: THREE.ImageUtils.loadTexture( data['image3'] ) }),
-        new THREE.MeshLambertMaterial({
-            ambient: 0xffffff,
-            map: THREE.ImageUtils.loadTexture( data['image4'] ) }),
-        new THREE.MeshLambertMaterial({
-            ambient: 0xffffff,
-            map: THREE.ImageUtils.loadTexture( data['image5']  ) }),
-        new THREE.MeshLambertMaterial( {
-            ambient: 0xffffff,
-            map: THREE.ImageUtils.loadTexture( data['image6']  ) })
-    ];
+    // var images = [
+    //     new THREE.MeshLambertMaterial({
+    //         ambient: 0xffffff,
+    //         map: THREE.ImageUtils.loadTexture(  data['image1'] ) }),
+    //     new THREE.MeshLambertMaterial({
+    //         ambient: 0xffffff,
+    //         map: THREE.ImageUtils.loadTexture( data['image2'] ) }),
+    //     new THREE.MeshLambertMaterial({
+    //         ambient: 0xffffff,
+    //         map: THREE.ImageUtils.loadTexture( data['image3'] ) }),
+    //     new THREE.MeshLambertMaterial({
+    //         ambient: 0xffffff,
+    //         map: THREE.ImageUtils.loadTexture( data['image4'] ) }),
+    //     new THREE.MeshLambertMaterial({
+    //         ambient: 0xffffff,
+    //         map: THREE.ImageUtils.loadTexture( data['image5']  ) }),
+    //     new THREE.MeshLambertMaterial( {
+    //         ambient: 0xffffff,
+    //         map: THREE.ImageUtils.loadTexture( data['image6']  ) })
+    // ];
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////TEXTSS
+ //        data['text1'] = this.m_contentArray.text1
+ //        data['text1_alignment'] = this.m_contentArray.text1_align
+ //        data['text1_bold'] = this.m_contentArray.text1_bold
+ //        data['text1_font'] = this.m_contentArray.text1_font
+ //        data['text1_font_color'] = this.m_contentArray.text1_font_color
+ //        data['text1_font_size'] = this.m_contentArray.text1_font_size
+ //        data['text1_italic'] = this.m_contentArray.text1_italic
+ //        data['valign1'] = this.m_contentArray.valign1
+ //        data['text_or_image1'] = this.m_contentArray.text_or_image1
+ ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // var dynamicTexture6  = new THREEx.DynamicTexture(512,512)
+    // dynamicTexture6.context.font = "italic bolder " + "90" + "px " + "Arial";
+
+    // var image  = document.createElement('img')
+    // image.src  = data['image6'],
+    // dynamicTexture6.drawImage( image,0, 0)
+    //text1_align
+
+    // //third argument is 
+    // //128 when valign top
+    // //256 when valign middle
+    // //500 when valign bottom
+
+    // //right/left alignment
+    // //2nd argument
+    // // undefined = middle
+    // // 10 = right side
+    // //160 = left side
 
 
-// text1_alignment:"center"
-// text1_bold:false
-// text1_font:"Calibri"
-// text1_font_color:"3D85C6"
-// text1_font_size:"90"
-// text1_italic:true
-    // data['text1_alignment'] = this.m_contentArray.text1_alignment
-    // data['text1_bold'] = this.m_contentArray.text1_bold
-    // data['text1_font'] = this.m_contentArray.text1_font
-    // data['text1_font_color'] = this.m_contentArray.text1_font_color
-    // data['text1_font_size'] = this.m_contentArray.text1_font_size
-    // data['text1_italic'] = this.m_contentArray.text1_italic
+  
+    // dynamicTexture6.drawText(data['text6'], 160, 500, '#ffff00')
+
+    // var materialText6    = new THREE.MeshBasicMaterial({
+    //     map : dynamicTexture6.texture
+    // })
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    var dynamicTexture1  = new THREEx.DynamicTexture(512,512)
-    dynamicTexture1.context.font = "bolder " + data['text1_font_size'] + "px Verdana";
-    dynamicTexture1.texture.anisotropy = renderer.getMaxAnisotropy()
-    dynamicTexture1.clear('white').drawText(data['text1'], undefined, 256, 'red')
-    var materialText1    = new THREE.MeshBasicMaterial({
-        map : dynamicTexture1.texture
-    })
+    // var dynamicTexture1  = new THREEx.DynamicTexture(512,512)
+    
+    // if (data['text_or_image1'] == 'off'){
+        
+    //     dynamicTexture1.texture.anisotropy = renderer.getMaxAnisotropy()
+    //     var image  = document.createElement('img')
+    //     image.src  = data['image1']
+    //     dynamicTexture1.drawImage( image,0, 0)
+       
 
-    var dynamicTexture2  = new THREEx.DynamicTexture(512,512)
-    dynamicTexture2.context.font = "bolder 90px Verdana";
-    dynamicTexture2.texture.anisotropy = renderer.getMaxAnisotropy()
-    dynamicTexture2.clear('cyan')
-        .drawText(data['text2'], undefined, 256, 'red')
 
-    var materialText2    = new THREE.MeshBasicMaterial({
-        map : dynamicTexture2.texture
-    })
+    // }else {
 
-    var dynamicTexture3  = new THREEx.DynamicTexture(512,512)
-    dynamicTexture3.context.font = "bolder 90px Verdana";
-    dynamicTexture3.texture.anisotropy = renderer.getMaxAnisotropy()
-    dynamicTexture3.clear('cyan')
-        .drawText(data['text3'], undefined, 256, 'red')
+    //     if (data['text1_bold'] == true) { bold = 'bolder '; }
+    //     if (data['text1_italic'] == true) { bold = 'italic ';}
 
-    var materialText3    = new THREE.MeshBasicMaterial({
-        map : dynamicTexture3.texture
-    })
+    //     if (data['text1_align'] == 'left' ){halign = 160} 
+    //     if (data['text1_align'] == 'center'){halign = undefined}
+    //     if (data['text1_align'] == 'right'){ halign = 10}
 
-    var dynamicTexture4  = new THREEx.DynamicTexture(512,512)
-    dynamicTexture4.context.font = "bolder 90px Verdana";
-    dynamicTexture4.texture.anisotropy = renderer.getMaxAnisotropy()
-    dynamicTexture4.clear('cyan')
-        .drawText(data['text4'], undefined, 256, 'red')
+    //     if (data['valign1'] == 'top' ){ valign = 128}
+    //     if (data['valign1'] ==  'middle'){valign = 256} 
+    //     if (data['valign1'] ==  'bottom'){ valign = 500}
 
-    var materialText2    = new THREE.MeshBasicMaterial({
-        map : dynamicTexture4.texture
-    })
+    //     var image  = document.createElement('img')
+    //     image.src  = data['image1']
+    //     dynamicTexture1.drawImage( image,0, 0)
 
-    var dynamicTexture5  = new THREEx.DynamicTexture(512,512)
-    dynamicTexture5.context.font = "bolder 90px Verdana";
-    dynamicTexture5.texture.anisotropy = renderer.getMaxAnisotropy()
-    dynamicTexture5.clear('cyan')
-        .drawText(data['text5'], undefined, 256, 'red')
 
-    var materialText5    = new THREE.MeshBasicMaterial({
-        map : dynamicTexture5.texture
-    })
+    //     dynamicTexture1.context.font = bold + italic + data['text1_font_size'] + "px " + data['text1_font'];
+    //     dynamicTexture1.texture.anisotropy = renderer.getMaxAnisotropy()
+    //     dynamicTexture1.drawText(data['text1'], valign, halign, data['text1_font_color'])
 
 
 
+    // }
 
-    var dynamicTexture6  = new THREEx.DynamicTexture(512,512)
-    dynamicTexture6.context.font = "italic bolder " + "90" + "px " + "Arial";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    var image  = document.createElement('img')
-    image.src  = data['image6'],
-    dynamicTexture6.drawImage( image,0, 0)
+    // var dynamicTexture5  = new THREEx.DynamicTexture(512,512)
+    // if (data['text_or_image5'] == 'off'){
+        
+    //     dynamicTexture5.texture.anisotropy = renderer.getMaxAnisotropy()
+    //     var image  = document.createElement('img')
+    //     image.src  = data['image2']
+    //     dynamicTexture5.drawImage( image,0, 0)
 
-    //third argument is 
+       
+
+
+    // }else {
+
+    //     if (data['text5_bold'] == true) { bold = 'bolder '; }
+    //     if (data['text5_italic'] == true) { bold = 'italic ';}
+
+    //     if (data['text5_align'] == 'left' ){halign = 160} 
+    //     if (data['text5_align'] == 'center'){halign = undefined}
+    //     if (data['text5_align'] == 'right'){ halign = 10}
+
+    //     if (data['valign5'] == 'top' ){ valign = 128}
+    //     if (data['valign5'] ==  'middle'){valign = 256} 
+    //     if (data['valign5'] ==  'bottom'){ valign = 500}
+
+    //     dynamicTexture5.context.font = "italic bolder " + "90" + "px " + "Arial";
+
+    //     var image  = document.createElement('img')
+    //     image.src  = data['image5'],
+    //     dynamicTexture5.drawImage( image,0, 0) 
+    //     dynamicTexture5.drawText(data['text5'], 160, 500, '#ffff00')
+
+    //     var materialText5    = new THREE.MeshBasicMaterial({
+    //         map : dynamicTexture5.texture
+    //     })
+
+    // }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var bold = '';
+var italic = '';
+var halign = undefined;
+var valign = 256;
+   //third argument is 
     //128 when valign top
     //256 when valign middle
     //500 when valign bottom
@@ -395,43 +537,270 @@ function createScene1(scene,data,update)
     //160 = left side
 
 
-  
-    dynamicTexture6.drawText(data['text6'], 160, 500, '#ffff00')
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if (data['text_or_image1'] == 'off'){
+    // no text
+    var dynamicTexture1  = new THREEx.DynamicTexture(512,512)
+    var image1  = document.createElement('img')
+    image1.src  = data['image1']
+    dynamicTexture1.drawImage( image1,0, 0) 
 
-    var materialText6    = new THREE.MeshBasicMaterial({
-        map : dynamicTexture6.texture
-    })
+}
+    else {
+        ////with text
+
+        /// getting text properties
+
+        if (data['text1_bold'] == true) { bold = 'bolder '; }
+        if (data['text1_italic'] == true) { italic = 'italic ';}
+
+        if (data['text1_align'] == 'left' ){halign = 10} 
+        if (data['text1_align'] == 'center'){halign = undefined}
+        if (data['text1_align'] == 'right'){ halign = 250}
+
+        if (data['valign1'] == 'top' ){ valign = 128}
+        if (data['valign1'] ==  'middle'){valign = 256} 
+        if (data['valign1'] ==  'bottom'){ valign = 500}
+
+    var dynamicTexture1  = new THREEx.DynamicTexture(512,512)
+    dynamicTexture1.context.font = bold + italic  + data['text1_font_size'] + "px " + data['text1_font'];
+    var image1  = document.createElement('img')
+    image1.src  = data['image1']
+    dynamicTexture1.drawImage( image1,0, 0) 
+    dynamicTexture1.drawText(data['text1'], halign, valign, data['text1_font_color'])
+    }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+if (data['text_or_image2'] == 'off'){
+    // no text
+    var dynamicTexture2  = new THREEx.DynamicTexture(512,512)
+    var image2  = document.createElement('img')
+    image2.src  = data['image2']
+    dynamicTexture2.drawImage( image2,0, 0) 
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    var dynamicTexture  = new THREEx.DynamicTexture(512,512)
-    dynamicTexture.context.font = "bolder 90px Verdana";
-    dynamicTexture.clear('cyan')
-        .drawText('abcdef', undefined, 256, 'red')
-    var materialtt    = new THREE.MeshBasicMaterial({
-        map : dynamicTexture.texture
-    })
+}
+    else {
+        ////with text
+
+        /// getting text properties
+
+        if (data['text2_bold'] == true) { bold = 'bolder '; }
+        if (data['text2_italic'] == true) { italic = 'italic ';}
+
+        if (data['text2_align'] == 'left' ){halign = 10} 
+        if (data['text2_align'] == 'center'){halign = undefined}
+        if (data['text2_align'] == 'right'){ halign = 250}
+
+        if (data['valign2'] == 'top' ){ valign = 128}
+        if (data['valign2'] ==  'middle'){valign = 256} 
+        if (data['valign2'] ==  'bottom'){ valign = 500}
+
+    var dynamicTexture2  = new THREEx.DynamicTexture(512,512)
+    dynamicTexture2.context.font = bold + italic  + data['text2_font_size'] + "px " + data['text2_font'];
+    var image2  = document.createElement('img')
+    image2.src  = data['image2']
+    dynamicTexture2.drawImage( image2,0, 0) 
+    dynamicTexture2.drawText(data['text2'], halign, valign, data['text2_font_color'])
+    }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if (data['text_or_image3'] == 'off'){
+    // no text
+    var dynamicTexture3  = new THREEx.DynamicTexture(512,512)
+    var image3  = document.createElement('img')
+    image3.src  = data['image3']
+    dynamicTexture3.drawImage( image3,0, 0) 
+
+}
+    else {
+        ////with text
+
+        /// getting text properties
+
+        if (data['text3_bold'] == true) { bold = 'bolder '; }
+        if (data['text3_italic'] == true) { italic = 'italic ';}
+
+        if (data['text3_align'] == 'left' ){halign = 10} 
+        if (data['text3_align'] == 'center'){halign = undefined}
+        if (data['text3_align'] == 'right'){ halign = 250}
+
+        if (data['valign3'] == 'top' ){ valign = 128}
+        if (data['valign3'] ==  'middle'){valign = 256} 
+        if (data['valign3'] ==  'bottom'){ valign = 500}
+
+    var dynamicTexture3  = new THREEx.DynamicTexture(512,512)
+    dynamicTexture3.context.font = bold + italic  + data['text3_font_size'] + "px " + data['text3_font'];
+    var image3  = document.createElement('img')
+    image3.src  = data['image3']
+    dynamicTexture3.drawImage( image3,0, 0) 
+    dynamicTexture3.drawText(data['text3'], halign, valign, data['text3_font_color'])
+    }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if (data['text_or_image4'] == 'off'){
+    // no text
+    var dynamicTexture4  = new THREEx.DynamicTexture(512,512)
+    var image4  = document.createElement('img')
+    image4.src  = data['image4']
+    dynamicTexture4.drawImage( image4,0, 0) 
+
+}
+    else {
+        ////with text
+
+        /// getting text properties
+
+        if (data['text4_bold'] == true) { bold = 'bolder '; }
+        if (data['text4_italic'] == true) { italic = 'italic ';}
+
+        if (data['text4_align'] == 'left' ){halign = 10} 
+        if (data['text4_align'] == 'center'){halign = undefined}
+        if (data['text4_align'] == 'right'){ halign = 250}
+
+        if (data['valign4'] == 'top' ){ valign = 128}
+        if (data['valign4'] ==  'middle'){valign = 256} 
+        if (data['valign4'] ==  'bottom'){ valign = 500}
+
+    var dynamicTexture4  = new THREEx.DynamicTexture(512,512)
+    dynamicTexture4.context.font = bold + italic  + data['text4_font_size'] + "px " + data['text4_font'];
+    var image4  = document.createElement('img')
+    image4.src  = data['image4']
+    dynamicTexture4.drawImage( image4,0, 0) 
+    dynamicTexture4.drawText(data['text4'], halign, valign, data['text4_font_color'])
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if (data['text_or_image5'] == 'off'){
+    // no text
+    var dynamicTexture5  = new THREEx.DynamicTexture(512,512)
+    var image5  = document.createElement('img')
+    image5.src  = data['image5']
+    dynamicTexture5.drawImage( image5,0, 0) 
+
+}
+    else {
+        ////with text
+
+        /// getting text properties
+
+        if (data['text5_bold'] == true) { bold = 'bolder '; }
+        if (data['text5_italic'] == true) { italic = 'italic ';}
+
+        if (data['text5_align'] == 'left' ){halign = 10} 
+        if (data['text5_align'] == 'center'){halign = undefined}
+        if (data['text5_align'] == 'right'){ halign = 250}
+
+        if (data['valign5'] == 'top' ){ valign = 128}
+        if (data['valign5'] ==  'middle'){valign = 256} 
+        if (data['valign5'] ==  'bottom'){ valign = 500}
+
+    var dynamicTexture5  = new THREEx.DynamicTexture(512,512)
+    dynamicTexture5.context.font = bold + italic  + data['text5_font_size'] + "px " + data['text5_font'];
+    var image5  = document.createElement('img')
+    image5.src  = data['image5']
+    dynamicTexture5.drawImage( image5,0, 0) 
+    dynamicTexture5.drawText(data['text5'], halign, valign, data['text5_font_color'])
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if (data['text_or_image6'] == 'off'){
+    // no text
+    var dynamicTexture6  = new THREEx.DynamicTexture(512,512)
+    var image6  = document.createElement('img')
+    image6.src  = data['image6']
+    dynamicTexture6.drawImage( image6,0, 0) 
+
+}
+    else {
+        ////with text
+
+        /// getting text properties
+
+        if (data['text6_bold'] == true) { bold = 'bolder '; }
+        if (data['text6_italic'] == true) { italic = 'italic ';}
+
+        if (data['text6_align'] == 'left' ){halign = 10} 
+        if (data['text6_align'] == 'center'){halign = undefined}
+        if (data['text6_align'] == 'right'){ halign = 250}
+
+        if (data['valign6'] == 'top' ){ valign = 128}
+        if (data['valign6'] ==  'middle'){valign = 256} 
+        if (data['valign6'] ==  'bottom'){ valign = 500}
+
+    var dynamicTexture6  = new THREEx.DynamicTexture(512,512)
+    dynamicTexture6.context.font = bold + italic  + data['text6_font_size'] + "px " + data['text6_font'];
+    var image6  = document.createElement('img')
+    image6.src  = data['image6']
+    dynamicTexture6.drawImage( image6,0, 0) 
+    dynamicTexture6.drawText(data['text6'], halign, valign, data['text6_font_color'])
+    }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    // var dynamicTexture4  = new THREEx.DynamicTexture(512,512)
+    // dynamicTexture4.context.font = "bolder 90px Verdana";
+    // dynamicTexture4.texture.anisotropy = renderer.getMaxAnisotropy()
+    // dynamicTexture4.clear('cyan')
+    //     .drawText(data['text4'], undefined, 256, 'red')
+
+    // var materialText2    = new THREE.MeshBasicMaterial({
+    //     map : dynamicTexture4.texture
+    // })
+
+    // var dynamicTexture5  = new THREEx.DynamicTexture(512,512)
+    // dynamicTexture5.context.font = "bolder 90px Verdana";
+    // dynamicTexture5.texture.anisotropy = renderer.getMaxAnisotropy()
+    // dynamicTexture5.clear('cyan')
+    //     .drawText(data['text5'], undefined, 256, 'red')
+
+    // var materialText5    = new THREE.MeshBasicMaterial({
+    //     map : dynamicTexture5.texture
+    // })
+
+
+    // var dynamicTexture6  = new THREEx.DynamicTexture(512,512)
+    // dynamicTexture6.context.font = "italic bolder " + "90" + "px " + "Arial";
+    // dynamicTexture5.texture.anisotropy = renderer.getMaxAnisotropy()
+    // var image  = document.createElement('img')
+    // image.src  = data['image6'],
+    // dynamicTexture6.drawImage( image,0, 0) 
+    // dynamicTexture6.drawText(data['text6'], 160, 500, '#ffff00')
+
+    // var materialText6    = new THREE.MeshBasicMaterial({
+    //     map : dynamicTexture6.texture
+    // })
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///text
     var text = [
         new THREE.MeshLambertMaterial({
             ambient: 0xffffff,
             map: dynamicTexture1.texture }),
+
         new THREE.MeshLambertMaterial({
             ambient: 0xffffff,
             map: dynamicTexture2.texture }),
+
         new THREE.MeshLambertMaterial({
             ambient: 0xffffff,
             map: dynamicTexture3.texture }),
+
         new THREE.MeshLambertMaterial({
             ambient: 0xffffff,
             map: dynamicTexture4.texture }),
+
         new THREE.MeshLambertMaterial({
             ambient: 0xffffff,
             map: dynamicTexture5.texture }),
+        
         new THREE.MeshLambertMaterial({
             ambient: 0xffffff,
             map: dynamicTexture6.texture }),
@@ -444,14 +813,7 @@ function createScene1(scene,data,update)
 
 
     var geo = new THREE.BoxGeometry(100, 100, 100); // w, h, d
-    //var mat = new THREE.MeshLambertMaterial({ map: texture });
-
-    if (data['imageOrText'] == 'image'){
-        cube = new THREE.Mesh(geo,new THREE.MeshFaceMaterial (images) )}
-    else{
-        cube = new THREE.Mesh(geo,new THREE.MeshFaceMaterial (text) )}
-
-
+    cube = new THREE.Mesh(geo,new THREE.MeshFaceMaterial (text) )//}
     //var cube    = new THREE.Mesh( geo, materialText );
     cube.name = "scene-1-lambert-cube";
     scene.add(cube);
